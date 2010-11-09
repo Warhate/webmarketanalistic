@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="WebApplication8.Trade.Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            <p style="text-align: center">
+                <asp:Label ID="Label1" runat="server" 
+                    style="text-align: center; font-weight: 700; font-size: large; color: #3399FF" 
+                    Text="Панель товара"></asp:Label>
+            </p>
+            <p style="text-align: left">
+                <asp:ImageButton ID="ImageButton1" runat="server" Height="48px" 
+                    ImageUrl="~/Image/box.png" PostBackUrl="~/Trade/View.aspx" />
+                <asp:ImageButton ID="ImageButton2" runat="server" Height="48px" 
+                    ImageUrl="~/Image/program-group.png" PostBackUrl="~/Trade/AddGroup.aspx" />
+                <asp:ImageButton ID="ImageButton3" runat="server" Height="48px" 
+                    ImageUrl="~/Image/1289309280_1.png" PostBackUrl="~/Trade/Default.aspx" />
+            </p>
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

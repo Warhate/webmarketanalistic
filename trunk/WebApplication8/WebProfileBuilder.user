@@ -1,0 +1,14 @@
+<profile enabled="true" defaultProvider="TechDaysProfileProvider" automaticSaveEnabled="false">
+      <providers>
+        <add name="TechDaysProfileProvider" type="System.Web.Profile.SqlProfileProvider" connectionStringName="TechDaysDb" />
+      </providers>
+      <properties>
+        <add name="LastName" type="string" defaultValue="" />
+        <add name="FirstName" type="string" defaultValue="" />
+        <add name="MidleName" type="string" defaultValue="" />
+        <add name="Profession" type="string" defaultValue="" />
+        <add name="Sex" type="string" defaultValue="" />
+        <add name="Home" type="string" defaultValue="" />
+        <add name="Age" type="int" defaultValue="0" />
+      </properties>
+    </profile>

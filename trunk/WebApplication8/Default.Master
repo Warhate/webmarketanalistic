@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="WebApplication8.Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<link rel="stylesheet" type="text/css" href="my.css" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+           <div style="text-align: right">
+               <div  style="text-align: left" ><asp:LoginStatus ID="LoginStatus1" runat="server" 
+                       style="text-align: left" LogoutPageUrl="~/Login.aspx" 
+                       meta:resourcekey="LoginStatus1Resource1" />
+                   <br />
+&nbsp;<asp:Localize ID="Localize2" runat="server" meta:resourcekey="Localize2Resource1"></asp:Localize>
+                   <asp:LoginView ID="LoginView1" runat="server" 
+                       onviewchanged="LoginView1_ViewChanged">
+                       <AnonymousTemplate>
+                           <asp:Button ID="Button2" runat="server" Text="Регистрация" Height="20px" 
+                               meta:resourcekey="Button2Resource1" PostBackUrl="~/Registration/Reg.aspx" 
+                               Width="84px" />
+                       </AnonymousTemplate>
+                       <LoggedInTemplate>
+                           <div style="text-align: left">
+                               <asp:LoginName ID="LoginName1" runat="server" 
+                                   FormatString="Добро пожаловать, {0}." meta:resourcekey="LoginName1Resource1" />
+                               <br />
+                               &nbsp;<asp:Localize ID="Localize2" runat="server" 
+                                   meta:resourcekey="Localize2Resource2"></asp:Localize>
+                               <asp:Button ID="Button1" runat="server" Height="19px" 
+                                   meta:resourcekey="Button1Resource1" PostBackUrl="~/Profile/Profile.aspx" 
+                                   Text="Личные данные" Width="105px" />
+                           </div>
+                       </LoggedInTemplate>
+                       <RoleGroups>
+                           <asp:RoleGroup Roles="Administrator">
+                               <ContentTemplate>
+                                   Администратор, добро пожаловать!<br />
+                                   <asp:Button ID="Button1" runat="server" Height="24px" 
+                                       meta:resourcekey="Button1Resource1" onclick="Button1_Click" 
+                                       PostBackUrl="~/Profile/Profile.aspx" Text="Личные данные" Width="107px" />
+                                   <asp:Button ID="Button3" runat="server" Height="23px" Text="Панель управления" 
+                                       Width="132px" PostBackUrl="~/Administrator/Default.aspx" />
+                                   <asp:Button ID="Button4" runat="server" Text="Панель статистики" 
+                                       PostBackUrl="~/Analistic/Default.aspx" Width="162px" />
+                                   <asp:Button ID="Button5" runat="server" Text="Панель товара" 
+                                       PostBackUrl="~/Trade/Default.aspx" />
+                               </ContentTemplate>
+                           </asp:RoleGroup>
+                           <asp:RoleGroup Roles="Trader">
+                               <ContentTemplate>
+                                   <asp:Button ID="Button1" runat="server" Height="24px" 
+                                       meta:resourcekey="Button1Resource1" onclick="Button1_Click" 
+                                       PostBackUrl="~/Profile/Profile.aspx" Text="Личные данные" Width="107px" />
+                                   <asp:Button ID="Button5" runat="server" PostBackUrl="~/Trade/Default.aspx" 
+                                       Text="Панель товара" />
+                               </ContentTemplate>
+                           </asp:RoleGroup>
+                           <asp:RoleGroup Roles="Analistic">
+                               <ContentTemplate>
+                                   <asp:Button ID="Button1" runat="server" Height="24px" 
+                                       meta:resourcekey="Button1Resource1" onclick="Button1_Click" 
+                                       PostBackUrl="~/Profile/Profile.aspx" Text="Личные данные" Width="107px" />
+                                   <asp:Button ID="Button4" runat="server" Height="24px" Text="Панель статистики" 
+                                       Width="132px" PostBackUrl="~/Analistic/Default.aspx" /> &nbsp;
+                               </ContentTemplate>
+                           </asp:RoleGroup>
+                       </RoleGroups>
+                   </asp:LoginView>
+               &nbsp;</div>
+               
+               <asp:Localize ID="Localize1" runat="server" 
+                   meta:resourcekey="Localize1Resource1"></asp:Localize>
+               
+        <asp:DropDownList ID="droplang" runat="server" meta:resourcekey="droplangResource1">
+            <asp:ListItem Value="ua-ua" meta:resourcekey="ListItemResource1">Українська</asp:ListItem>
+            <asp:ListItem Value="ru-ru" meta:resourcekey="ListItemResource2">Русский</asp:ListItem>
+        </asp:DropDownList>
+        <asp:Button ID="btnlang" runat="server" Text="Выбрать" 
+                   meta:resourcekey="btnlangResource1" />
+    </div>
+        </asp:ContentPlaceHolder>
+           <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+           <div>
+           </div>
+    </asp:ContentPlaceHolder>
+    
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+
+
+    </asp:ContentPlaceHolder>
+    
+    </form>
+</body>
+</html>
