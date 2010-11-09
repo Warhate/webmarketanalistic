@@ -24,7 +24,8 @@
                 <asp:ImageButton ID="ImageButton2" runat="server" Height="48px" 
                     ImageUrl="~/Image/program-group.png" PostBackUrl="~/Trade/AddGroup.aspx" />
                 <asp:ImageButton ID="ImageButton3" runat="server" Height="48px" 
-                    ImageUrl="~/Image/1289309280_1.png" PostBackUrl="~/Trade/Default.aspx" />
+                    ImageUrl="~/Image/1289309280_1.png" 
+                    PostBackUrl="~/Trade/AddProduct.aspx" />
             </p>
         
         </asp:ContentPlaceHolder>
