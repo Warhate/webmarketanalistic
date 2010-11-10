@@ -84,7 +84,17 @@
         </asp:DropDownList>
         <asp:Button ID="btnlang" runat="server" Text="Выбрать" 
                    meta:resourcekey="btnlangResource1" />
+    <p>
+
+
+        <asp:ImageButton ID="ImageButton1" runat="server" Height="24px" 
+            ImageUrl="~/Image/shopcart_128x128.png" PostBackUrl="~/Tray/Default.aspx" />
+        <asp:HyperLink ID="HLTray" runat="server" NavigateUrl="~/Tray/Default.aspx">Корзина</asp:HyperLink>
+
+
+    </p>
     </div>
+    
         </asp:ContentPlaceHolder>
            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
            <div>

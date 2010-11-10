@@ -77,6 +77,8 @@
     <Content Include="Image\newsfire_48x48.png" />
     <Content Include="Image\news_subscribe.png" />
     <Content Include="Image\program-group.png" />
+    <Content Include="Image\shopcartapply_128x128.png" />
+    <Content Include="Image\shopcart_128x128.png" />
     <Content Include="Image\users1.png" />
     <Content Include="Login.aspx" />
     <Content Include="Profile\Profile.aspx" />
@@ -87,6 +89,7 @@
     <Content Include="Trade\no_entry.png" />
     <Content Include="Trade\AddGroup.aspx" />
     <Content Include="Trade\View.aspx" />
+    <Content Include="Tray\Default.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -260,6 +263,20 @@
     <Compile Include="Trade\View.aspx.designer.cs">
       <DependentUpon>View.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Tray\Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tray\Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Tray\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tray\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Varibles.cs" />
     <Compile Include="webmarketDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -301,6 +318,7 @@
   <ItemGroup>
     <Content Include="Trade\Image.ashx" />
     <Content Include="Administrator\Handler.ashx" />
+    <Content Include="Tray\Default.Master" />
     <None Include="webmarketDataSet.xsc">
       <DependentUpon>webmarketDataSet.xsd</DependentUpon>
     </None>
