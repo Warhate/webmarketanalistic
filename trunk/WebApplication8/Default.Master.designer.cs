@@ -94,6 +94,24 @@ namespace WebApplication8 {
         protected global::System.Web.UI.WebControls.Button btnlang;
         
         /// <summary>
+        /// ImageButton1 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
+        
+        /// <summary>
+        /// HLTray элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HLTray;
+        
+        /// <summary>
         /// ContentPlaceHolder2 элемент управления.
         /// </summary>
         /// <remarks>
