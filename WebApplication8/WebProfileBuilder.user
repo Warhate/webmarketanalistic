@@ -10,5 +10,6 @@
         <add name="Sex" type="string" defaultValue="" />
         <add name="Home" type="string" defaultValue="" />
         <add name="Age" type="int" defaultValue="0" />
+
       </properties>
     </profile>

@@ -61,7 +61,7 @@
         <tr>
             <td>
                 <asp:Button ID="BtnAddNews" runat="server" onclick="BtnAddNews_Click" 
-                    Text="Добавить" PostBackUrl="~/Administrator/OkEdit.aspx" />
+                    Text="Добавить" />
                 <br />
             </td>
         </tr>

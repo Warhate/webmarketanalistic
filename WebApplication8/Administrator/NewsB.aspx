@@ -12,13 +12,12 @@
             <asp:BoundField DataField="date" HeaderText="date" SortExpression="date" />
             <asp:BoundField DataField="newsname" HeaderText="newsname" 
                 SortExpression="newsname" />
-            <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" 
-                ReadOnly="True" SortExpression="id" />
+            <asp:BoundField DataField="id" HeaderText="id" SortExpression="id" />
         </Columns>
         <SelectedRowStyle BackColor="#99FF66" />
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:ConnectionString22 %>" 
+        ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
         SelectCommand="SELECT [date], [newsname], [id] FROM [News]">
     </asp:SqlDataSource>
     <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 

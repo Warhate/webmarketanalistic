@@ -7,14 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication8.Trade
 {
-    public partial class WebForm3 : System.Web.UI.Page
+    public partial class WebForm6 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void ListView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

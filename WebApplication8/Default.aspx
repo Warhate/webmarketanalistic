@@ -6,7 +6,7 @@
 
 <asp:Content ID = "Content1" ContentPlaceHolderID = "ContentPlaceHolder2" runat = "server">
     &nbsp;<asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:ConnectionString22 %>" 
+        ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
         SelectCommand="SELECT [newsbody], [date], [newsname] FROM [News]">
     </asp:SqlDataSource>
     <br />
