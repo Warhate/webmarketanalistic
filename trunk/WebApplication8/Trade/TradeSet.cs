@@ -8,7 +8,7 @@ namespace WebApplication8.Trade
 {
     public class TradeSet
     {
-        SqlConnection conection = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Warh\Documents\Visual Studio 2010\Projects\WebApplication8\WebApplication8\App_Data\webmarket.mdf;Integrated Security=True;User Instance=True");
+        SqlConnection conection = new SqlConnection(Varibles.ConectionString);
 
         public void InsertGroupT(String GroupName)
         {

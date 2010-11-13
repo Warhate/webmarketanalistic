@@ -14,9 +14,10 @@
     contentplaceholderid="ContentPlaceHolder2">
     <p class="style1">
         Перегляд товарів</p>
-<asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource3">
+<asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource3" 
+        onselectedindexchanged="ListView1_SelectedIndexChanged">
     <AlternatingItemTemplate>
-        <span style="">Name:
+        <span style="background-color: #FFF8DC;">Name:
             <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
         <br />
             Info:
@@ -25,18 +26,17 @@
             Cost:
             <asp:Label ID="CostLabel" runat="server" Text='<%# Eval("Cost") %>' />
         <br />
-        <span>
-        <asp:Image ID="Image2" runat="server" 
-                ImageUrl='<%# Eval("Name", "Image.ashx?TrName={0}") %>' Width="400px" />
+        Image:
+        <asp:Label ID="ImageLabel" runat="server" Text='<%# Eval("Image") %>' />
+        <br />
+        InStock:
+        <asp:Label ID="InStockLabel" runat="server" Text='<%# Eval("InStock") %>' />
+        <br />
+        <br />
         </span>
-        <br />
-        <span>&nbsp;<asp:Label ID="InfoLabel0" runat="server" BorderStyle="Dotted" 
-                Text='<%# Eval("Info") %>'></asp:Label>
-        <br />
-            Ціна: </span></span>
     </AlternatingItemTemplate>
     <EditItemTemplate>
-        <span style="">Name:
+        <span style="background-color: #008A8C;color: #FFFFFF;">Name:
             <asp:TextBox ID="NameTextBox" runat="server" Text='<%# Bind("Name") %>' />
         <br />
             Info:
@@ -64,81 +64,81 @@
     </EmptyDataTemplate>
     <InsertItemTemplate>
         <span style="">Name:
-            <asp:TextBox ID="NameTextBox0" runat="server" Text='<%# Bind("Name") %>' />
+            <asp:TextBox ID="NameTextBox" runat="server" Text='<%# Bind("Name") %>' />
         <br />
             Info:
-            <asp:TextBox ID="InfoTextBox0" runat="server" Text='<%# Bind("Info") %>' />
+            <asp:TextBox ID="InfoTextBox" runat="server" Text='<%# Bind("Info") %>' />
         <br />
             Cost:
-            <asp:TextBox ID="CostTextBox0" runat="server" Text='<%# Bind("Cost") %>' />
+            <asp:TextBox ID="CostTextBox" runat="server" Text='<%# Bind("Cost") %>' />
         <br />
             Image:
-            <asp:TextBox ID="ImageTextBox0" runat="server" 
+            <asp:TextBox ID="ImageTextBox" runat="server" 
             Text='<%# Bind("Image") %>' />
         <br />
             InStock:
-            <asp:TextBox ID="InStockTextBox0" runat="server" 
+            <asp:TextBox ID="InStockTextBox" runat="server" 
             Text='<%# Bind("InStock") %>' />
         <br />
         <asp:Button ID="InsertButton" runat="server" CommandName="Insert" 
                 Text="Вставить" />
-        <asp:Button ID="CancelButton0" runat="server" CommandName="Cancel" 
+        <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" 
                 Text="Очистить" />
         <br />
         <br />
         </span>
     </InsertItemTemplate>
     <ItemTemplate>
-        <span style="">Name:
-            <asp:Label ID="NameLabel0" runat="server" Text='<%# Eval("Name") %>' />
+        <span style="background-color: #DCDCDC;color: #000000;">Name:
+            <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
         <br />
             Info:
-            <asp:Label ID="InfoLabel1" runat="server" Text='<%# Eval("Info") %>' />
+            <asp:Label ID="InfoLabel" runat="server" Text='<%# Eval("Info") %>' />
         <br />
             Cost:
-            <asp:Label ID="CostLabel0" runat="server" Text='<%# Eval("Cost") %>' />
+            <asp:Label ID="CostLabel" runat="server" Text='<%# Eval("Cost") %>' />
         <br />
-        <asp:Image ID="Image3" runat="server" 
-                ImageUrl='<%# Eval("Name", "Image.ashx?TrName={0}") %>' />
+        Image:
+        <asp:Label ID="ImageLabel" runat="server" Text='<%# Eval("Image") %>' />
         <br />
             InStock:
             <asp:Label ID="InStockLabel" runat="server" Text='<%# Eval("InStock") %>' />
         <br />
         <br />
-        </span></span></span>
+        </span>
     </ItemTemplate>
     <LayoutTemplate>
         <div ID="itemPlaceholderContainer" runat="server" 
-                style="">
+                style="font-family: Verdana, Arial, Helvetica, sans-serif;">
             <span runat="server" id="itemPlaceholder" />
         </div>
-        <div style="">
+        <div style="text-align: center;background-color: #CCCCCC;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000;">
             <asp:DataPager ID="DataPager1" runat="server">
                 <Fields>
                     <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" 
-                            ShowNextPageButton="False" ShowPreviousPageButton="False" />
+                        ShowNextPageButton="False" ShowPreviousPageButton="False" />
                     <asp:NumericPagerField />
                     <asp:NextPreviousPagerField ButtonType="Button" ShowLastPageButton="True" 
-                            ShowNextPageButton="False" ShowPreviousPageButton="False" />
+                        ShowNextPageButton="False" ShowPreviousPageButton="False" />
                 </Fields>
             </asp:DataPager>
         </div>
     </LayoutTemplate>
     <SelectedItemTemplate>
-        <span style="">Name:
-            <asp:Label ID="NameLabel1" runat="server" Text='<%# Eval("Name") %>' />
+        <span style="background-color: #008A8C;font-weight: bold;color: #FFFFFF;">Name:
+            <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
         <br />
             Info:
-            <asp:Label ID="InfoLabel2" runat="server" Text='<%# Eval("Info") %>' />
+            <asp:Label ID="InfoLabel" runat="server" Text='<%# Eval("Info") %>' />
         <br />
             Cost:
-            <asp:Label ID="CostLabel1" runat="server" Text='<%# Eval("Cost") %>' />
+            <asp:Label ID="CostLabel" runat="server" Text='<%# Eval("Cost") %>' />
         <br />
             Image:
             <asp:Label ID="ImageLabel" runat="server" Text='<%# Eval("Image") %>' />
         <br />
             InStock:
-            <asp:Label ID="InStockLabel0" runat="server" 
+            <asp:Label ID="InStockLabel" runat="server" 
             Text='<%# Eval("InStock") %>' />
         <br />
         <br />
@@ -147,8 +147,9 @@
 </asp:ListView>
 <p>
     <asp:SqlDataSource ID="SqlDataSource3" runat="server" 
-            ConnectionString="<%$ ConnectionStrings:ConnectionString22 %>" 
-            SelectCommand="SELECT [Name], [Info], [Cost], [Image], [InStock] FROM [Product]">
+            ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
+            
+        SelectCommand="SELECT [Name], [Info], [Cost], [Image], [InStock] FROM [Product]">
     </asp:SqlDataSource>
 </p>
 </asp:Content>

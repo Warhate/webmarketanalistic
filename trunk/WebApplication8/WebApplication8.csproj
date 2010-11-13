@@ -63,14 +63,11 @@
     <Content Include="Administrator\OkEdit.aspx" />
     <Content Include="Administrator\Default.aspx" />
     <Content Include="Analistic\Default.aspx" />
-    <Content Include="App_Data\webmarket.mdf" />
-    <Content Include="App_Data\webmarket_log.ldf">
-      <DependentUpon>webmarket.mdf</DependentUpon>
-    </Content>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Image\1289309280_1.png" />
     <Content Include="Image\1289313975_Emulation.png" />
+    <Content Include="Image\1289469968_label_blue_buy.png" />
     <Content Include="Image\administration.png" />
     <Content Include="Image\box.png" />
     <Content Include="Image\message_edit.png" />
@@ -89,6 +86,8 @@
     <Content Include="Trade\no_entry.png" />
     <Content Include="Trade\AddGroup.aspx" />
     <Content Include="Trade\View.aspx" />
+    <Content Include="Trade\GroupRemove.aspx" />
+    <Content Include="Trade\ProductRemove.aspx" />
     <Content Include="Tray\Default.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -100,6 +99,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Market.aspx" />
+    <Content Include="Product.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -188,6 +188,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Image.ashx.cs">
+      <DependentUpon>Image.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -238,9 +241,6 @@
     <Compile Include="Trade\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Trade\Image.ashx.cs">
-      <DependentUpon>Image.ashx</DependentUpon>
-    </Compile>
     <Compile Include="Trade\AddGroup.aspx.cs">
       <DependentUpon>AddGroup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -263,6 +263,22 @@
     <Compile Include="Trade\View.aspx.designer.cs">
       <DependentUpon>View.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Trade\GroupRemove.aspx.cs">
+      <DependentUpon>GroupRemove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trade\GroupRemove.aspx.designer.cs">
+      <DependentUpon>GroupRemove.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trade\ProductRemove.aspx.cs">
+      <DependentUpon>ProductRemove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trade\ProductRemove.aspx.designer.cs">
+      <DependentUpon>ProductRemove.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TraySource.cs" />
+    <Compile Include="Tray\AddTray.cs" />
     <Compile Include="Tray\Default.Master.cs">
       <DependentUpon>Default.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -278,10 +294,12 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Varibles.cs" />
-    <Compile Include="webmarketDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>webmarketDataSet.xsd</DependentUpon>
+    <Compile Include="Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebProfile.cs" />
   </ItemGroup>
@@ -289,6 +307,7 @@
     <Content Include="Default.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="App_LocalResources\" />
     <Folder Include="Domain\" />
   </ItemGroup>
@@ -316,23 +335,15 @@
     <EmbeddedResource Include="Analistic\Report1.rdlc" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Trade\Image.ashx" />
     <Content Include="Administrator\Handler.ashx" />
     <Content Include="Tray\Default.Master" />
-    <None Include="webmarketDataSet.xsc">
-      <DependentUpon>webmarketDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="webmarketDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>webmarketDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="webmarketDataSet.xss">
-      <DependentUpon>webmarketDataSet.xsd</DependentUpon>
-    </None>
+    <Content Include="Tray\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image.ashx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
