@@ -16,6 +16,19 @@ namespace WebApplication8
                 txtFirstName.Text = WebProfile.Current.FirstName;
                 txtMidleName.Text = WebProfile.Current.MidleName;
                 txtLastName.Text = WebProfile.Current.LastName;
+                txtAge.Text = WebProfile.Current.Age.ToString();
+                txtPorofession.Text = WebProfile.Current.Profession;
+                DDListSex.Text = WebProfile.Current.Sex;
+
+                TxtCountry.Text = WebProfile.Current.Country;
+                TxtCity.Text = WebProfile.Current.City;
+                TxtOblast.Text = WebProfile.Current.Obl;
+                TxtRAyon.Text = WebProfile.Current.Rayon;
+                TxtDom.Text = WebProfile.Current.Dom;
+                TxtRoom.Text = WebProfile.Current.Room;
+                TxtIndex.Text = WebProfile.Current.Index;
+                TxtStreet.Text = WebProfile.Current.Street;
+                
             }
         }
 
@@ -25,7 +38,19 @@ namespace WebApplication8
                WebProfile.Current.FirstName = txtFirstName.Text;
                WebProfile.Current.MidleName = txtMidleName.Text;
                WebProfile.Current.LastName = txtLastName.Text;
-               WebProfile.Current.Save();
+                WebProfile.Current.Age = Convert.ToInt32(txtAge.Text);
+               WebProfile.Current.Profession= txtPorofession.Text;
+              WebProfile.Current.Sex= DDListSex.Text;
+
+              WebProfile.Current.Country =  TxtCountry.Text;
+              WebProfile.Current.City =  TxtCity.Text;
+             WebProfile.Current.Obl =   TxtOblast.Text;
+              WebProfile.Current.Rayon =  TxtRAyon.Text ;
+              WebProfile.Current.Dom = TxtDom.Text;
+               WebProfile.Current.Room = TxtRoom.Text;
+              WebProfile.Current.Index = TxtIndex.Text;
+             WebProfile.Current.Street =  TxtStreet.Text;
+                WebProfile.Current.Save();
              
         }
     }

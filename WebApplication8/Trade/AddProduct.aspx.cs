@@ -89,7 +89,7 @@ namespace WebApplication8.Trade
 
 
 
-                cmd.CommandText = "INSERT INTO Product (name,cost,info,firmID,image) VALUES ('" + TxtName.Text + "','" + TxtPrice.Text + "','" + TxtInfo.Text + "'," + DDListFirm.SelectedValue + ",@file)";
+                cmd.CommandText = "INSERT INTO Product (name,cost,info,firmID,image,GroupID) VALUES ('" + TxtName.Text + "','" + TxtPrice.Text + "','" + TxtInfo.Text + "'," + DDListFirm.SelectedValue + ",@file,"+DDListGroup.SelectedValue+")";
                 cmd.Parameters.AddWithValue("@file", ms);
                 cmd.ExecuteNonQuery();
                 LabelMessage.Visible = true;

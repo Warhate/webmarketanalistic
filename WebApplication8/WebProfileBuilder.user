@@ -8,7 +8,14 @@
         <add name="MidleName" type="string" defaultValue="" />
         <add name="Profession" type="string" defaultValue="" />
         <add name="Sex" type="string" defaultValue="" />
-        <add name="Home" type="string" defaultValue="" />
+        <add name="Country" type="string" defaultValue="" />
+        <add name="City" type="string" defaultValue="" />
+        <add name="Obl" type="string" defaultValue="" />
+        <add name="Rayon" type="string" defaultValue="" />
+        <add name="Street" type="string" defaultValue="" />
+        <add name="Dom" type="string" defaultValue="" />
+        <add name="Room" type="string" defaultValue="" />
+        <add name="Index" type="string" defaultValue="" />
         <add name="Age" type="int" defaultValue="0" />
 
       </properties>

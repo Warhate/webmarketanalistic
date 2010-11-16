@@ -25,7 +25,7 @@
             DataSourceID="SqlDataSourceGroup" DataTextField="Name" DataValueField="GroupID">
         </asp:DropDownList>
         <asp:SqlDataSource ID="SqlDataSourceGroup" runat="server" 
-            ConnectionString="<%$ ConnectionStrings:ConnectionString22 %>" 
+            ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
             SelectCommand="SELECT [GroupID], [Name] FROM [GroupT]"></asp:SqlDataSource>
     </td>
     </tr>
@@ -38,7 +38,8 @@
             DataSourceID="SqlDataSourceFirm" DataTextField="Name" DataValueField="FirmID">
         </asp:DropDownList>
         <asp:SqlDataSource ID="SqlDataSourceFirm" runat="server" 
-            ConnectionString="<%$ ConnectionStrings:ConnectionString22 %>" 
+            ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
+            
             SelectCommand="SELECT [FirmID], [Name] FROM [Firm] WHERE ([GroupID] = @GroupID)">
             <SelectParameters>
                 <asp:ControlParameter ControlID="DDListGroup" Name="GroupID" 

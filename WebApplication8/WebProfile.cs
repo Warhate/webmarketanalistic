@@ -27,21 +27,12 @@ namespace WebApplication8 {
             this._profileBase = profileBase;
         }
         
-        public virtual string FirstName {
+        public virtual int Age {
             get {
-                return ((string)(this.GetPropertyValue("FirstName")));
+                return ((int)(this.GetPropertyValue("Age")));
             }
             set {
-                this.SetPropertyValue("FirstName", value);
-            }
-        }
-        
-        public virtual string Home {
-            get {
-                return ((string)(this.GetPropertyValue("Home")));
-            }
-            set {
-                this.SetPropertyValue("Home", value);
+                this.SetPropertyValue("Age", value);
             }
         }
         
@@ -54,12 +45,57 @@ namespace WebApplication8 {
             }
         }
         
-        public virtual string Sex {
+        public virtual string Country {
             get {
-                return ((string)(this.GetPropertyValue("Sex")));
+                return ((string)(this.GetPropertyValue("Country")));
             }
             set {
-                this.SetPropertyValue("Sex", value);
+                this.SetPropertyValue("Country", value);
+            }
+        }
+        
+        public virtual string Rayon {
+            get {
+                return ((string)(this.GetPropertyValue("Rayon")));
+            }
+            set {
+                this.SetPropertyValue("Rayon", value);
+            }
+        }
+        
+        public virtual string FirstName {
+            get {
+                return ((string)(this.GetPropertyValue("FirstName")));
+            }
+            set {
+                this.SetPropertyValue("FirstName", value);
+            }
+        }
+        
+        public virtual string Room {
+            get {
+                return ((string)(this.GetPropertyValue("Room")));
+            }
+            set {
+                this.SetPropertyValue("Room", value);
+            }
+        }
+        
+        public virtual string Index {
+            get {
+                return ((string)(this.GetPropertyValue("Index")));
+            }
+            set {
+                this.SetPropertyValue("Index", value);
+            }
+        }
+        
+        public virtual string Dom {
+            get {
+                return ((string)(this.GetPropertyValue("Dom")));
+            }
+            set {
+                this.SetPropertyValue("Dom", value);
             }
         }
         
@@ -72,6 +108,15 @@ namespace WebApplication8 {
             }
         }
         
+        public virtual string Sex {
+            get {
+                return ((string)(this.GetPropertyValue("Sex")));
+            }
+            set {
+                this.SetPropertyValue("Sex", value);
+            }
+        }
+        
         public virtual string MidleName {
             get {
                 return ((string)(this.GetPropertyValue("MidleName")));
@@ -81,12 +126,30 @@ namespace WebApplication8 {
             }
         }
         
-        public virtual int Age {
+        public virtual string Street {
             get {
-                return ((int)(this.GetPropertyValue("Age")));
+                return ((string)(this.GetPropertyValue("Street")));
             }
             set {
-                this.SetPropertyValue("Age", value);
+                this.SetPropertyValue("Street", value);
+            }
+        }
+        
+        public virtual string City {
+            get {
+                return ((string)(this.GetPropertyValue("City")));
+            }
+            set {
+                this.SetPropertyValue("City", value);
+            }
+        }
+        
+        public virtual string Obl {
+            get {
+                return ((string)(this.GetPropertyValue("Obl")));
+            }
+            set {
+                this.SetPropertyValue("Obl", value);
             }
         }
         
