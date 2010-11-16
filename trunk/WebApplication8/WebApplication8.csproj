@@ -63,6 +63,7 @@
     <Content Include="Administrator\OkEdit.aspx" />
     <Content Include="Administrator\Default.aspx" />
     <Content Include="Analistic\Default.aspx" />
+    <Content Include="Analistic\Users.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Image\1289309280_1.png" />
@@ -79,6 +80,7 @@
     <Content Include="Image\users1.png" />
     <Content Include="Login.aspx" />
     <Content Include="Profile\Profile.aspx" />
+    <Content Include="Profile\Profile.css" />
     <Content Include="Registration\Reg.aspx" />
     <Content Include="my.css" />
     <Content Include="Trade\AddProduct.aspx" />
@@ -177,6 +179,13 @@
     </Compile>
     <Compile Include="Analistic\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analistic\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Analistic\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -309,6 +318,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="App_LocalResources\" />
+    <Folder Include="App_Themes\" />
     <Folder Include="Domain\" />
   </ItemGroup>
   <ItemGroup>
@@ -354,7 +364,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>23565</DevelopmentServerPort>
+          <DevelopmentServerPort>1210</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

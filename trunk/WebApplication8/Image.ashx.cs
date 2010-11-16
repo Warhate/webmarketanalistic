@@ -24,6 +24,7 @@ namespace WebApplication8.Trade
                 conn.Open();
                 context.Response.ContentType = "image/png";
                 context.Response.BinaryWrite((byte[])cmd.ExecuteScalar());
+                
             }
             catch (Exception)
             { }
