@@ -21,10 +21,8 @@ namespace WebApplication8
 
         protected void CreateUserWizard1_ContinueButtonClick(object sender, EventArgs e)
         {
-            WebProfile.Current.FirstName = txtFirstName.Text;
-            WebProfile.Current.MidleName = txtMiddleName.Text;
-            WebProfile.Current.LastName = txtLastName.Text;
-            WebProfile.Current.Save();
+
+
         }
 
         protected void CreateUserWizard1_FinishButtonClick(object sender, WizardNavigationEventArgs e)
@@ -32,9 +30,32 @@ namespace WebApplication8
 
         }
 
-        protected void CreateUserWizard1_FinishButtonClick1(object sender, WizardNavigationEventArgs e)
+      
+
+        protected void StepNextButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void CreateUserWizard1_CreatingUser(object sender, LoginCancelEventArgs e)
+        {
+            
+        }
+
+        protected void CreateUserWizard1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void CreateUserWizard1_Unload(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+            
         }
     }
 }

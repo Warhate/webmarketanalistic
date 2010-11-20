@@ -31,7 +31,7 @@ namespace WebApplication8
                         reader.Read();
                         LabelName.Text = reader["Name"].ToString();
                         LabelInfo.Text = reader["info"].ToString();
-                        LabelPrice.Text = reader["Cost"].ToString();
+                        LabelPrice.Text = String.Format("{0:c}",reader["Cost"]);
                         Image1.ImageUrl = "~/Image.ashx?ID="+ID;
 
                     }

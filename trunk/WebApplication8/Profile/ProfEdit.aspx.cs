@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication8
 {
-    public partial class WebForm3 : System.Web.UI.Page
+    public partial class WebForm7 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -28,30 +28,23 @@ namespace WebApplication8
                 TxtRoom.Text = WebProfile.Current.Room;
                 TxtIndex.Text = WebProfile.Current.Index;
                 TxtStreet.Text = WebProfile.Current.Street;
-                
+
             }
         }
-        /// <summary>
-        /// Обновление информации профиля пользователя
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         protected void Button1_Click(object sender, EventArgs e)
         {
-            
-             
+           
         }
 
-        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
-
             WebProfile.Current.FirstName = txtFirstName.Text;
             WebProfile.Current.MidleName = txtMidleName.Text;
             WebProfile.Current.LastName = txtLastName.Text;
             WebProfile.Current.Age = Convert.ToInt32(txtAge.Text);
             WebProfile.Current.Profession = txtPorofession.Text;
             WebProfile.Current.Sex = DDListSex.Text;
-
             WebProfile.Current.Country = TxtCountry.Text;
             WebProfile.Current.City = TxtCity.Text;
             WebProfile.Current.Obl = TxtOblast.Text;
@@ -62,7 +55,7 @@ namespace WebApplication8
             WebProfile.Current.Street = TxtStreet.Text;
             WebProfile.Current.Save();
             ProfileEdit pe = new ProfileEdit();
-            pe.ProfileUpdate();
+            pe.ProfileAdd();
         }
     }
 }

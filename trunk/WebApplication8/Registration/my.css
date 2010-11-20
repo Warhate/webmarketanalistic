@@ -1,6 +1,8 @@
 ﻿
 
 
+
+
 .item
 {
 	border-style:dotted;
@@ -10,8 +12,8 @@
 	color:Black;
 	font-size: 16px;
 	
-	
 	}
+
 
 #GroupBox
 {
@@ -24,13 +26,9 @@
 	
 	}
 	* {
-	border-style: none;
-	border-color: inherit;
-	border-width: 0;
 	margin: 0;
 	padding: 0;
-	text-align: left;
-	height: 24px;
+	border: 0;
 }
 body {
 	padding: 0 0 0;
