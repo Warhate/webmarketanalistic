@@ -10,22 +10,30 @@
         SelectCommand="SELECT [newsbody], [date], [newsname] FROM [News]">
     </asp:SqlDataSource>
     <br />
-    <% = sss() %>
-    <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
+    <asp:ListView ID="ListView1"  runat="server" DataSourceID="SqlDataSource1" 
+        style="text-align: left" >
+
+
         <AlternatingItemTemplate>
-            <span style="background-color: #FFF8DC;">newsbody:
-            <asp:Label ID="newsbodyLabel" runat="server" Text='<%# Eval("newsbody") %>' />
+                 <div class="title">
+            
+            <b><asp:HyperLink ID="HyperLink1" runat="server"  Text='<%# Eval("newsname") %>' ></asp:HyperLink></b>
+            <hl>
             <br />
-            date:
-            <asp:Label ID="dateLabel" runat="server" Text='<%# Eval("date") %>' />
             <br />
-            newsname:
-            <asp:Label ID="newsnameLabel" runat="server" Text='<%# Eval("newsname") %>' />
+            <%# Eval("newsbody") %>
+            <br />
+            <br />
+            <i><asp:Label runat="server" Text="Дата публикации"></asp:Label><asp:Label ID="dateLabel" runat="server" Text='<%# Eval("date") %>' /></i>
+            <br />
+            
+                 </div>
             <br />
 <br /></span>
         </AlternatingItemTemplate>
+
         <EditItemTemplate>
-            <span style="background-color: #008A8C;color: #FFFFFF;">newsbody:
+            <span style="">newsbody:
             <asp:TextBox ID="newsbodyTextBox" runat="server" 
                 Text='<%# Bind("newsbody") %>' />
             <br />
@@ -61,24 +69,32 @@
                 Text="Очистить" />
             <br /><br /></span>
         </InsertItemTemplate>
+         
+
         <ItemTemplate>
-            <span style="background-color: #DCDCDC;color: #000000;">newsbody:
-            <asp:Label ID="newsbodyLabel" runat="server" Text='<%# Eval("newsbody") %>' />
+         <div class="title">
+            
+            <b><asp:HyperLink ID="HyperLink1" runat="server"  Text='<%# Eval("newsname") %>' ></asp:HyperLink></b>
+            <hl>
             <br />
-            date:
-            <asp:Label ID="dateLabel" runat="server" Text='<%# Eval("date") %>' />
             <br />
-            newsname:
-            <asp:Label ID="newsnameLabel" runat="server" Text='<%# Eval("newsname") %>' />
+            <%# Eval("newsbody") %>
+            <br />
+            <br />
+            <i><asp:Label ID="Label1" runat="server" Text="Дата публикации"></asp:Label><asp:Label ID="dateLabel" runat="server" Text='<%# Eval("date") %>' /></i>
+            <br />
+            
+                 </div>
             <br />
 <br /></span>
         </ItemTemplate>
+
         <LayoutTemplate>
             <div ID="itemPlaceholderContainer" runat="server" 
-                style="font-family: Verdana, Arial, Helvetica, sans-serif;">
+                style="">
                 <span runat="server" id="itemPlaceholder" />
             </div>
-            <div style="text-align: center;background-color: #CCCCCC;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000;">
+            <div style="">
                 <asp:DataPager ID="DataPager1" runat="server">
                     <Fields>
                         <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" 
@@ -91,7 +107,7 @@
             </div>
         </LayoutTemplate>
         <SelectedItemTemplate>
-            <span style="background-color: #008A8C;font-weight: bold;color: #FFFFFF;">
+            <span style="">
             newsbody:
             <asp:Label ID="newsbodyLabel" runat="server" Text='<%# Eval("newsbody") %>' />
             <br />

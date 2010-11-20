@@ -1,12 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="WebApplication8.WebForm3" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="ProfEdit.aspx.cs" Inherits="WebApplication8.WebForm7" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
- <div id = "title">
- 
-
-    <table>
+   
+   <div class = "item">
+   <table>
     <tr>
         <td>
             <asp:Label ID="LabelFirstName" runat="server" Text="Имя"></asp:Label>
@@ -63,12 +61,13 @@
     </tr>
         <tr>
         <td>
-            <asp:Label ID="Label9" runat="server" Text="Адресс"></asp:Label>
         </td>
         <td style="text-align: right">
             &nbsp;</td>
     </tr>
-
+    
+    
+    <thead><asp:Label ID="Label9" runat="server" Text="Адресс"></asp:Label></thead>
     <tr>
         <td>
             <asp:Label ID="Label1" runat="server" Text="Страна"></asp:Label>
@@ -137,21 +136,37 @@
     <td>
     </td>
         <td>
-            <asp:ImageButton ID="ImageButton2" runat="server" 
-                ImageUrl="~/Image/save (1).png" onclick="ImageButton2_Click" Width="24px" />
+            <asp:ImageButton ID="ImageButton1" runat="server" 
+                ImageUrl="~/Image/save (1).png" onclick="ImageButton1_Click" Width="24px" />
     </td>
     </tr>
     
     
     </table>
-   
     </div>
-    </div>
-    </div>
-
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
 </asp:Content>
+<asp:Content ID="Content5" runat="server" 
+    contentplaceholderid="ContentPlaceHolder1">
+           <div style="text-align: right">
+               <div  style="text-align: left" >&nbsp;<asp:Localize ID="Localize2" runat="server" meta:resourcekey="Localize2Resource1"></asp:Localize>
+               &nbsp;</div>
+               
+               <asp:Localize ID="Localize1" runat="server" 
+                   meta:resourcekey="Localize1Resource1"></asp:Localize>
+               
+        <asp:DropDownList ID="droplang" runat="server" meta:resourcekey="droplangResource1">
+            <asp:ListItem Value="ua-ua" meta:resourcekey="ListItemResource1">Українська</asp:ListItem>
+            <asp:ListItem Value="ru-ru" meta:resourcekey="ListItemResource2">Русский</asp:ListItem>
+        </asp:DropDownList>
+        <asp:Button ID="btnlang" runat="server" Text="Выбрать" 
+                   meta:resourcekey="btnlangResource1" />
+    <p>
 
-        
+
+        &nbsp;</p>
+    </div>
+    
+        </asp:Content>
 

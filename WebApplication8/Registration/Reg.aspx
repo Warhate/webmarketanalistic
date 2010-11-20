@@ -2,31 +2,26 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+
+<div class ="item">
     <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" 
             oncreateduser="CreateUserWizard1_CreatedUser" 
-            Height="261px" Width="243px" BackColor="#E3EAEB" BorderColor="#E6E2D8" 
-            BorderStyle="Solid" BorderWidth="1px" 
-            ContinueDestinationPageUrl="~/default.aspx" Font-Names="Verdana" 
-            Font-Size="0.8em" oncontinuebuttonclick="CreateUserWizard1_ContinueButtonClick" 
+            Height="261px" Width="243px" oncontinuebuttonclick="CreateUserWizard1_ContinueButtonClick" 
             onnextbuttonclick="CreateUserWizard1_FinishButtonClick" 
-        onfinishbuttonclick="CreateUserWizard1_FinishButtonClick1">
-    <ContinueButtonStyle BackColor="White" BorderColor="#C5BBAF" 
-                BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" 
-                ForeColor="#1C5E55" />
-    <CreateUserButtonStyle BackColor="White" BorderColor="#C5BBAF" 
-                BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" 
-                ForeColor="#1C5E55" />
-    <TitleTextStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+        onfinishbuttonclick="CreateUserWizard1_FinishButtonClick" oncreatinguser="CreateUserWizard1_CreatingUser" 
+        onload="CreateUserWizard1_Load" onunload="CreateUserWizard1_Unload" 
+        FinishDestinationPageUrl="~/Profile/ProfEdit.aspx">
     <WizardSteps>
         <asp:CreateUserWizardStep runat="server" >
             <ContentTemplate>
-                <table style="font-size: 100%; height: 269px; width: 223px;">
+            <center>
+                <table width = "400px"  style="font-size: 100%;" >
                     <tr>
-                        <td align="center" colspan="2">
-                                    Зарегистрировать новую учетную запись</td>
+                        <td align="center" colspan="2"><b>
+                                    Зарегистрировать новую учетную запись</b></td>
                     </tr>
                     <tr>
-                        <td align="right">
+                        <td align="right" >
                             <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">Имя пользователя:</asp:Label>
                         </td>
                         <td>
@@ -80,28 +75,15 @@
                     </tr>
                     <tr>
                         <td align="right">
-                            <asp:Label ID="QuestionLabel" runat="server" AssociatedControlID="Question">Защитный вопрос:</asp:Label>
-                        </td>
+                            &nbsp;</td>
                         <td>
-                            <asp:TextBox ID="Question" runat="server"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="QuestionRequired" runat="server" 
-                                        ControlToValidate="Question" 
-                                        ErrorMessage="Защитный вопрос является обязательным." 
-                                        ToolTip="Защитный вопрос является обязательным." 
-                                        ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
-                        </td>
+                            &nbsp;</td>
                     </tr>
                     <tr>
                         <td align="right">
-                            <asp:Label ID="AnswerLabel" runat="server" AssociatedControlID="Answer">Защитный ответ:</asp:Label>
-                        </td>
+                            &nbsp;</td>
                         <td>
-                            <asp:TextBox ID="Answer" runat="server"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="AnswerRequired" runat="server" 
-                                        ControlToValidate="Answer" ErrorMessage="Защитный ответ является обязательным." 
-                                        ToolTip="Защитный ответ является обязательным." 
-                                        ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
-                        </td>
+                            &nbsp;</td>
                     </tr>
                     <tr>
                         <td align="center" colspan="2">
@@ -120,128 +102,44 @@
                 </table>
             </ContentTemplate>
         </asp:CreateUserWizardStep>
-        <asp:WizardStep runat="server" Title="Дополнительные свединия" StepType="Step">
-            <table>
-                <tr>
-                    <td>
-                        <asp:Label ID="LabelFirstName" runat="server" Text="(FirstName)"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="LabelMiddleName" runat="server" Text="(MiddleName)"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:TextBox ID="txtMiddleName" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="LabelLastName" runat="server" Text="(LastName)"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="LabelAge" runat="server" Text="(Age)"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:TextBox ID="txtAge" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="LabelHome" runat="server" Text="(Home)"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:TextBox ID="txtHome" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="LabelSex" runat="server" Text="(Sex)"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:TextBox ID="txtSex" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="LabelProfession" runat="server" Text="(Profession)"></asp:Label>
-                    </td>
-                    <td>
-                        <asp:TextBox ID="txtProffesion" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-            </table>
-        </asp:WizardStep>
         <asp:CompleteWizardStep runat="server" >
             <ContentTemplate>
                 <table style="font-family:Verdana;font-size:100%;height:261px;width:243px;">
                     <tr>
-                        <td align="center" colspan="2" 
+                        <td align="center" 
                                     style="color:White;background-color:#1C5E55;font-weight:bold;">
                                     Завершить</td>
                     </tr>
                     <tr>
                         <td>
-                                    Ваша учетная запись создана.</td>
+                                    Ваша учетная запись создана.<br /> </td>
                     </tr>
                     <tr>
-                        <td align="right" colspan="2">
+                        <td align="right">
                             <asp:Button ID="ContinueButton" runat="server" BackColor="White" 
                                         BorderColor="#C5BBAF" BorderStyle="Solid" BorderWidth="1px" 
                                         CausesValidation="False" CommandName="Continue" Font-Names="Verdana" 
-                                        ForeColor="#1C5E55" Text="Продолжить" ValidationGroup="CreateUserWizard1" />
+                                        ForeColor="#1C5E55" Text="Продолжить" 
+                                ValidationGroup="CreateUserWizard1" PostBackUrl="~/Profile/ProfEdit.aspx" />
                         </td>
                     </tr>
                 </table>
             </ContentTemplate>
         </asp:CompleteWizardStep>
     </WizardSteps>
-    <HeaderStyle BackColor="#666666" BorderColor="#E6E2D8" BorderStyle="Solid" 
-                BorderWidth="2px" Font-Bold="True" Font-Size="0.9em" ForeColor="White" 
-                HorizontalAlign="Center" />
-    <NavigationButtonStyle BackColor="White" BorderColor="#C5BBAF" 
-                BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" 
-                ForeColor="#1C5E55" />
-    <SideBarButtonStyle ForeColor="White" />
-    <SideBarStyle BackColor="#1C5E55" Font-Size="0.9em" VerticalAlign="Top" />
     <StepNavigationTemplate>
         <asp:Button ID="StepPreviousButton" runat="server" BackColor="White" 
                     BorderColor="#C5BBAF" BorderStyle="Solid" BorderWidth="1px" 
                     CausesValidation="False" CommandName="MovePrevious" Font-Names="Verdana" 
                     ForeColor="#1C5E55" Text="Предыдущ." />
-        <asp:Button ID="StepNextButton" runat="server" BackColor="White" 
-                    BorderColor="#C5BBAF" BorderStyle="Solid" BorderWidth="1px" 
-                    CommandName="MoveNext" Font-Names="Verdana" ForeColor="#1C5E55" 
-                    Text="Следующий" />
+        <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="Завершить!"
+            Width="89px" />
     </StepNavigationTemplate>
-    <StepStyle BorderWidth="0px" />
 </asp:CreateUserWizard>
+</center>
+</div>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
 </asp:Content>
-<asp:Content ID="Content5" runat="server" 
-    contentplaceholderid="ContentPlaceHolder1">
-    <div style="text-align: right">
-               <div  style="text-align: left" >
-                   <br />
-&nbsp;<asp:Localize ID="Localize2" runat="server"></asp:Localize>
-               </div>
-               
-               <asp:Localize ID="Localize1" runat="server"></asp:Localize>
-               
-        <asp:DropDownList ID="droplang" runat="server">
-            <asp:ListItem Value="ua-ua">Українська</asp:ListItem>
-            <asp:ListItem Value="ru-ru">Русский</asp:ListItem>
-        </asp:DropDownList>
-        <asp:Button ID="btnlang" runat="server" Text="Выбрать" />
-    </div>
-        </asp:Content>
+
 

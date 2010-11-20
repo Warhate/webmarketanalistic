@@ -27,15 +27,15 @@
         DataSourceID="SDSPrice" Height="29px" Width="329px">
         <Fields>
             <asp:BoundField DataField="Expr1" HeaderText="Средняя цена товара" 
-                ReadOnly="True" SortExpression="Expr1">
+                ReadOnly="True" SortExpression="Expr1" DataFormatString="{0:c}">
             <ItemStyle Font-Bold="True" ForeColor="#009933" />
             </asp:BoundField>
             <asp:BoundField DataField="Expr2" HeaderText="Минимальная цена товара" 
-                ReadOnly="True" SortExpression="Expr2">
+                ReadOnly="True" SortExpression="Expr2" DataFormatString="{0:c}">
             <ItemStyle Font-Bold="True" ForeColor="#009933" />
             </asp:BoundField>
             <asp:BoundField DataField="Expr3" HeaderText="Максимальная  цена товара" 
-                ReadOnly="True" SortExpression="Expr3">
+                ReadOnly="True" SortExpression="Expr3" DataFormatString="{0:c}">
             <ItemStyle Font-Bold="True" ForeColor="#009933" />
             </asp:BoundField>
         </Fields>
