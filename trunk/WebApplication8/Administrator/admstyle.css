@@ -13,6 +13,13 @@ select
 	border-color:#3b8ac2;
 }
 
+table
+{
+	border: 1px Green;
+	
+	
+	
+	}
 
 .item
 {
@@ -25,7 +32,16 @@ select
 	
 	}
 
-
+TextArea
+{
+		border-style:solid;
+	border-width:2px;
+	border-color:#3b8ac2;
+	
+	}
+	
+	
+	
 #GroupBox
 {
 	border-style:dotted;
@@ -48,6 +64,9 @@ body {
 #page {
 	width: 100%;
 	margin: 0 auto;
+
+	
+	
 }
 a {
 	color: #00431e;
@@ -105,19 +124,22 @@ a:hover {
 	color: #333;
 	float: left;
 }
-#lm {
+#lm 
+{
+
+
 	background:#e8e8e8;
 	border-top: #a3a4a4 solid 2px;
 	border-left: #48b479 dotted 1px;
 	border-bottom: #48b479 dotted 1px;
-	width: 15%;
+	width: 95%;
+
 	font:  12px/1 Arial;
 	font-weight:bold;
 
 	
 	
 	color: Blue;
-	float: left;
 	margin-left: 20px;
 }
 #bs {
@@ -126,22 +148,25 @@ a:hover {
 	color: #333;
 	padding-left: 28px;
 }
-#menu a {
+.menu a {
 	display: block;
-	width: 180px;
+	width: 175px;
 	height: 19px;
-	padding-left: 15px;
+	padding-left: 5px;
 	padding-top:5px;
 	font-weight:bold;
-
+	float:left;
 	background: url("/image/button.png")  0 0 no-repeat;
-	margin: 0px 0;
 	font:  12px/1 Arial;
 	color:White;
 	text-decoration: none;
+	border-left: 3px solid #3b8ac2;
+		border-right: 3px solid #3b8ac2;
+
+	
 	
 }
-#menu a:hover {
+.menu a:hover {
 	background-position: 0 -24px;
 	font:  12px/1 Arial;
 	font-weight:bold;
@@ -162,32 +187,50 @@ a:hover {
 	background-position: 0 -40px;
 }
 #mmn {
-	width: 180px;
+	width: auto;
 	color: #333;
 	padding-left: 10px;
-	text-align: left;
+	
+
 }
-#txt {
-	width: 95%;
+#txt 
+{
+width:95%;
+
+
+
 	color: #333;
 	padding-left: 20px;
 	margin-right: 20px;
 }
-#text {
-	display: block;
+#text 
+{
+	display:block;
+	width:95%;
+
+
 	border-left: #48b479 dotted 1px;
 	border-right: #48b479 dotted 1px;
 	border-top: #a3a4a4 solid 2px;
 	border-bottom: #48b479 dotted 1px;
 	background:   #e8e8e8;
-	width: 80%;
+
+
+	margin-left: 20px;
+
+	
+
+	
+	
+
 
 	font: .8em bold;
 	color: #666666;
 margin-right: 20px;
 margin-bottom:20px;
 padding-bottom:20px;
-	float: left;
+
+
 }
 #bottom {
 	display: block;
@@ -219,7 +262,11 @@ padding-bottom:20px;
 	float: right;
 	margin-right: 25px;
 }
-#psch {
+#psch 
+{
+	font-weight:bold;
+	color:White;
+	font-size:30px;
 	display: block;
 	float: right;
 	margin-top: 3px;
@@ -254,7 +301,7 @@ p {
 	
 	
 	color:Black;
-	width: 100%;
+	width: auto;
 	margin-top: 10px;
 	outline-style:solid;
 	outline-color:#3b8ac2;
@@ -276,3 +323,7 @@ button
 	
 }
 
+table
+{
+	border:2px;
+}

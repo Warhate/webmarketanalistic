@@ -22,6 +22,24 @@ namespace WebApplication8.Administrator {
         protected global::System.Web.UI.WebControls.TextBox TxtHeadNews;
         
         /// <summary>
+        /// RequiredFieldValidator1 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
+        /// Label2 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
         /// TxtBodyNews элемент управления.
         /// </summary>
         /// <remarks>
@@ -31,15 +49,6 @@ namespace WebApplication8.Administrator {
         protected global::System.Web.UI.WebControls.TextBox TxtBodyNews;
         
         /// <summary>
-        /// CheckPosted элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckPosted;
-        
-        /// <summary>
         /// LabelDate элемент управления.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace WebApplication8.Administrator {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelDate;
+        
+        /// <summary>
+        /// CheckPosted элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CheckPosted;
         
         /// <summary>
         /// Calendar1 элемент управления.
@@ -65,5 +83,14 @@ namespace WebApplication8.Administrator {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnAddNews;
+        
+        /// <summary>
+        /// LabelMessage элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelMessage;
     }
 }

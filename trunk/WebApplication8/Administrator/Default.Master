@@ -3,40 +3,115 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
-    <title></title>
+<link rel="stylesheet" type="text/css" href="admstyle.css" />
+    <title>Панель управления</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
+<div id = "page">
     <form id="form1" runat="server">
-    <div style="text-align: center">
+    
+            <div id = "header">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-            <asp:Label ID="Label1" runat="server" 
-                style="font-weight: 700; color: #3399FF; font-size: large" 
+        <div id= "psch">
+            <asp:Label ID="Label1" runat="server"  
                 Text="Панель управления"></asp:Label>
-        
+        </div>
+
+
         </asp:ContentPlaceHolder>
-        <br />
-        <asp:ImageButton ID="ImageButton1" runat="server" Height="48px" 
-            ImageUrl="~/Image/administration.png" 
-            PostBackUrl="~/Administrator/Default.aspx" ToolTip="Панель управления" />
-        <asp:ImageButton ID="ImageButton2" runat="server" Height="48px" 
-            ImageUrl="~/Image/users1.png" PostBackUrl="~/Administrator/Users.aspx" 
-            ToolTip="Пользователи" />
-        <asp:ImageButton ID="ImageButton3" runat="server" Height="48px" 
-            ImageUrl="~/Image/newsfire_48x48.png" PostBackUrl="~/Administrator/NewsB.aspx" 
-            ToolTip="Новости" />
-        <asp:ImageButton ID="ImageButton4" runat="server" Height="48px" 
-            ImageUrl="~/Image/news_subscribe.png" 
-            PostBackUrl="~/Administrator/NewsEdit.aspx" ToolTip="Добавить новость" />
-        <br />
-        <br />
-        <br />
-    </div>
+                    </div>
+<div id = "lm">
+<div id = "mmn">
+          <div id = "mn">
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+
+
+       <table align="center" border="1px" cellpadding="50px" frame="box">
+       <tr>
+       <td align="center">
+           <asp:ImageButton ID="ImageButton1" runat="server" 
+               ImageUrl="~/Image/go-home.png" PostBackUrl="~/Default.aspx" Width="48px" />
+       </td>
+       <td align="center">
+           <asp:ImageButton ID="ImageButton5" runat="server" 
+               ImageUrl="~/Image/administration.png" 
+               PostBackUrl="~/Administrator/Default.aspx" Width="48px" />
+       </td>
+              <td align="center">
+                  <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Image/people.png" 
+                      PostBackUrl="~/Administrator/Users.aspx" Width="48px" />
+       </td>
+       <td align="center">
+           <asp:ImageButton ID="ImageButton6" runat="server" 
+               ImageUrl="~/Image/newsfire_48x48.png" PostBackUrl="~/Administrator/NewsB.aspx" 
+               Width="48px" />
+       </td>
+              <td align="center">
+                  <asp:ImageButton ID="ImageButton3" runat="server" 
+                      ImageUrl="~/Image/news_subscribe.png" 
+                      PostBackUrl="~/Administrator/NewsEdit.aspx" Width="48px" />
+       </td>
+       <td align="center">
+           <asp:ImageButton ID="ImageButton7" runat="server" 
+               ImageUrl="~/Image/shopcartapply_128x128.png" Width="48px" />
+       </td>
+              <td align="center">
+                  &nbsp;</td>
+       <td align="center">
+           &nbsp;</td>
+       </tr>
+              <tr>
+       <td align="center" width="100">
+           <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">На главную</asp:HyperLink>
+       </td>
+       <td align="center" width="100">
+           <asp:HyperLink ID="HyperLink2" runat="server" 
+               NavigateUrl="~/Administrator/Default.aspx">Управление</asp:HyperLink>
+       </td>
+
+              <td align="center" width="100">
+                  <asp:HyperLink ID="HyperLink3" runat="server" 
+                      NavigateUrl="~/Administrator/Users.aspx">Пользователи</asp:HyperLink>
+       </td>
+       <td align="center" width="100">
+           <asp:HyperLink ID="HyperLink4" runat="server" 
+               NavigateUrl="~/Administrator/NewsB.aspx">Новости</asp:HyperLink>
+       </td>
+              <td align="center" width="100">
+                  <asp:HyperLink ID="HyperLink5" runat="server" 
+                      NavigateUrl="~/Administrator/NewsEdit.aspx">Добавить новость</asp:HyperLink>
+       </td>
+       <td align="center" width="100">
+           <asp:HyperLink ID="HyperLink6" runat="server">Заказы</asp:HyperLink>
+       </td>
+              <td align="center" width="100">
+                  &nbsp;</td>
+       <td align="center" width="100">
+           &nbsp;</td>
+       </tr>
+       </table>
+    </asp:ContentPlaceHolder>
+                </div>
+           </div>
+</div>
+
+
+    <div id = "text">
+    <div id = "txt">
     <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
     </asp:ContentPlaceHolder>
+    </div>
+    </div>
+
+    
+    
+
     </form>
+            </div>
 </body>
 </html>

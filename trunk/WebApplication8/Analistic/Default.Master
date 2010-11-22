@@ -4,29 +4,91 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+<link rel="stylesheet" type="text/css" href="anlstyle.css" />
+    <title>Панель статистики</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
+<div id = "page">
     <form id="form1" runat="server">
-    <div style="text-align: center">
+    <div id = "header" >
         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            <div id= "psch">
             <asp:Label ID="Label1" runat="server" 
-                style="font-weight: 700; color: #0099CC; font-size: large" 
                 Text="Панель статистики"></asp:Label>
+                </div>
         </asp:ContentPlaceHolder>
-        <br />
-        <asp:ImageButton ID="ImageButton1" runat="server" Height="48px" 
-            ImageUrl="~/Image/box.png" PostBackUrl="~/Analistic/Default.aspx" />
-        <asp:ImageButton ID="ImageButton2" runat="server" Height="48px" 
-            ImageUrl="~/Image/users1.png" PostBackUrl="~/Analistic/Users.aspx" />
-        <br />
+        </div>
+        <div id = "lm">
+<div id = "mmn">
+          <div id = "mn">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+        <table align="center" border="1px" cellpadding="50px" frame="box">
+       <tr>
+       <td align="center">
+           <asp:ImageButton ID="ImageButton1" runat="server" 
+               ImageUrl="~/Image/go-home.png" PostBackUrl="~/Default.aspx" Width="48px" />
+       </td>
+       <td align="center">
+           <asp:ImageButton ID="ImageButton5" runat="server" 
+               ImageUrl="~/Image/warehause.png" 
+               PostBackUrl="~/Analistic/Default.aspx" Width="48px" />
+       </td>
+              <td align="center">
+                  <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Image/people.png" 
+                      PostBackUrl="~/Analistic/Users.aspx" Width="48px" />
+       </td>
+       <td align="center">
+           &nbsp;</td>
+              <td align="center">
+                  &nbsp;</td>
+       <td align="center">
+           &nbsp;</td>
+              <td align="center">
+                  &nbsp;</td>
+       <td align="center">
+           &nbsp;</td>
+       </tr>
+              <tr>
+       <td align="center" width="100">
+           <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">На главную</asp:HyperLink>
+       </td>
+       <td align="center" width="100">
+           <asp:HyperLink ID="HyperLink2" runat="server" 
+               NavigateUrl="~/Analistic/Default.aspx">Статистика товара</asp:HyperLink>
+       </td>
+
+              <td align="center" width="100">
+                  <asp:HyperLink ID="HyperLink3" runat="server" 
+                      NavigateUrl="~/Analistic/Users.aspx">Статистика пользователей</asp:HyperLink>
+       </td>
+       <td align="center" width="100">
+           &nbsp;</td>
+              <td align="center" width="100">
+                  &nbsp;</td>
+       <td align="center" width="100">
+           &nbsp;</td>
+              <td align="center" width="100">
+                  &nbsp;</td>
+       <td align="center" width="100">
+           &nbsp;</td>
+       </tr>
+       </table>
+        </asp:ContentPlaceHolder>
+                </div>
+           </div>
+</div>
+    <div id = "text">
+    <div id = "txt">
+
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
         <br />
     </div>
+    </div>
     </form>
+    </div>
 </body>
 </html>

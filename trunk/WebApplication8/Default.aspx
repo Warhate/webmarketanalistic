@@ -7,7 +7,7 @@
 <asp:Content ID = "Content1" ContentPlaceHolderID = "ContentPlaceHolder2" runat = "server">
     &nbsp;<asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
-        SelectCommand="SELECT [newsbody], [date], [newsname] FROM [News]">
+        SelectCommand="SELECT newsbody, date, newsname FROM News ORDER BY date">
     </asp:SqlDataSource>
     <br />
     <asp:ListView ID="ListView1"  runat="server" DataSourceID="SqlDataSource1" 
@@ -15,21 +15,22 @@
 
 
         <AlternatingItemTemplate>
-                 <div class="title">
-            
-            <b><asp:HyperLink ID="HyperLink1" runat="server"  Text='<%# Eval("newsname") %>' ></asp:HyperLink></b>
-            <hl>
-            <br />
-            <br />
-            <%# Eval("newsbody") %>
-            <br />
-            <br />
-            <i><asp:Label runat="server" Text="Дата публикации"></asp:Label><asp:Label ID="dateLabel" runat="server" Text='<%# Eval("date") %>' /></i>
-            <br />
-            
-                 </div>
-            <br />
-<br /></span>
+                         <div class = "title">
+                         <h3>
+            <asp:HyperLink ID="HyperLink1" runat="server" Text='<%# Eval("newsname") %>'></asp:HyperLink>
+            </h3>
+                <br />
+                <br />
+                <%# Eval("newsbody") %>
+                <br />
+                <br />
+                <i>
+                <asp:Label ID="Label1" runat="server" Text="Дата публикации"></asp:Label>
+                <asp:Label ID="dateLabel" runat="server" Text='<%# Eval("date", "{0:D}") %>'></asp:Label>
+                </i>
+                <br />
+                </div>
+
         </AlternatingItemTemplate>
 
         <EditItemTemplate>
@@ -72,21 +73,23 @@
          
 
         <ItemTemplate>
-         <div class="title">
-            
-            <b><asp:HyperLink ID="HyperLink1" runat="server"  Text='<%# Eval("newsname") %>' ></asp:HyperLink></b>
+        <div class = "title">
+        <h3>
+            <asp:HyperLink ID="HyperLink1" runat="server" Text='<%# Eval("newsname") %>'></asp:HyperLink>
+           </h3>
             <hl>
-            <br />
-            <br />
-            <%# Eval("newsbody") %>
-            <br />
-            <br />
-            <i><asp:Label ID="Label1" runat="server" Text="Дата публикации"></asp:Label><asp:Label ID="dateLabel" runat="server" Text='<%# Eval("date") %>' /></i>
-            <br />
-            
-                 </div>
-            <br />
-<br /></span>
+                <br />
+                <br />
+                <%# Eval("newsbody") %>
+                <br />
+                <br />
+                <i>
+                <asp:Label ID="Label1" runat="server" Text="Дата публикации"></asp:Label>
+                <asp:Label ID="dateLabel" runat="server" Text='<%# Eval("date", "{0:D}") %>'></asp:Label>
+                </i>
+                <br />
+                </div>
+
         </ItemTemplate>
 
         <LayoutTemplate>
@@ -126,7 +129,7 @@
     </strong></span>
 
 
-    </div>
+
 
 
     </asp:Content>

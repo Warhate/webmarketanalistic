@@ -26,7 +26,7 @@ namespace WebApplication8.Administrator
             }
             else
             {
-                if (!isUpdate)
+                if (!this.IsPostBack)
                 {
                     BtnAddNews.Text += "Save";
                     isEdit = true;
@@ -88,8 +88,8 @@ namespace WebApplication8.Administrator
 
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)
         {
-            LabelDate.Text = Calendar1.SelectedDate.Date.ToLongDateString();
-            PostedDate = Calendar1.SelectedDate.Date;
+            LabelDate.Text = Calendar1.SelectedDate.ToLongDateString() ;
+            PostedDate = Calendar1.SelectedDate;
         }
 
         protected void BtnAddNews_Click(object sender, EventArgs e)
@@ -99,8 +99,13 @@ namespace WebApplication8.Administrator
             if (!isEdit)
             {
                 
-                TxtBodyNews.Text = en.AddNews(TxtBodyNews.Text, TxtHeadNews.Text, PostedDate.ToUniversalTime(), CheckPosted.Checked);
-                TxtHeadNews.Text = PostedDate.ToString();
+               if(en.AddNews(TxtBodyNews.Text, TxtHeadNews.Text, PostedDate, CheckPosted.Checked)=="")
+               {
+                   TxtBodyNews.Text = "";
+                   TxtHeadNews.Text = "";
+                   LabelMessage.Text = "Новость добавлено!";
+               }
+
             }
             else 
             
@@ -111,7 +116,7 @@ namespace WebApplication8.Administrator
                     conection.Open();
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = conection;
-                    cmd.CommandText = "UPDATE News SET newsname = N'" + TxtHeadNews.Text + "', newsbody = '" + TxtBodyNews.Text + "',date ='" + PostedDate + "' WHERE (id = " + ID + ")";
+                    cmd.CommandText = "SET dateformat dmy UPDATE News SET newsname = N'" + TxtHeadNews.Text + "', newsbody = '" + TxtBodyNews.Text + "',date ='" + PostedDate + "' WHERE (id = " + ID + ")";
                     cmd.ExecuteNonQuery();
 
                 }

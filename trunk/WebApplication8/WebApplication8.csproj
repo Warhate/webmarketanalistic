@@ -56,12 +56,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Administrator\admstyle.css" />
     <Content Include="Administrator\Users.aspx" />
     <Content Include="Administrator\NewsEdit.aspx" />
     <Content Include="Administrator\News.aspx" />
     <Content Include="Administrator\NewsB.aspx" />
     <Content Include="Administrator\OkEdit.aspx" />
     <Content Include="Administrator\Default.aspx" />
+    <Content Include="Analistic\anlstyle.css" />
     <Content Include="Analistic\Default.aspx" />
     <Content Include="Analistic\Users.aspx" />
     <Content Include="Default.aspx" />
@@ -76,21 +78,26 @@
     <Content Include="Image\bgtext.png" />
     <Content Include="Image\box.png" />
     <Content Include="Image\button.png" />
+    <Content Include="Image\go-home.png" />
     <Content Include="Image\head.png" />
     <Content Include="Image\message_edit.png" />
     <Content Include="Image\newsfire_48x48.png" />
     <Content Include="Image\news_subscribe.png" />
+    <Content Include="Image\people.png" />
     <Content Include="Image\program-group.png" />
+    <Content Include="Image\psg.png" />
     <Content Include="Image\save %281%29.png" />
+    <Content Include="Image\shopcartapply_128x128 %281%29.png" />
     <Content Include="Image\shopcartapply_128x128.png" />
     <Content Include="Image\shopcart_128x128.png" />
     <Content Include="Image\users1.png" />
+    <Content Include="Image\warehause.png" />
     <Content Include="Login.aspx" />
+    <Content Include="my.css" />
     <Content Include="Profile\my.css" />
     <Content Include="Profile\Profile.aspx" />
     <Content Include="Registration\my.css" />
     <Content Include="Registration\Reg.aspx" />
-    <Content Include="my.css" />
     <Content Include="Trade\AddProduct.aspx" />
     <Content Include="Trade\Default.aspx" />
     <Content Include="Trade\no_entry.png" />
