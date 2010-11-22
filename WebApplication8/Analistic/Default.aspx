@@ -7,8 +7,9 @@
 <tr>
 <td>
     <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" 
-        BorderStyle="None" BorderWidth="0px" DataSourceID="SDSCount" Height="50px" 
-        Width="208px">
+        BorderStyle="Solid" BorderWidth="0px" DataSourceID="SDSCount" Height="50px" 
+        Width="208px" BorderColor="#006600">
+        <AlternatingRowStyle BorderColor="#339933" />
         <Fields>
             <asp:BoundField DataField="Expr1" HeaderText="Количество товара" 
                 ReadOnly="True" SortExpression="Expr1">
@@ -24,7 +25,9 @@
 <td>
     <br />
     <asp:DetailsView ID="DetailsView2" runat="server" AutoGenerateRows="False" 
-        DataSourceID="SDSPrice" Height="29px" Width="329px">
+        DataSourceID="SDSPrice" Height="29px" Width="329px" BorderColor="#006600" 
+        BorderStyle="Solid">
+        <AlternatingRowStyle BorderColor="#006666" BorderStyle="Dotted" />
         <Fields>
             <asp:BoundField DataField="Expr1" HeaderText="Средняя цена товара" 
                 ReadOnly="True" SortExpression="Expr1" DataFormatString="{0:c}">
@@ -65,7 +68,7 @@
             
             SelectCommand="SELECT Firm.Name, COUNT(Product.ProductID) AS Expr1 FROM Firm INNER JOIN Product ON Firm.FirmID = Product.FirmID GROUP BY Firm.Name"></asp:SqlDataSource>
         <asp:Chart ID="Chart1" runat="server" DataSourceID="SqlDataSource5" 
-            Height="276px" Width="377px">
+            Height="276px" Width="377px" BackColor="Transparent">
             <Series>
                 <asp:Series ChartType="Doughnut" Name="Series1" XValueMember="name" 
                     YValueMembers="Expr1">
@@ -79,7 +82,7 @@
     </td>
     <td>
         <asp:Chart ID="Chart2" runat="server" Height="271px" Width="347px" 
-            DataSourceID="SDSGroup">
+            DataSourceID="SDSGroup" BackColor="Transparent">
             <Series>
                 <asp:Series Name="Series1" ChartType="Doughnut" XValueMember="Name" 
                     YValueMembers="Expr1">
@@ -110,13 +113,19 @@
     </td>
         <td>
             <asp:GridView ID="GridView2" runat="server" AllowSorting="True" 
-                AutoGenerateColumns="False" DataSourceID="SDSGroup">
+                AutoGenerateColumns="False" DataSourceID="SDSGroup" BorderColor="#006600" 
+                BorderStyle="Solid">
                 <Columns>
                     <asp:BoundField DataField="Name" HeaderText="Имя группы" 
                         SortExpression="Name" />
                     <asp:BoundField DataField="Expr1" HeaderText="Количество  товара" 
                         ReadOnly="True" SortExpression="Expr1" />
                 </Columns>
+                <EmptyDataRowStyle BorderColor="#006600" BorderStyle="Solid" />
+                <FooterStyle BorderColor="#006600" BorderStyle="Solid" />
+                <HeaderStyle BorderColor="#006600" BorderStyle="Solid" />
+                <PagerStyle BorderColor="#006600" BorderStyle="Solid" />
+                <RowStyle BorderColor="Blue" BorderStyle="Solid" BorderWidth="1px" />
             </asp:GridView>
     </td>
     </tr>

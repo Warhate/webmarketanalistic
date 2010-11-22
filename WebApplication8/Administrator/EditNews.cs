@@ -12,18 +12,19 @@ namespace WebApplication8.Administrator
 
         public String AddNews(String NewsBody, String NewsHead, DateTime DatePost, bool IsPosted)
         {
+            String d = DatePost.Date.ToShortDateString().Trim();
             try
             {
                 conection.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conection;
-                cmd.CommandText = "INSERT INTO News(newsname,newsbody,date) VALUES('"+NewsHead+"','"+NewsBody+"','"+DatePost+"')";
+                cmd.CommandText = "SET dateformat dmy INSERT INTO News(newsname,newsbody,date) VALUES('" + NewsHead + "','" + NewsBody + "','"+DatePost.ToShortDateString()+"')";
                 cmd.ExecuteNonQuery();
-                return "Ok";
+                return "";
             }
             catch (SqlException ex)
             {
-                return ex.Message;
+                return ex.Message+ DatePost.ToString();
 
             }
             finally

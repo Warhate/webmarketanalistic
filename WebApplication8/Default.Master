@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <link rel="stylesheet" type="text/css" href="my.css" />
 <head runat="server">
-    <title></title>
+    <title>Web Market</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     
     </asp:ContentPlaceHolder>
@@ -206,8 +206,7 @@
      <div id="txt">
 
            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-           <div>
-           </div>
+
     </asp:ContentPlaceHolder>
     </div>
     </div>
