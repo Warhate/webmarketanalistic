@@ -15,10 +15,12 @@ namespace WebApplication8.Administrator
             String d = DatePost.Date.ToShortDateString().Trim();
             try
             {
+                
                 conection.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conection;
-                cmd.CommandText = "SET dateformat dmy INSERT INTO News(newsname,newsbody,date) VALUES('" + NewsHead + "','" + NewsBody + "','"+DatePost.ToShortDateString()+"')";
+                cmd.CommandText = "SET dateformat dmy INSERT INTO News(newsname,newsbody,date) VALUES('" + NewsHead + "',@text,'"+DatePost.ToShortDateString()+"')";
+                cmd.Parameters.AddWithValue("@text", NewsBody);
                 cmd.ExecuteNonQuery();
                 return "";
             }

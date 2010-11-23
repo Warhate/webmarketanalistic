@@ -28,7 +28,7 @@ namespace WebApplication8.Administrator
             {
                 if (!this.IsPostBack)
                 {
-                    BtnAddNews.Text += "Save";
+                    BtnAddNews.Text = "Зберегти";
                     isEdit = true;
                     ID = Convert.ToString(HttpContext.Current.Request.QueryString["ID"]);
                    
@@ -96,10 +96,20 @@ namespace WebApplication8.Administrator
         {
             isUpdate = true;
             EditNews en = new EditNews();
-            if (!isEdit)
+            if (Calendar1.SelectedDate.ToString() =="")
             {
-                
-               if(en.AddNews(TxtBodyNews.Text, TxtHeadNews.Text, PostedDate, CheckPosted.Checked)=="")
+                PostedDate = DateTime.Now;
+
+
+            }
+            else
+            {
+                PostedDate = Calendar1.SelectedDate;
+            }
+            if (HttpContext.Current.Request.QueryString.Count == 0)
+            {
+
+                if (en.AddNews(TxtBodyNews.Text, TxtHeadNews.Text, PostedDate, CheckPosted.Checked) == "")
                {
                    TxtBodyNews.Text = "";
                    TxtHeadNews.Text = "";
@@ -110,13 +120,13 @@ namespace WebApplication8.Administrator
             else 
             
             {
-                //TxtBodyNews.Text = en.Edit(TxtBodyNews.Text, TxtHeadNews.Text, PostedDate.ToUniversalTime(), CheckPosted.Checked,Convert.ToInt32(ID));
+                ID = Convert.ToString(HttpContext.Current.Request.QueryString["ID"]);
                 try
                 {
                     conection.Open();
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = conection;
-                    cmd.CommandText = "SET dateformat dmy UPDATE News SET newsname = N'" + TxtHeadNews.Text + "', newsbody = '" + TxtBodyNews.Text + "',date ='" + PostedDate + "' WHERE (id = " + ID + ")";
+                    cmd.CommandText = "SET dateformat dmy UPDATE News SET newsname = '" + TxtHeadNews.Text + "', newsbody = '" + TxtBodyNews.Text + "',date ='" +PostedDate .ToShortDateString() + "' WHERE(id = '" + ID + "')";
                     cmd.ExecuteNonQuery();
 
                 }

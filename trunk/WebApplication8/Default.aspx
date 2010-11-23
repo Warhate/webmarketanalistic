@@ -7,7 +7,8 @@
 <asp:Content ID = "Content1" ContentPlaceHolderID = "ContentPlaceHolder2" runat = "server">
     &nbsp;<asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
-        SelectCommand="SELECT newsbody, date, newsname FROM News ORDER BY date">
+        
+        SelectCommand="SELECT newsbody, date, newsname FROM News ORDER BY date DESC">
     </asp:SqlDataSource>
     <br />
     <asp:ListView ID="ListView1"  runat="server" DataSourceID="SqlDataSource1" 

@@ -6,9 +6,30 @@
 <table align="center">
 <tr>
 <td>
+<div id = "selectstat">
+    <asp:Label ID="Label5" runat="server" 
+        Text="Выбор статистики, которую нужно показать"></asp:Label>
+    <br />
+    <br />
+    <asp:CheckBox ID="CBFirm" runat="server" Checked="True" Text="Производители" />
+    <br />
+    <asp:CheckBox ID="CBGroup" runat="server" Checked="True" Text="Группы" />
+    <br />
+    <asp:CheckBox ID="CBProduct" runat="server" Checked="True" Text="Спрос" />
+    <br />
+    <br />
+    <asp:Button ID="Button1" runat="server" onclick="Button1_Click1" 
+        Text="Выбрать" />
+        </div>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
     <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" 
         BorderStyle="Solid" BorderWidth="0px" DataSourceID="SDSCount" Height="50px" 
-        Width="208px" BorderColor="#006600">
+        Width="335px" BorderColor="#006600" Font-Bold="True" Font-Size="Medium">
         <AlternatingRowStyle BorderColor="#339933" />
         <Fields>
             <asp:BoundField DataField="Expr1" HeaderText="Количество товара" 
@@ -26,7 +47,7 @@
     <br />
     <asp:DetailsView ID="DetailsView2" runat="server" AutoGenerateRows="False" 
         DataSourceID="SDSPrice" Height="29px" Width="329px" BorderColor="#006600" 
-        BorderStyle="Solid">
+        BorderStyle="Solid" Font-Size="Medium">
         <AlternatingRowStyle BorderColor="#006666" BorderStyle="Dotted" />
         <Fields>
             <asp:BoundField DataField="Expr1" HeaderText="Средняя цена товара" 
@@ -52,12 +73,14 @@
 </tr>
 <tr>
 <td style="text-align: center">
-    <asp:Label ID="Label2" runat="server" Text="Статистика по производителям" 
-        style="font-weight: 700; color: #0066CC"></asp:Label>
+    <asp:Label ID="LabelFirm" runat="server" Text="Статистика по производителям" 
+        style="font-weight: 700; color: #0066CC" Font-Bold="True" 
+        Font-Size="Large"></asp:Label>
     </td>
     <td style="text-align: center">
-        <asp:Label ID="Label3" runat="server" Text="Статистика по группам товара" 
-            style="font-weight: 700; color: #0066FF"></asp:Label>
+        <asp:Label ID="LabelGroup" runat="server" Text="Статистика по группам товара" 
+            style="font-weight: 700; color: #0066FF" Font-Bold="True" 
+            Font-Size="Large"></asp:Label>
     </td>
     </tr>
     <tr>
@@ -67,7 +90,7 @@
             ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
             
             SelectCommand="SELECT Firm.Name, COUNT(Product.ProductID) AS Expr1 FROM Firm INNER JOIN Product ON Firm.FirmID = Product.FirmID GROUP BY Firm.Name"></asp:SqlDataSource>
-        <asp:Chart ID="Chart1" runat="server" DataSourceID="SqlDataSource5" 
+        <asp:Chart ID="ChartFirm" runat="server" DataSourceID="SqlDataSource5" 
             Height="276px" Width="377px" BackColor="Transparent">
             <Series>
                 <asp:Series ChartType="Doughnut" Name="Series1" XValueMember="name" 
@@ -81,7 +104,7 @@
         </asp:Chart>
     </td>
     <td>
-        <asp:Chart ID="Chart2" runat="server" Height="271px" Width="347px" 
+        <asp:Chart ID="ChartGroup" runat="server" Height="271px" Width="347px" 
             DataSourceID="SDSGroup" BackColor="Transparent">
             <Series>
                 <asp:Series Name="Series1" ChartType="Doughnut" XValueMember="Name" 
@@ -101,20 +124,32 @@
     </tr>
     <tr>
     <td>
-        <asp:GridView ID="GridView1" runat="server" AllowSorting="True" 
-            AutoGenerateColumns="False" DataSourceID="SqlDataSource5">
+        <asp:GridView ID="GridViewFirm" runat="server" AllowSorting="True" 
+            AutoGenerateColumns="False" DataSourceID="SqlDataSource5" 
+            BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" 
+            CellPadding="4" CellSpacing="2" Font-Size="Medium" ForeColor="Black">
             <Columns>
                 <asp:BoundField DataField="Name" HeaderText="Фирама производитель" 
                     SortExpression="Name"></asp:BoundField>
                 <asp:BoundField DataField="Expr1" HeaderText="Количество товара" 
                     ReadOnly="True" SortExpression="Expr1"></asp:BoundField>
             </Columns>
+            <FooterStyle BackColor="#CCCCCC" />
+            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
+            <RowStyle BackColor="White" />
+            <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#808080" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
     </td>
         <td>
-            <asp:GridView ID="GridView2" runat="server" AllowSorting="True" 
-                AutoGenerateColumns="False" DataSourceID="SDSGroup" BorderColor="#006600" 
-                BorderStyle="Solid">
+            <asp:GridView ID="GridViewGroup" runat="server" AllowSorting="True" 
+                AutoGenerateColumns="False" DataSourceID="SDSGroup" BorderColor="#999999" 
+                BorderStyle="Solid" BackColor="#CCCCCC" BorderWidth="3px" CellPadding="4" 
+                CellSpacing="2" Font-Size="Medium" ForeColor="Black">
                 <Columns>
                     <asp:BoundField DataField="Name" HeaderText="Имя группы" 
                         SortExpression="Name" />
@@ -122,10 +157,18 @@
                         ReadOnly="True" SortExpression="Expr1" />
                 </Columns>
                 <EmptyDataRowStyle BorderColor="#006600" BorderStyle="Solid" />
-                <FooterStyle BorderColor="#006600" BorderStyle="Solid" />
-                <HeaderStyle BorderColor="#006600" BorderStyle="Solid" />
-                <PagerStyle BorderColor="#006600" BorderStyle="Solid" />
-                <RowStyle BorderColor="Blue" BorderStyle="Solid" BorderWidth="1px" />
+                <FooterStyle BorderColor="#006600" BorderStyle="Solid" BackColor="#CCCCCC" />
+                <HeaderStyle BorderColor="#006600" BorderStyle="Solid" BackColor="Black" 
+                    Font-Bold="True" ForeColor="White" />
+                <PagerStyle BorderColor="#006600" BorderStyle="Solid" BackColor="#CCCCCC" 
+                    ForeColor="Black" HorizontalAlign="Left" />
+                <RowStyle BorderColor="Blue" BorderStyle="Solid" BorderWidth="1px" 
+                    BackColor="White" />
+                <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#808080" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
     </td>
     </tr>
@@ -133,7 +176,7 @@
     <td>
         <br />
         <br />
-        <asp:Label ID="Label4" runat="server" 
+        <asp:Label ID="LabelProduct" runat="server" 
             style="font-weight: 700; color: #0066CC; font-size: large" 
             Text="Спрос на товар"></asp:Label>
     </td>
@@ -142,8 +185,10 @@
     </tr>
         <tr>
     <td>
-        <asp:GridView ID="GridView3" runat="server" AllowPaging="True" 
-            AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SDSPopular">
+        <asp:GridView ID="GridViewProduct" runat="server" AllowPaging="True" 
+            AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SDSPopular" 
+            BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" 
+            CellPadding="4" CellSpacing="2" Font-Size="Medium" ForeColor="Black">
             <Columns>
                 <asp:BoundField DataField="Name" HeaderText="Наименование товара" 
                     SortExpression="Name" />
@@ -152,6 +197,15 @@
                 <ItemStyle Font-Bold="True" ForeColor="#00CC00" />
                 </asp:BoundField>
             </Columns>
+            <FooterStyle BackColor="#CCCCCC" />
+            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
+            <RowStyle BackColor="White" />
+            <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#808080" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
         <asp:SqlDataSource ID="SDSPopular" runat="server" 
             ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
