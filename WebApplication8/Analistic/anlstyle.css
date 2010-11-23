@@ -307,6 +307,56 @@ p {
 	outline-color:#3b8ac2;
 	outline-width:3px;
 }
+
+
+	
+	#selectstat {
+	display: block;
+	margin-left: 2px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	font-family:Calibri;
+	font-weight:bold;
+	
+	
+	color:Black;
+	width: auto;
+	margin-top: 10px;
+	outline-style:solid;
+	outline-color:#3b8ac2;
+	outline-width:3px;
+}
+
+#selectstat input
+{
+	border-color:Green;
+	border-width:2px;
+	background-color:Green;
+	color:White;
+	
+	
+	}
+	
+#stat
+{
+	display: block;
+	margin-left: 2px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	font-family:Calibri;
+	font-weight:bold;
+	
+	
+	color:Black;
+	width: auto;
+	margin-top: 10px;
+	outline-style:solid;
+	outline-color:Green;
+	outline-width:3px;
+	
+	}
 #name
 {
 	display: block;
