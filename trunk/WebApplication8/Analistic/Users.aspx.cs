@@ -29,6 +29,7 @@ namespace WebApplication8.Analistic
             {
                 LabelAge.Visible = true;
                 GridViewAge.Visible = true;
+                ButtonAge.Visible = true;
                 
             
             }
@@ -37,12 +38,14 @@ namespace WebApplication8.Analistic
             {
                 LabelAge.Visible = false;
                 GridViewAge.Visible = false;
+                ButtonAge.Visible = false;
             
             }
 
             if (CBCity.Checked)
             {
                 GridViewCity.Visible = true;
+                ButtonCity.Visible = true;
 
 
             }
@@ -50,12 +53,14 @@ namespace WebApplication8.Analistic
             else
             {
                 GridViewCity.Visible = false;
+                ButtonCity.Visible = false;
 
             }
 
             if (CBCountry.Checked)
             {
                 GridViewCountry.Visible = true;
+                ButtonCountry.Visible = true;
 
 
             }
@@ -63,6 +68,7 @@ namespace WebApplication8.Analistic
             else
             {
                 GridViewCountry.Visible = false;
+                ButtonCountry.Visible = false;
 
             }
 
@@ -71,6 +77,7 @@ namespace WebApplication8.Analistic
             {
                 LabelProffesion.Visible = true;
                 GridViewProfession.Visible = true;
+                ButtonProffesion.Visible = true;
 
 
             }
@@ -79,6 +86,7 @@ namespace WebApplication8.Analistic
             {
                 LabelProffesion.Visible = false;
                 GridViewProfession.Visible = false;
+                ButtonProffesion.Visible = false;
             }
 
             if (CBSex.Checked)
@@ -86,6 +94,7 @@ namespace WebApplication8.Analistic
                 LabelSex.Visible = true;
                 GreedViewSex.Visible = true;
                 ChartSex.Visible = true;
+                ButtonSex.Visible = true;
 
 
             }
@@ -95,6 +104,7 @@ namespace WebApplication8.Analistic
                 LabelSex.Visible = false;
                 GreedViewSex.Visible = false;
                 ChartSex.Visible = false;
+                ButtonSex.Visible = false;
             }
 
             if (!CBCity.Checked && !CBCountry.Checked)
@@ -110,6 +120,60 @@ namespace WebApplication8.Analistic
             }
         
         
+        }
+
+        /// <summary>
+        /// Экспорт статистики до ексель файла
+        /// </summary>
+        /// <param name="dg">Эеспортируемая гридвайв</param>
+        public void ExportExel(GridView dg)
+        {
+
+            System.IO.StringWriter sw = new System.IO.StringWriter();
+            HtmlTextWriter tw = new HtmlTextWriter(sw);
+            dg.DataBind();
+            dg.RenderControl(tw);
+            Response.Clear();
+            Response.AddHeader("Content-Disposition", "attachment; filename=StatisticUsers.xls");
+            Response.ContentEncoding = System.Text.Encoding.Default;
+            Response.Charset = "";
+            Response.ContentType = "application/vnd.ms-excel";
+
+            Response.Write(sw.ToString());
+
+            Response.Flush();
+            Response.End();
+
+        }
+
+        public override void VerifyRenderingInServerForm(Control control)
+        {
+            //Оставить пустым
+        }
+
+        protected void ButtonSex_Click(object sender, EventArgs e)
+        {
+            ExportExel(GreedViewSex);
+        }
+
+        protected void ButtonAge_Click(object sender, EventArgs e)
+        {
+            ExportExel(GridViewAge);
+        }
+
+        protected void ButtonProffesion_Click(object sender, EventArgs e)
+        {
+            ExportExel(GridViewProfession);
+        }
+
+        protected void ButtonCountry_Click(object sender, EventArgs e)
+        {
+            ExportExel(GridViewCountry);
+        }
+
+        protected void ButtonCity_Click(object sender, EventArgs e)
+        {
+            ExportExel(GridViewCity);
         }
     }
 }

@@ -78,6 +78,7 @@
     <Content Include="Image\bgtext.png" />
     <Content Include="Image\box.png" />
     <Content Include="Image\button.png" />
+    <Content Include="Image\document-export.png" />
     <Content Include="Image\go-home.png" />
     <Content Include="Image\head.png" />
     <Content Include="Image\message_edit.png" />
@@ -195,6 +196,9 @@
     </Compile>
     <Compile Include="Analistic\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analistic\Export.cs">
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Analistic\Users.aspx.cs">
       <DependentUpon>Users.aspx</DependentUpon>

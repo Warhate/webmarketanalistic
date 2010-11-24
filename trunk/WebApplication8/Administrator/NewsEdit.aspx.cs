@@ -43,6 +43,7 @@ namespace WebApplication8.Administrator
                         reader.Read();
                         TxtBodyNews.Text = reader["newsbody"].ToString();
                         TxtHeadNews.Text = reader["newsname"].ToString();
+                        LabelDate.Text = reader["date"].ToString();
 
                     }
                     catch (SqlException ex)
@@ -76,10 +77,13 @@ namespace WebApplication8.Administrator
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!this.IsPostBack)
+            {
             LabelDate.Text = DateTime.Now.Date.ToLongDateString();
             PostedDate = DateTime.Now;
 
             LoadNews();
+            }
             
             }
         
@@ -96,7 +100,7 @@ namespace WebApplication8.Administrator
         {
             isUpdate = true;
             EditNews en = new EditNews();
-            if (Calendar1.SelectedDate.ToString() =="")
+            if (Calendar1.SelectedDate.ToString("yyyy")=="0001")
             {
                 PostedDate = DateTime.Now;
 

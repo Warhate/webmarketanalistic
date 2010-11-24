@@ -11,7 +11,7 @@ namespace WebApplication8.Analistic
     public partial class WebForm1 : System.Web.UI.Page
     {
         SqlConnection conn = new SqlConnection(Varibles.ConectionString);
-           
+        Export export = new Export();
         
         
         
@@ -63,6 +63,7 @@ namespace WebApplication8.Analistic
                 LabelFirm.Visible = true;
                 ChartFirm.Visible = true;
                 GridViewFirm.Visible = true;
+                ButtonFirm.Visible=true;
 
             }
 
@@ -71,6 +72,7 @@ namespace WebApplication8.Analistic
                 LabelFirm.Visible = false;
                 ChartFirm.Visible = false;
                 GridViewFirm.Visible = false;
+                ButtonFirm.Visible = false;
             
             
             }
@@ -80,6 +82,7 @@ namespace WebApplication8.Analistic
                 LabelGroup.Visible = true;
                 ChartGroup.Visible = true;
                 GridViewGroup.Visible = true;
+                ButtonGroup.Visible = true;
 
             }
             else
@@ -87,6 +90,7 @@ namespace WebApplication8.Analistic
                 LabelGroup.Visible = false;
                 ChartGroup.Visible = false;
                 GridViewGroup.Visible = false;
+                ButtonGroup.Visible = false;
             
             }
 
@@ -94,16 +98,62 @@ namespace WebApplication8.Analistic
             {
                 LabelProduct.Visible = true;
                 GridViewProduct.Visible = true;
+                ButtonProduct.Visible = true;
 
             }
             else
             {
                 LabelProduct.Visible = false;
                 GridViewProduct.Visible = false;
+                ButtonProduct.Visible = false;
             }
         
         
         }
+        /// <summary>
+        /// Экспорт статистики до ексель файла
+        /// </summary>
+        /// <param name="dg">Эеспортируемая гридвайв</param>
+        public void ExportExel(GridView dg)
+        {
 
+            System.IO.StringWriter sw = new System.IO.StringWriter();
+            HtmlTextWriter tw = new HtmlTextWriter(sw);
+            dg.DataBind();
+            dg.RenderControl(tw);
+            Response.Clear();
+            Response.AddHeader("Content-Disposition", "attachment; filename=StatisticProduct.xls");
+            Response.ContentEncoding = System.Text.Encoding.Default;
+            Response.Charset = "";
+            Response.ContentType = "application/vnd.ms-excel";
+
+            Response.Write(sw.ToString());
+
+            Response.Flush();
+            Response.End();
+
+        }
+
+        public override void VerifyRenderingInServerForm(Control control)
+        {
+            //Оставить пустым
+        }
+
+        protected void Button2_Click1(object sender, EventArgs e)
+        {
+            ExportExel(GridViewFirm);
+        }
+
+        protected void ButtonGroup_Click(object sender, EventArgs e)
+        {
+            ExportExel(GridViewGroup);
+        }
+
+        protected void ButtonProduct_Click(object sender, EventArgs e)
+        {
+            ExportExel(GridViewProduct);
+        }
+    
+    
     }
 }

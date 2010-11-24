@@ -22,7 +22,8 @@
     </td>
     <td>
         <asp:DropDownList ID="DDListGroup" runat="server" AutoPostBack="True" 
-            DataSourceID="SqlDataSourceGroup" DataTextField="Name" DataValueField="GroupID">
+            DataSourceID="SqlDataSourceGroup" DataTextField="Name" 
+            DataValueField="GroupID" DataMember="DefaultView">
         </asp:DropDownList>
         <asp:SqlDataSource ID="SqlDataSourceGroup" runat="server" 
             ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
@@ -60,6 +61,107 @@
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
             ErrorMessage="* Необходимо заполнить" ControlToValidate="TxtName" 
             SetFocusOnError="True" ValidationGroup="2"></asp:RequiredFieldValidator>
+    </td>
+    </tr>
+    <tr>
+    <td>
+        <asp:Label ID="LabelTVDiag" runat="server" Text="Диагональ экрана:"></asp:Label>
+    </td>
+    <td>
+        <asp:TextBox ID="TextBoxTVDiag" runat="server" Width="173px"></asp:TextBox>
+    </td>
+    </tr>
+
+    <tr>
+    <td>
+        <asp:Label ID="LabelTVClass" runat="server" Text="Класс:"></asp:Label>
+    </td>
+    <td>
+        <asp:TextBox ID="TextBoxTVClass" runat="server" Width="172px"></asp:TextBox>
+    </td>
+    </tr>
+
+
+    <tr>
+    <td>
+        <asp:Label ID="LabelTvRoz" runat="server" Text="Разрешение:"></asp:Label>
+    </td>
+    <td>
+        <asp:TextBox ID="TextBoxTVRaz" runat="server" Width="170px"></asp:TextBox>
+    </td>
+    </tr>
+
+
+    <tr>
+    <td>
+        <asp:Label ID="LabelPhoneFF" runat="server" Text="Форм-фактор телефона" 
+            Visible="False"></asp:Label>
+    </td>
+    <td>
+        <asp:TextBox ID="TextBoxPhoneFF" runat="server" Visible="False" Width="170px"></asp:TextBox>
+    </td>
+    </tr>
+
+
+    <tr>
+    <td>
+        <asp:Label ID="LabelPhoneSize" runat="server" Text="Размеры" Visible="False"></asp:Label>
+    </td>
+    <td>
+        <asp:TextBox ID="TextBoxPhoneSize" runat="server" Visible="False" Width="170px"></asp:TextBox>
+    </td>
+    </tr>
+
+
+    <tr>
+    <td>
+        <asp:Label ID="LabelPhoneCamera" runat="server" Text="Камера" Visible="False"></asp:Label>
+    </td>
+    <td>
+        <asp:TextBox ID="TextBoxPhoneCam" runat="server" Visible="False" Width="170px"></asp:TextBox>
+    </td>
+    </tr>
+
+
+    <tr>
+    <td>
+        <asp:Label ID="LabelPhneMemory" runat="server" Text="Функции памяти" 
+            Visible="False"></asp:Label>
+    </td>
+    <td>
+        <asp:TextBox ID="TextBoxPhoneMemmory" runat="server" Visible="False" 
+            Width="170px"></asp:TextBox>
+    </td>
+    </tr>
+
+    <tr>
+    <td>
+    </td>
+    <td>
+    </td>
+    </tr>
+
+    
+    <tr>
+    <td>
+    </td>
+    <td>
+    </td>
+    </tr>
+
+    
+    <tr>
+    <td>
+    </td>
+    <td>
+    </td>
+    </tr>
+
+    
+    <tr>
+    <td>
+    </td>
+    <td>
     </td>
     </tr>
 

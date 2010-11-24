@@ -130,6 +130,15 @@ namespace WebApplication8.Analistic {
         protected global::System.Web.UI.WebControls.GridView GreedViewSex;
         
         /// <summary>
+        /// ButtonSex элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonSex;
+        
+        /// <summary>
         /// ChartSex элемент управления.
         /// </summary>
         /// <remarks>
@@ -166,6 +175,15 @@ namespace WebApplication8.Analistic {
         protected global::System.Web.UI.WebControls.GridView GridViewAge;
         
         /// <summary>
+        /// ButtonAge элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonAge;
+        
+        /// <summary>
         /// SDSOther элемент управления.
         /// </summary>
         /// <remarks>
@@ -193,6 +211,15 @@ namespace WebApplication8.Analistic {
         protected global::System.Web.UI.WebControls.GridView GridViewProfession;
         
         /// <summary>
+        /// ButtonProffesion элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonProffesion;
+        
+        /// <summary>
         /// LabelCountry элемент управления.
         /// </summary>
         /// <remarks>
@@ -211,6 +238,15 @@ namespace WebApplication8.Analistic {
         protected global::System.Web.UI.WebControls.GridView GridViewCountry;
         
         /// <summary>
+        /// ButtonCountry элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonCountry;
+        
+        /// <summary>
         /// GridViewCity элемент управления.
         /// </summary>
         /// <remarks>
@@ -218,6 +254,15 @@ namespace WebApplication8.Analistic {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridViewCity;
+        
+        /// <summary>
+        /// ButtonCity элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonCity;
         
         /// <summary>
         /// SDSCity элемент управления.

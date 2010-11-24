@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Analistic/Default.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication8.Analistic.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Analistic/Default.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication8.Analistic.WebForm1" EnableEventValidation ="false" %>
 <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     </asp:Content>
@@ -144,6 +144,9 @@
             <SortedDescendingCellStyle BackColor="#CAC9C9" />
             <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
+        <asp:Button ID="ButtonFirm" runat="server" CssClass="nbutton" 
+            onclick="Button2_Click1" Text="Экспорт" />
+        <br />
     </td>
         <td>
             <asp:GridView ID="GridViewGroup" runat="server" AllowSorting="True" 
@@ -170,6 +173,9 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
+            <asp:Button ID="ButtonGroup" runat="server" CssClass="nbutton" 
+                onclick="ButtonGroup_Click" Text="Экспорт" />
+            <br />
     </td>
     </tr>
     <tr>
@@ -207,6 +213,8 @@
             <SortedDescendingCellStyle BackColor="#CAC9C9" />
             <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
+        <asp:Button ID="ButtonProduct" runat="server" CssClass="nbutton" 
+            onclick="ButtonProduct_Click" Text="Экспорт" />
         <asp:SqlDataSource ID="SDSPopular" runat="server" 
             ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
             SelectCommand="SELECT Product.Name, COUNT(Tray.TrayID) AS Expr1 FROM Product INNER JOIN Tray ON Product.ProductID = Tray.ProductID GROUP BY Product.Name">
