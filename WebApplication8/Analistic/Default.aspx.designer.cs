@@ -157,6 +157,15 @@ namespace WebApplication8.Analistic {
         protected global::System.Web.UI.WebControls.GridView GridViewFirm;
         
         /// <summary>
+        /// ButtonFirm элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonFirm;
+        
+        /// <summary>
         /// GridViewGroup элемент управления.
         /// </summary>
         /// <remarks>
@@ -164,6 +173,15 @@ namespace WebApplication8.Analistic {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridViewGroup;
+        
+        /// <summary>
+        /// ButtonGroup элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonGroup;
         
         /// <summary>
         /// LabelProduct элемент управления.
@@ -182,6 +200,15 @@ namespace WebApplication8.Analistic {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridViewProduct;
+        
+        /// <summary>
+        /// ButtonProduct элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonProduct;
         
         /// <summary>
         /// SDSPopular элемент управления.

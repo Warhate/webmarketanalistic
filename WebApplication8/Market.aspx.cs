@@ -14,12 +14,18 @@ namespace WebApplication8
             
         }
 
+        
         protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
         {
 
         }
 
         protected void ListView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ListView1_Load(object sender, EventArgs e)
         {
 
         }

@@ -6,13 +6,15 @@
     <br />
     <asp:ListView ID="ListView1" runat="server" DataKeyNames="ProductID" 
         DataSourceID="SqlDataSource1" 
-        onselectedindexchanged="ListView1_SelectedIndexChanged">
+        onselectedindexchanged="ListView1_SelectedIndexChanged" 
+        onload="ListView1_Load">
         <AlternatingItemTemplate>
-            <asp:HyperLink ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' 
-                NavigateUrl='<%# Eval("ProductID", "~/Product.aspx?ID={0}") %>'></asp:HyperLink>
+        <div class = "title">
+            <span style="" />Name:
+            <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
             <br />
             ProductID:
-            <asp:Label ID="ProductIDLabel" runat="server" Text='<%# Eval("ProductID") %>'  />
+            <asp:Label ID="ProductIDLabel" runat="server" Text='<%# Eval("ProductID") %>' />
             <br />
             Info:
             <asp:Label ID="InfoLabel" runat="server" Text='<%# Eval("Info") %>' />
@@ -20,33 +22,34 @@
             Cost:
             <asp:Label ID="CostLabel" runat="server" Text='<%# Eval("Cost") %>' />
             <br />
-                       <asp:Image ID="Image1" runat="server" 
-                ImageUrl='<%# Eval("ProductID", "~/Image.ashx?ID={0}") %>' /><br />
-
+            Image:
+            <asp:Label ID="ImageLabel" runat="server" Text='<%# Eval("Image") %>' />
+            <br />
             InStock:
-            <asp:Label ID="InStockLabel" runat="server" Height="120px" Text='<%# Eval("InStock") %>' />
+            <asp:Label ID="InStockLabel" runat="server" Text='<%# Eval("InStock") %>' />
             <br />
+            TVDiag:
+            <asp:Label ID="TVDiagLabel" runat="server" Text='<%# Eval("TVDiag") %>' />
+            <br />
+            TVClass:
+            <asp:Label ID="TVClassLabel" runat="server" Text='<%# Eval("TVClass") %>' />
+            <br />
+            TVRaz:
+            <asp:Label ID="TVRazLabel" runat="server" Text='<%# Eval("TVRaz") %>' />
+            <br />
+            PhoneFF:
+            <asp:Label ID="PhoneFFLabel" runat="server" Text='<%# Eval("PhoneFF") %>' />
+            <br />
+            PhoneSize:
+            <asp:Label ID="PhoneSizeLabel" runat="server" Text='<%# Eval("PhoneSize") %>' />
+            <br />
+            PhoneCam:
+            <asp:Label ID="PhoneCamLabel" runat="server" Text='<%# Eval("PhoneCam") %>' />
+            <br />
+            PhoneMem:
+            <asp:Label ID="PhoneMemLabel" runat="server" Text='<%# Eval("PhoneMem") %>' />
 
-            <asp:ImageButton ID="ImageButton3" runat="server" Height="40px" 
-                ImageUrl="~/Image/1289469968_label_blue_buy.png" 
-                PostBackUrl='<%# Eval("ProductID", "~/Tray/Default.aspx?ID={0}") %>' />
-
-            <span /><span style="background-color: #FFFBD6;color: #333333;" />
-            <span style="background-color: #FFFBD6;color: #333333;">
-            <br />
-            </span></span>
-            <span><span style="background-color: #FFFBD6;color: #333333;" />
-            <span style="background-color: #FFFBD6;color: #333333;">
-            <br />
-            </span></span></span>
-            <br />
-            </span>
-            <br />
-            <br />
-            </span></span></span>
-            <br />
-            <br />
-            </span>
+            </div>
         </AlternatingItemTemplate>
         <EditItemTemplate>
             <span style="">Name:
@@ -67,6 +70,30 @@
             <br />
             InStock:
             <asp:TextBox ID="InStockTextBox" runat="server" Text='<%# Bind("InStock") %>' />
+            <br />
+            TVDiag:
+            <asp:TextBox ID="TVDiagTextBox" runat="server" Text='<%# Bind("TVDiag") %>' />
+            <br />
+            TVClass:
+            <asp:TextBox ID="TVClassTextBox" runat="server" Text='<%# Bind("TVClass") %>' />
+            <br />
+            TVRaz:
+            <asp:TextBox ID="TVRazTextBox" runat="server" Text='<%# Bind("TVRaz") %>' />
+            <br />
+            PhoneFF:
+            <asp:TextBox ID="PhoneFFTextBox" runat="server" Text='<%# Bind("PhoneFF") %>' />
+            <br />
+            PhoneSize:
+            <asp:TextBox ID="PhoneSizeTextBox" runat="server" 
+                Text='<%# Bind("PhoneSize") %>' />
+            <br />
+            PhoneCam:
+            <asp:TextBox ID="PhoneCamTextBox" runat="server" 
+                Text='<%# Bind("PhoneCam") %>' />
+            <br />
+            PhoneMem:
+            <asp:TextBox ID="PhoneMemTextBox" runat="server" 
+                Text='<%# Bind("PhoneMem") %>' />
             <br />
             <asp:Button ID="UpdateButton" runat="server" CommandName="Update" 
                 Text="Обновить" />
@@ -89,6 +116,30 @@
             <br />InStock:
             <asp:TextBox ID="InStockTextBox" runat="server" Text='<%# Bind("InStock") %>' />
             <br />
+            TVDiag:
+            <asp:TextBox ID="TVDiagTextBox" runat="server" Text='<%# Bind("TVDiag") %>' />
+            <br />
+            TVClass:
+            <asp:TextBox ID="TVClassTextBox" runat="server" Text='<%# Bind("TVClass") %>' />
+            <br />
+            TVRaz:
+            <asp:TextBox ID="TVRazTextBox" runat="server" Text='<%# Bind("TVRaz") %>' />
+            <br />
+            PhoneFF:
+            <asp:TextBox ID="PhoneFFTextBox" runat="server" Text='<%# Bind("PhoneFF") %>' />
+            <br />
+            PhoneSize:
+            <asp:TextBox ID="PhoneSizeTextBox" runat="server" 
+                Text='<%# Bind("PhoneSize") %>' />
+            <br />
+            PhoneCam:
+            <asp:TextBox ID="PhoneCamTextBox" runat="server" 
+                Text='<%# Bind("PhoneCam") %>' />
+            <br />
+            PhoneMem:
+            <asp:TextBox ID="PhoneMemTextBox" runat="server" 
+                Text='<%# Bind("PhoneMem") %>' />
+            <br />
             <asp:Button ID="InsertButton" runat="server" CommandName="Insert" 
                 Text="Вставить" />
             <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" 
@@ -96,11 +147,12 @@
             <br /><br /></span>
         </InsertItemTemplate>
         <ItemTemplate>
-            <asp:HyperLink ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' 
-                NavigateUrl='<%# Eval("ProductID", "~/Product.aspx?ID={0}") %>'></asp:HyperLink>
+
+            <span style="" />Name:
+            <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
             <br />
             ProductID:
-            <asp:Label ID="ProductIDLabel" runat="server" Text='<%# Eval("ProductID") %>'  />
+            <asp:Label ID="ProductIDLabel" runat="server" Text='<%# Eval("ProductID") %>' />
             <br />
             Info:
             <asp:Label ID="InfoLabel" runat="server" Text='<%# Eval("Info") %>' />
@@ -108,20 +160,34 @@
             Cost:
             <asp:Label ID="CostLabel" runat="server" Text='<%# Eval("Cost") %>' />
             <br />
-            <asp:Image ID="Image1" runat="server" Height="120px"
-                ImageUrl='<%# Eval("ProductID", "~/Image.ashx?ID={0}") %>' /><br />
+            Image:
+            <asp:Label ID="ImageLabel" runat="server" Text='<%# Eval("Image") %>' />
+            <br />
             InStock:
             <asp:Label ID="InStockLabel" runat="server" Text='<%# Eval("InStock") %>' />
             <br />
-
-            <asp:ImageButton ID="ImageButton3" runat="server" Height="40px" 
-                ImageUrl="~/Image/1289469968_label_blue_buy.png" 
-                PostBackUrl='<%# Eval("ProductID", "~/Tray/Default.aspx?ID={0}") %>' />
-
-            <span /><span style="background-color: #FFFBD6;color: #333333;" />
-            <span style="background-color: #FFFBD6;color: #333333;">
+            TVDiag:
+            <asp:Label ID="TVDiagLabel" runat="server" Text='<%# Eval("TVDiag") %>' />
             <br />
-            </span></span>
+            TVClass:
+            <asp:Label ID="TVClassLabel" runat="server" Text='<%# Eval("TVClass") %>' />
+            <br />
+            TVRaz:
+            <asp:Label ID="TVRazLabel" runat="server" Text='<%# Eval("TVRaz") %>' />
+            <br />
+            PhoneFF:
+            <asp:Label ID="PhoneFFLabel" runat="server" Text='<%# Eval("PhoneFF") %>' />
+            <br />
+            PhoneSize:
+            <asp:Label ID="PhoneSizeLabel" runat="server" Text='<%# Eval("PhoneSize") %>' />
+            <br />
+            PhoneCam:
+            <asp:Label ID="PhoneCamLabel" runat="server" Text='<%# Eval("PhoneCam") %>' />
+            <br />
+            PhoneMem:
+            <asp:Label ID="PhoneMemLabel" runat="server" Text='<%# Eval("PhoneMem") %>' />
+            <br />
+            <br />
         </ItemTemplate>
         <LayoutTemplate>
             <div ID="itemPlaceholderContainer" runat="server" 
@@ -130,15 +196,6 @@
 
             </div>
             <div style="">
-                <asp:DataPager ID="DataPager1" runat="server">
-                    <Fields>
-                        <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" 
-                            ShowNextPageButton="False" ShowPreviousPageButton="False" />
-                        <asp:NumericPagerField />
-                        <asp:NextPreviousPagerField ButtonType="Button" ShowLastPageButton="True" 
-                            ShowNextPageButton="False" ShowPreviousPageButton="False" />
-                    </Fields>
-                </asp:DataPager>
             </div>
         </LayoutTemplate>
         <SelectedItemTemplate>
@@ -160,13 +217,35 @@
             InStock:
             <asp:Label ID="InStockLabel" runat="server" Text='<%# Eval("InStock") %>' />
             <br />
-<br /></span>
+            TVDiag:
+            <asp:Label ID="TVDiagLabel" runat="server" Text='<%# Eval("TVDiag") %>' />
+<br />TVClass:
+            <asp:Label ID="TVClassLabel" runat="server" Text='<%# Eval("TVClass") %>' />
+            <br />
+            TVRaz:
+            <asp:Label ID="TVRazLabel" runat="server" Text='<%# Eval("TVRaz") %>' />
+            <br />
+            PhoneFF:
+            <asp:Label ID="PhoneFFLabel" runat="server" Text='<%# Eval("PhoneFF") %>' />
+            <br />
+            PhoneSize:
+            <asp:Label ID="PhoneSizeLabel" runat="server" Text='<%# Eval("PhoneSize") %>' />
+            <br />
+            PhoneCam:
+            <asp:Label ID="PhoneCamLabel" runat="server" Text='<%# Eval("PhoneCam") %>' />
+            <br />
+            PhoneMem:
+            <asp:Label ID="PhoneMemLabel" runat="server" Text='<%# Eval("PhoneMem") %>' />
+            <br />
+            <br />
+            </span>
         </SelectedItemTemplate>
     </asp:ListView>
     <br />
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
-        SelectCommand="SELECT [Name], [ProductID], [Info], [Cost], [Image], [InStock] FROM [Product]">
+        
+        SelectCommand="SELECT [Name], [ProductID], [Info], [Cost], [Image], [InStock], [TVDiag], [TVClass], [TVRaz], [PhoneFF], [PhoneSize], [PhoneCam], [PhoneMem] FROM [Product]">
     </asp:SqlDataSource>
     <br />
     </asp:Content>

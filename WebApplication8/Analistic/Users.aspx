@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Analistic/Default.Master" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="WebApplication8.Analistic.WebForm2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Analistic/Default.Master" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="WebApplication8.Analistic.WebForm2" EnableEventValidation ="false" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -108,6 +108,9 @@
             <SortedDescendingCellStyle BackColor="#CAC9C9" />
             <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
+        <asp:Button ID="ButtonSex" runat="server" CssClass="nbutton" 
+            onclick="ButtonSex_Click" Text="Экспорт" />
+        <br />
     <asp:Chart ID="ChartSex" runat="server" DataSourceID="SDSUsersSex" Height="202px" 
             style="text-align: left" Width="394px" Palette="SeaGreen">
         <Series>
@@ -156,6 +159,8 @@
             <SortedDescendingCellStyle BackColor="#CAC9C9" />
             <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
+        <asp:Button ID="ButtonAge" runat="server" CssClass="nbutton" 
+            onclick="ButtonAge_Click" Text="Экспорт" />
         <asp:SqlDataSource ID="SDSOther" runat="server" 
             ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
             SelectCommand="SELECT COUNT(aspnet_Users.UserId) AS Expr1, Users.Age FROM aspnet_Users INNER JOIN Users ON aspnet_Users.UserId = Users.UserId GROUP BY Users.Age">
@@ -192,6 +197,8 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
+            <asp:Button ID="ButtonProffesion" runat="server" CssClass="nbutton" 
+                onclick="ButtonProffesion_Click" Text="Экспорт" />
     </td>
         <td>
     </td>
@@ -223,6 +230,9 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
+        <asp:Button ID="ButtonCountry" runat="server" CssClass="nbutton" 
+            onclick="ButtonCountry_Click" Text="Экспорт" />
+        <br />
     </td>
         <td>
     </td>
@@ -251,6 +261,9 @@
             <SortedDescendingCellStyle BackColor="#CAC9C9" />
             <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
+        <asp:Button ID="ButtonCity" runat="server" CssClass="nbutton" 
+            onclick="ButtonCity_Click" Text="Экспорт" />
+        <br />
         <asp:SqlDataSource ID="SDSCity" runat="server" 
             ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
             SelectCommand="SELECT COUNT(aspnet_Users.UserId) AS Expr1, Users.City FROM aspnet_Users INNER JOIN Users ON aspnet_Users.UserId = Users.UserId GROUP BY Users.City">
