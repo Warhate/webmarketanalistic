@@ -63,6 +63,7 @@
     <Content Include="Administrator\NewsB.aspx" />
     <Content Include="Administrator\OkEdit.aspx" />
     <Content Include="Administrator\Default.aspx" />
+    <Content Include="Administrator\Order.aspx" />
     <Content Include="Analistic\anlstyle.css" />
     <Content Include="Analistic\Default.aspx" />
     <Content Include="Analistic\Users.aspx" />
@@ -100,13 +101,16 @@
     <Content Include="Registration\my.css" />
     <Content Include="Registration\Reg.aspx" />
     <Content Include="Trade\AddProduct.aspx" />
+    <Content Include="Trade\TradeStyle.css" />
     <Content Include="Trade\Default.aspx" />
     <Content Include="Trade\no_entry.png" />
     <Content Include="Trade\AddGroup.aspx" />
     <Content Include="Trade\View.aspx" />
     <Content Include="Trade\GroupRemove.aspx" />
     <Content Include="Trade\ProductRemove.aspx" />
+    <Content Include="Tray\style.css" />
     <Content Include="Tray\Default.aspx" />
+    <Content Include="Tray\Done.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -181,6 +185,13 @@
     </Compile>
     <Compile Include="Administrator\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
     </Compile>
     <Compile Include="Analistic\Count.cs" />
     <Compile Include="Analistic\Default.Master.cs">
@@ -323,6 +334,13 @@
     <Compile Include="Tray\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Tray\Done.aspx.cs">
+      <DependentUpon>Done.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tray\Done.aspx.designer.cs">
+      <DependentUpon>Done.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Varibles.cs" />
     <Compile Include="Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
@@ -337,6 +355,21 @@
     </Compile>
     <Compile Include="Profile\ProfEdit.aspx.designer.cs">
       <DependentUpon>ProfEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="webmark.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>webmark.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="webmarkk.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>webmarkk.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="webmarkkkDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>webmarkkkDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="WebProfile.cs" />
   </ItemGroup>
@@ -379,6 +412,44 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Image.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="webmark.xsc">
+      <DependentUpon>webmark.xsd</DependentUpon>
+    </None>
+    <None Include="webmark.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>webmark.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="webmark.xss">
+      <DependentUpon>webmark.xsd</DependentUpon>
+    </None>
+    <None Include="webmarkk.xsc">
+      <DependentUpon>webmarkk.xsd</DependentUpon>
+    </None>
+    <None Include="webmarkk.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>webmarkk.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="webmarkk.xss">
+      <DependentUpon>webmarkk.xsd</DependentUpon>
+    </None>
+    <None Include="webmarkkkDataSet.xsc">
+      <DependentUpon>webmarkkkDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="webmarkkkDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>webmarkkkDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="webmarkkkDataSet.xss">
+      <DependentUpon>webmarkkkDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Administrator\Report1.rdlc" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

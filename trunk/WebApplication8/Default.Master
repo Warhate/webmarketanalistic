@@ -118,7 +118,7 @@
                            <div id="mn">
                            <asp:Label ID="Label3" runat="server" Text="Персональное меню"></asp:Label>
                            <div id = "menu">
-                               <asp:HyperLink ID="HyperLink17" runat="server" Text = "Личные данные"></asp:HyperLink>
+                               <asp:HyperLink ID="HyperLink17" runat="server" Text = "Личные данные" NavigateUrl="~/Profile/Profile.aspx"></asp:HyperLink>
                                </div>
                            </div>
                        </LoggedInTemplate>
