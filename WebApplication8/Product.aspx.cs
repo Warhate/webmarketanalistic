@@ -33,7 +33,7 @@ namespace WebApplication8
                         LabelInfo.Text = reader["info"].ToString();
                         LabelPrice.Text = String.Format("{0:c}",reader["Cost"]);
                         Image1.ImageUrl = "~/Image.ashx?ID="+ID;
-
+                        Button1.PostBackUrl = "~/Tray/Default.aspx?ID="+ID;
                     }
                     catch (SqlException ex)
                     {
@@ -55,6 +55,11 @@ namespace WebApplication8
                     }
 
                 }
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
 
         }
     }

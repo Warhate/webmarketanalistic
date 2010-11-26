@@ -16,16 +16,19 @@ namespace WebApplication8.Trade
         ProfileBase pb = new ProfileBase();
         ProfileInfoCollection pic = new ProfileInfoCollection();
         
+        
         protected void Page_Load(object sender, EventArgs e)
         {
 
             this.Title = "Добавление товара";
-            if (this.IsPostBack)
-            {
-                SetVisible();
-            }
+            //if (this.IsPostBack)
+            //{
+            //    SetVisible();
+            //}
             
         }
+
+
 
 
         private void SetVisible()
@@ -175,6 +178,11 @@ namespace WebApplication8.Trade
             TextBoxTVDiag.Text = "";
             TextBoxTVRaz.Text = "";
 
+        }
+
+        protected void DDListGroup_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetVisible();
         }
     }
 }

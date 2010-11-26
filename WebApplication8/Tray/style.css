@@ -13,14 +13,14 @@ select
 	border-color:#3b8ac2;
 }
 
-.nbutton
+table
 {
-	Color:White;
-	background-color:Green;
+	border: 1px Green;
 	
 	
 	
 	}
+
 .item
 {
 	border-style:dotted;
@@ -28,11 +28,20 @@ select
 	margin: 5px;
 	padding: 0;
 	color:Black;
-	font-size: 18px;
+	font-size: 16px;
 	
 	}
 
-
+TextArea
+{
+		border-style:solid;
+	border-width:2px;
+	border-color:#3b8ac2;
+	
+	}
+	
+	
+	
 #GroupBox
 {
 	border-style:dotted;
@@ -69,11 +78,7 @@ a:hover {
 	color: rgb(0,51,255);
 }
 
-.title 
-{
-	text-align:justify;
-	text-indent: 3px;
-	
+.title {
 	font: 17px Georgia, "Times New Roman", Times, serif;
 	border-left: #48b479 dotted 1px;
 	border-right: #48b479 dotted 1px;
@@ -83,23 +88,7 @@ a:hover {
 	margin-bottom: 9px;
 	color: Black;
 	background:url("/image/bgtext.png") repeat;
-	padding:15px;
-
-	
-	
 }
-
-.title a
-{
-	color:Blue;
-	
-	}
-	
-	.title i
-{
-	color:#336699;
-	
-	}
 
 .titlemnu {
 	font: 17px Georgia, "Times New Roman", Times, serif;
@@ -138,12 +127,12 @@ a:hover {
 #lm 
 {
 
-	display:block;
+
 	background:#e8e8e8;
 	border-top: #a3a4a4 solid 2px;
 	border-left: #48b479 dotted 1px;
 	border-bottom: #48b479 dotted 1px;
-	width: 204px;
+	width: 95%;
 
 	font:  12px/1 Arial;
 	font-weight:bold;
@@ -151,7 +140,6 @@ a:hover {
 	
 	
 	color: Blue;
-float:left;
 	margin-left: 20px;
 }
 #bs {
@@ -160,22 +148,25 @@ float:left;
 	color: #333;
 	padding-left: 28px;
 }
-#menu a {
+.menu a {
 	display: block;
-	width: 180px;
+	width: 175px;
 	height: 19px;
-	padding-left: 15px;
+	padding-left: 5px;
 	padding-top:5px;
 	font-weight:bold;
-
+	float:left;
 	background: url("/image/button.png")  0 0 no-repeat;
-	margin: 0px 0;
 	font:  12px/1 Arial;
 	color:White;
 	text-decoration: none;
+	border-left: 3px solid #3b8ac2;
+		border-right: 3px solid #3b8ac2;
+
+	
 	
 }
-#menu a:hover {
+.menu a:hover {
 	background-position: 0 -24px;
 	font:  12px/1 Arial;
 	font-weight:bold;
@@ -196,10 +187,11 @@ float:left;
 	background-position: 0 -40px;
 }
 #mmn {
-	width: 180px;
+	width: auto;
 	color: #333;
 	padding-left: 10px;
-	text-align: left;
+	
+
 }
 #txt 
 {
@@ -214,7 +206,7 @@ width:95%;
 #text 
 {
 	display:block;
-	width:80%;
+	width:95%;
 
 
 	border-left: #48b479 dotted 1px;
@@ -224,7 +216,7 @@ width:95%;
 	background:   #e8e8e8;
 
 
-
+	margin-left: 20px;
 
 	
 
@@ -237,7 +229,7 @@ width:95%;
 margin-right: 20px;
 margin-bottom:20px;
 padding-bottom:20px;
-float:left;
+
 
 }
 #bottom {
@@ -272,11 +264,12 @@ float:left;
 }
 #psch 
 {
-
+	font-weight:bold;
+	color:White;
+	font-size:30px;
 	display: block;
 	float: right;
-
-	margin-top: 10px;
+	margin-top: 3px;
 	margin-left: 20px;
 	margin-right: 20px;
 }
@@ -308,7 +301,7 @@ p {
 	
 	
 	color:Black;
-	width: 100%;
+	width: auto;
 	margin-top: 10px;
 	outline-style:solid;
 	outline-color:#3b8ac2;
@@ -330,3 +323,7 @@ button
 	
 }
 
+table
+{
+	border:2px;
+}

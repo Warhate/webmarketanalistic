@@ -23,7 +23,8 @@
     <td>
         <asp:DropDownList ID="DDListGroup" runat="server" AutoPostBack="True" 
             DataSourceID="SqlDataSourceGroup" DataTextField="Name" 
-            DataValueField="GroupID" DataMember="DefaultView">
+            DataValueField="GroupID" DataMember="DefaultView" 
+            onselectedindexchanged="DDListGroup_SelectedIndexChanged">
         </asp:DropDownList>
         <asp:SqlDataSource ID="SqlDataSourceGroup" runat="server" 
             ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
@@ -57,7 +58,7 @@
 
     </td>
     <td>
-        <asp:TextBox ID="TxtName" runat="server" Width="176px" CausesValidation="True"></asp:TextBox>
+        <asp:TextBox ID="TxtName" runat="server" Width="170px" CausesValidation="True"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
             ErrorMessage="* Необходимо заполнить" ControlToValidate="TxtName" 
             SetFocusOnError="True" ValidationGroup="2"></asp:RequiredFieldValidator>
@@ -68,7 +69,7 @@
         <asp:Label ID="LabelTVDiag" runat="server" Text="Диагональ экрана:"></asp:Label>
     </td>
     <td>
-        <asp:TextBox ID="TextBoxTVDiag" runat="server" Width="173px"></asp:TextBox>
+        <asp:TextBox ID="TextBoxTVDiag" runat="server" Width="170px"></asp:TextBox>
     </td>
     </tr>
 
@@ -77,7 +78,7 @@
         <asp:Label ID="LabelTVClass" runat="server" Text="Класс:"></asp:Label>
     </td>
     <td>
-        <asp:TextBox ID="TextBoxTVClass" runat="server" Width="172px"></asp:TextBox>
+        <asp:TextBox ID="TextBoxTVClass" runat="server" Width="170px"></asp:TextBox>
     </td>
     </tr>
 
@@ -180,7 +181,7 @@
         <asp:Label ID="Label5" runat="server" Text="Цена"></asp:Label>
     </td>
     <td>
-        <asp:TextBox ID="TxtPrice" runat="server" Width="174px"></asp:TextBox>
+        <asp:TextBox ID="TxtPrice" runat="server" Width="170px"></asp:TextBox>
     </td>
     </tr>
 
@@ -191,7 +192,7 @@
 
     </td>
     <td>
-        <asp:TextBox ID="TxtInStock" runat="server" Width="172px"></asp:TextBox>
+        <asp:TextBox ID="TxtInStock" runat="server" Width="170px"></asp:TextBox>
     </td>
     </tr>
     <tr>

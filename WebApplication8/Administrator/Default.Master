@@ -58,7 +58,8 @@
        </td>
        <td align="center">
            <asp:ImageButton ID="ImageButton7" runat="server" 
-               ImageUrl="~/Image/shopcartapply_128x128.png" Width="48px" />
+               ImageUrl="~/Image/shopcartapply_128x128.png" Width="48px" 
+               PostBackUrl="~/Administrator/Order.aspx" />
        </td>
               <td align="center">
                   &nbsp;</td>
@@ -87,7 +88,8 @@
                       NavigateUrl="~/Administrator/NewsEdit.aspx">Добавить новость</asp:HyperLink>
        </td>
        <td align="center" width="100">
-           <asp:HyperLink ID="HyperLink6" runat="server">Заказы</asp:HyperLink>
+           <asp:HyperLink ID="HyperLink6" runat="server" 
+               NavigateUrl="~/Administrator/Order.aspx">Заказы</asp:HyperLink>
        </td>
               <td align="center" width="100">
                   &nbsp;</td>

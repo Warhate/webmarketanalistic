@@ -4,37 +4,71 @@
 
 <asp:Content ID="Content2" runat="server" 
     contentplaceholderid="ContentPlaceHolder2">
-    <asp:Wizard ID="Wizard1" runat="server" ActiveStepIndex="0" BackColor="#E6E2D8" 
-        BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" 
-        Font-Names="Verdana" Font-Size="0.8em" Height="130px" 
-        onfinishbuttonclick="Wizard1_FinishButtonClick" Width="317px">
-        <HeaderStyle BackColor="#666666" BorderColor="#E6E2D8" BorderStyle="Solid" 
-            BorderWidth="2px" Font-Bold="True" Font-Size="0.9em" ForeColor="White" 
-            HorizontalAlign="Center" />
-        <NavigationButtonStyle BackColor="White" BorderColor="#C5BBAF" 
-            BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" 
-            ForeColor="#1C5E55" />
-        <SideBarButtonStyle ForeColor="White" />
-        <SideBarStyle BackColor="#1C5E55" Font-Size="0.9em" VerticalAlign="Top" />
-        <StepStyle BackColor="#F7F6F3" BorderColor="#E6E2D8" BorderStyle="Solid" 
-            BorderWidth="2px" />
+    <div class = "title">
+    <asp:Wizard ID="Wizard1" runat="server" ActiveStepIndex="0" Height="16px" 
+        onfinishbuttonclick="Wizard1_FinishButtonClick" Width="687px">
+        <FinishNavigationTemplate>
+            <asp:Button ID="FinishPreviousButton" runat="server" CausesValidation="False" 
+                CommandName="MovePrevious" Text="Предыдущ." />
+            <asp:Button ID="FinishButton" runat="server" CommandName="MoveComplete" 
+                onclick="FinishButton_Click" PostBackUrl="~/Tray/Done.aspx" Text="Готово" />
+        </FinishNavigationTemplate>
         <WizardSteps>
             <asp:WizardStep runat="server" title="Step 1">
-                Список товаров<asp:Label ID="LabelMessage" runat="server" Text="Label"></asp:Label>
                 <br />
                 <br />
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-                    DataSourceID="SqlDataSource1">
+                    DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#CCCCCC" 
+                    BorderStyle="None" BorderWidth="1px" CellPadding="3" Height="100px" 
+                    Width="493px">
                     <Columns>
-                        <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-                        <asp:BoundField DataField="Cost" HeaderText="Cost" SortExpression="Cost" />
+                        <asp:CommandField ShowSelectButton="True" >
+                        <ItemStyle Width="10%" />
+                        </asp:CommandField>
+                        <asp:BoundField DataField="Name" HeaderText="Наименование" 
+                            SortExpression="Name" >
+                        <ItemStyle Width="60%" Font-Bold="True" ForeColor="Black" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="Cost" HeaderText="Цена" SortExpression="Cost" 
+                            DataFormatString="{0:C}" >
+                        <ItemStyle Width="30%" Font-Bold="True" ForeColor="#009933" />
+                        </asp:BoundField>
                     </Columns>
+                    <FooterStyle BackColor="White" ForeColor="#000066" />
+                    <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                    <RowStyle ForeColor="#000066" />
+                    <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                    <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                    <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                    <SortedDescendingHeaderStyle BackColor="#00547E" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                     ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
-                    SelectCommand="SELECT Product.Name, Product.Cost FROM Product INNER JOIN Tray ON Product.ProductID = Tray.ProductID AND Product.ProductID = Tray.ProductID INNER JOIN aspnet_Users ON Tray.UserID = aspnet_Users.UserId AND Tray.UserID = aspnet_Users.UserId WHERE (aspnet_Users.UserName = 'Taras')">
+                    
+                    
+                    
+                    SelectCommand="SELECT Product.Name, Product.Cost FROM Product INNER JOIN Tray ON Product.ProductID = Tray.ProductID AND Product.ProductID = Tray.ProductID WHERE (Tray.UserName = @UserName) AND (Tray.IsBuy IS NULL)">
+                    <SelectParameters>
+                        <asp:ProfileParameter Name="UserName" PropertyName="UserName" />
+                    </SelectParameters>
                 </asp:SqlDataSource>
+                <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" 
+                    DataSourceID="SDSSum" Height="50px" HorizontalAlign="Left" Width="125px">
+                    <Fields>
+                        <asp:BoundField DataField="Expr1" DataFormatString="{0:c}" HeaderText="Сумма:" 
+                            ReadOnly="True" SortExpression="Expr1" />
+                    </Fields>
+                </asp:DetailsView>
                 <br />
+                <asp:SqlDataSource ID="SDSSum" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
+                    SelectCommand="SELECT SUM(Product.Cost) AS Expr1 FROM Tray INNER JOIN Product ON Tray.ProductID = Product.ProductID WHERE (Tray.UserName = @UserName)">
+                    <SelectParameters>
+                        <asp:ProfileParameter Name="UserName" PropertyName="UserName" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
                 <br />
                 <br />
                 <br />
@@ -47,13 +81,110 @@
             </asp:WizardStep>
             <asp:WizardStep runat="server" title="Step 2">
                 Адреса доставик
+<table >
+<tr>
+<td>
+    <asp:Label ID="Label2" runat="server" Text="Страна"></asp:Label>
+</td>
+<td>
+    <asp:Label ID="LabelCountry" runat="server"></asp:Label>
+</td>
+</tr>
+
+
+<tr>
+<td>
+    <asp:Label ID="Label3" runat="server" Text="Город"></asp:Label>
+</td>
+<td>
+    <asp:Label ID="LabelCity" runat="server"></asp:Label>
+</td>
+</tr>
+
+
+<tr>
+<td>
+    <asp:Label ID="Label4" runat="server" Text="Область"></asp:Label>
+</td>
+<td>
+    <asp:Label ID="LabelObl" runat="server"></asp:Label>
+</td>
+</tr>
+
+
+<tr>
+<td>
+    <asp:Label ID="Label5" runat="server" Text="Район"></asp:Label>
+</td>
+<td>
+    <asp:Label ID="LabelRayon" runat="server"></asp:Label>
+</td>
+</tr>
+
+
+<tr>
+<td>
+    <asp:Label ID="Label6" runat="server" Text="Индекс"></asp:Label>
+</td>
+<td>
+    <asp:Label ID="LabelIndex" runat="server"></asp:Label>
+</td>
+</tr>
+
+
+<tr>
+<td>
+    <asp:Label ID="Label7" runat="server" Text="Улица"></asp:Label>
+</td>
+<td>
+    <asp:Label ID="LabelStreet" runat="server"></asp:Label>
+</td>
+</tr>
+
+
+<tr>
+<td>
+    <asp:Label ID="Label8" runat="server" Text="Дом"></asp:Label>
+</td>
+<td>
+    <asp:Label ID="LabelDom" runat="server"></asp:Label>
+</td>
+</tr>
+
+
+<tr>
+<td>
+    <asp:Label ID="Label9" runat="server" Text="Квартира"></asp:Label>
+</td>
+<td>
+    <asp:Label ID="LabelRoom" runat="server"></asp:Label>
+</td>
+</tr>
+
+
+<tr>
+<td>
+    &nbsp;</td>
+<td>
+</td>
+</tr>
+
+
+<tr>
+<td>
+    &nbsp;</td>
+<td>
+</td>
+</tr>
+
+
+</table>
             </asp:WizardStep>
         </WizardSteps>
     </asp:Wizard>
+    </div>
+    
     <br />
-    <asp:ImageButton ID="ImageButton1" runat="server" Height="24px" 
-        ImageUrl="~/Image/1289469968_label_blue_buy.png" />
-    <asp:HyperLink ID="HyperLink1" runat="server">Купить</asp:HyperLink>
     <br />
     <br />
 </asp:Content>

@@ -16,7 +16,7 @@ namespace WebApplication8.Tray
             try
             {
                 connection.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO Tray(ProductId, UserId) VALUES ("+id+",'"+UserId+"') ", connection);
+                SqlCommand cmd = new SqlCommand("INSERT INTO Tray(ProductId, UserName) VALUES ("+id+",'"+WebProfile.Current.UserName+"') ", connection);
                 cmd.ExecuteNonQuery();
 
                 return error;
@@ -57,7 +57,11 @@ namespace WebApplication8.Tray
         
         //}
 
-
+        /// <summary>
+        /// Возвращает индефикатор юзера
+        /// </summary>
+        /// <param name="UserName">Имя пользователя</param>
+        /// <returns>Идентификатор пользователя</returns>
         private String GetUserId(String UserName)
         {
 
@@ -89,6 +93,30 @@ namespace WebApplication8.Tray
 
         }
 
+        public String Buy()
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("UPDATE Tray  SET IsBuy = 1 WHERE (UserName = '" + WebProfile.Current.UserName + "') AND (IsBuy IS NULL)", connection);
+                cmd.ExecuteNonQuery();
+
+                return "";
+
+            }
+            catch (SqlException ex)
+            {
+                error = ex.Message;
+                return error;
+            }
+            finally
+            {
+                connection.Close();
+
+            }
+        
+        
+        }
 
     }
 }

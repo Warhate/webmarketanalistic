@@ -46,7 +46,7 @@
     <asp:Label ID="Label1" runat="server" Text="Название группы"></asp:Label>
     </td>
     <td>
-    <asp:TextBox ID="TxtGroup" runat="server" Width="136px" ValidationGroup="1" 
+    <asp:TextBox ID="TxtGroup" runat="server" Width="170px" ValidationGroup="1" 
             CausesValidation="True"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
             ControlToValidate="TxtGroup" ErrorMessage="* Поле необходимо заполнить" 
@@ -60,7 +60,7 @@
     <td>
     <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
         Text="Добавить" PostBackUrl="~/Trade/AddGroup.aspx" Width="72px" 
-            ValidationGroup="1" />
+            ValidationGroup="1" CssClass="nbutton" />
     </td>
     </tr>
 
@@ -87,7 +87,7 @@
         <asp:Label ID="Label5" runat="server" Text="Название фирмы"></asp:Label>
     </td>
     <td>
-        <asp:TextBox ID="TxtFirm" runat="server" ValidationGroup="2" Width="132px"></asp:TextBox>
+        <asp:TextBox ID="TxtFirm" runat="server" ValidationGroup="2" Width="170px"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
             ControlToValidate="TxtFirm" ErrorMessage="* Поле необходимо заполнить" 
             ValidationGroup="2"></asp:RequiredFieldValidator>
@@ -99,7 +99,7 @@
     </td>
     <td>
     <asp:Button ID="AddBtn" runat="server" onclick="AddBtn_Click" Text="Добавить" 
-            ValidationGroup="2" Width="76px" />
+            ValidationGroup="2" Width="76px" CssClass="nbutton" />
     </td>
     </tr>
 

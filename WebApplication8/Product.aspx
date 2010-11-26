@@ -4,7 +4,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     
     <div class = "item">
-    <table>
+    <table width="100%">
     <tr>
     <td>
     <asp:Label ID="LabelName" runat="server" 
@@ -30,10 +30,12 @@
 
         <tr>
     <td>
+        <asp:Label ID="LabelPrice" runat="server" style="font-weight: 500; color: #0033CC" Text = "Цена : {0:c}"></asp:Label>
         <br />
     </td>
     <td>
-        <asp:Label ID="LabelPrice" runat="server" style="font-weight: 500; color: #0033CC" Text = "Цена : {0:c}"></asp:Label>
+        <asp:Button ID="Button1" runat="server" CssClass="nbutton" 
+            onclick="Button1_Click" Text="Купить" />
     </td>
     </tr>
 
