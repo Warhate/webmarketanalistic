@@ -118,5 +118,27 @@ namespace WebApplication8.Tray
         
         }
 
+        public void Del(String id)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("UPDATE Tray  SET IsBuy = 1 WHERE (UserName = '" + WebProfile.Current.UserName + "') AND (IsBuy IS NULL)", connection);
+                cmd.ExecuteNonQuery();
+
+
+            }
+            catch (SqlException ex)
+            {
+                error = ex.Message;
+            }
+            finally
+            {
+                connection.Close();
+
+            }
+        
+        
+        }
     }
 }

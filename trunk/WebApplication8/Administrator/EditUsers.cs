@@ -18,11 +18,12 @@ namespace WebApplication8.Administrator
             try
             {
                 conn.Open();
-                cmd.CommandText = "DELETE FROM aspnet_Profile WHERE (UserId ='" + userId + "' )";
+                cmd.CommandText = "DELETE FROM aspnet_Profile WHERE (UserId ="+userId+" )";
+                cmd.Parameters.AddWithValue("@UserId", userId);
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "DELETE FROM aspnet_Membership WHERE (UserId ='" + userId + "' )";
+                cmd.CommandText = "DELETE FROM aspnet_Membership WHERE (UserId =" + userId + ")";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "DELETE FROM aspnet_Users WHERE (UserId ='" + userId + "' )";
+                cmd.CommandText = "DELETE FROM aspnet_Users WHERE (UserId =" + userId + ")";
                 cmd.ExecuteNonQuery();
 
 

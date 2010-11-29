@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>PerfCenterCpl.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -64,6 +67,7 @@
     <Content Include="Administrator\OkEdit.aspx" />
     <Content Include="Administrator\Default.aspx" />
     <Content Include="Administrator\Order.aspx" />
+    <Content Include="Administrator\UsersRole.aspx" />
     <Content Include="Analistic\anlstyle.css" />
     <Content Include="Analistic\Default.aspx" />
     <Content Include="Analistic\Users.aspx" />
@@ -96,6 +100,7 @@
     <Content Include="Image\warehause.png" />
     <Content Include="Login.aspx" />
     <Content Include="my.css" />
+    <Content Include="PerfCenterCpl.ico" />
     <Content Include="Profile\my.css" />
     <Content Include="Profile\Profile.aspx" />
     <Content Include="Registration\my.css" />
@@ -192,6 +197,13 @@
     </Compile>
     <Compile Include="Administrator\Order.aspx.designer.cs">
       <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\UsersRole.aspx.cs">
+      <DependentUpon>UsersRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\UsersRole.aspx.designer.cs">
+      <DependentUpon>UsersRole.aspx</DependentUpon>
     </Compile>
     <Compile Include="Analistic\Count.cs" />
     <Compile Include="Analistic\Default.Master.cs">
@@ -356,21 +368,6 @@
     <Compile Include="Profile\ProfEdit.aspx.designer.cs">
       <DependentUpon>ProfEdit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="webmark.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>webmark.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="webmarkk.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>webmarkk.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="webmarkkkDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>webmarkkkDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="WebProfile.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -412,41 +409,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Image.ashx" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="webmark.xsc">
-      <DependentUpon>webmark.xsd</DependentUpon>
-    </None>
-    <None Include="webmark.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>webmark.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="webmark.xss">
-      <DependentUpon>webmark.xsd</DependentUpon>
-    </None>
-    <None Include="webmarkk.xsc">
-      <DependentUpon>webmarkk.xsd</DependentUpon>
-    </None>
-    <None Include="webmarkk.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>webmarkk.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="webmarkk.xss">
-      <DependentUpon>webmarkk.xsd</DependentUpon>
-    </None>
-    <None Include="webmarkkkDataSet.xsc">
-      <DependentUpon>webmarkkkDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="webmarkkkDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>webmarkkkDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="webmarkkkDataSet.xss">
-      <DependentUpon>webmarkkkDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Administrator\Report1.rdlc" />

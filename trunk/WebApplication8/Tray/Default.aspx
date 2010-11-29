@@ -20,19 +20,17 @@
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
                     DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#CCCCCC" 
                     BorderStyle="None" BorderWidth="1px" CellPadding="3" Height="100px" 
-                    Width="493px">
+                    Width="493px" AllowSorting="True" DataKeyNames="TrayID">
                     <Columns>
-                        <asp:CommandField ShowSelectButton="True" >
-                        <ItemStyle Width="10%" />
-                        </asp:CommandField>
+                        <asp:CommandField ShowSelectButton="True" />
                         <asp:BoundField DataField="Name" HeaderText="Наименование" 
                             SortExpression="Name" >
-                        <ItemStyle Width="60%" Font-Bold="True" ForeColor="Black" />
                         </asp:BoundField>
                         <asp:BoundField DataField="Cost" HeaderText="Цена" SortExpression="Cost" 
-                            DataFormatString="{0:C}" >
-                        <ItemStyle Width="30%" Font-Bold="True" ForeColor="#009933" />
+                            DataFormatString="{0:c}" >
                         </asp:BoundField>
+                        <asp:BoundField DataField="TrayID" HeaderText="TrayID" InsertVisible="False" 
+                            ReadOnly="True" SortExpression="TrayID" Visible="False" />
                     </Columns>
                     <FooterStyle BackColor="White" ForeColor="#000066" />
                     <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
@@ -49,7 +47,8 @@
                     
                     
                     
-                    SelectCommand="SELECT Product.Name, Product.Cost FROM Product INNER JOIN Tray ON Product.ProductID = Tray.ProductID AND Product.ProductID = Tray.ProductID WHERE (Tray.UserName = @UserName) AND (Tray.IsBuy IS NULL)">
+                    
+                    SelectCommand="SELECT Product.Name, Product.Cost, Tray.TrayID FROM Product INNER JOIN Tray ON Product.ProductID = Tray.ProductID AND Product.ProductID = Tray.ProductID WHERE (Tray.UserName = @UserName) AND (Tray.IsBuy IS NULL)">
                     <SelectParameters>
                         <asp:ProfileParameter Name="UserName" PropertyName="UserName" />
                     </SelectParameters>
@@ -64,12 +63,15 @@
                 <br />
                 <asp:SqlDataSource ID="SDSSum" runat="server" 
                     ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
-                    SelectCommand="SELECT SUM(Product.Cost) AS Expr1 FROM Tray INNER JOIN Product ON Tray.ProductID = Product.ProductID WHERE (Tray.UserName = @UserName)">
+                    
+                    SelectCommand="SELECT SUM(Product.Cost) AS Expr1 FROM Tray INNER JOIN Product ON Tray.ProductID = Product.ProductID WHERE (Tray.UserName = @UserName) AND (Tray.IsBuy IS NULL)">
                     <SelectParameters>
                         <asp:ProfileParameter Name="UserName" PropertyName="UserName" />
                     </SelectParameters>
                 </asp:SqlDataSource>
                 <br />
+                <asp:Button ID="BtnDel" runat="server" OnClick="BtnDel_Click" 
+                    Text="Удалить выбраую покупку" />
                 <br />
                 <br />
                 <br />
