@@ -27,8 +27,10 @@ namespace WebApplication8.Tray
                 if (!GridView1.Visible)
                 {
                     DetailsView1.Visible = false;
+                    BtnDel.Visible = false;
                 
                 }
+
 
                 LabelCountry.Text = WebProfile.Current.Country;
                 LabelCity.Text = WebProfile.Current.City;
@@ -55,6 +57,14 @@ namespace WebApplication8.Tray
         {
             AddTray addTray = new AddTray();
             addTray.Buy();
+        }
+
+        protected void BtnDel_Click(object sender, EventArgs e)
+        {
+            AddTray addTray = new AddTray();
+            addTray.Del(GridView1.SelectedRow.Cells[3].Text);
+            GridView1.DataBind();
+            DetailsView1.DataBind();
         }
     }
 }

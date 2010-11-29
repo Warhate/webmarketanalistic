@@ -23,7 +23,7 @@ namespace WebApplication8.Administrator
         {
             EditUsers eu = new EditUsers();
             Button1.Text = eu.DeleteUser(GridView1.SelectedRow.Cells[2].Text);
-            
+            GridView1.DataBind();
 
             
             

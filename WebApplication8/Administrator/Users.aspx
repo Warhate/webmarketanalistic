@@ -45,6 +45,7 @@
         </asp:GridView>
         <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
             Text="Удалить пользователя" />
+        <asp:Button ID="Button2" runat="server" Text="Изменить права пользователя" />
     </p>
     </asp:Content>
 
