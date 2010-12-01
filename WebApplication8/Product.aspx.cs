@@ -33,6 +33,8 @@ namespace WebApplication8
                         LabelInfo.Text = reader["info"].ToString();
                         LabelPrice.Text = String.Format("{0:c}",reader["Cost"]);
 
+
+
                         if (reader["GroupID"].ToString() == "1")
                         {
                             LabelClass.Visible = true;
@@ -60,7 +62,7 @@ namespace WebApplication8
 
                         
                         }
-                        else if (reader["GroupID"].ToString() == "2")
+                        if (reader["GroupID"].ToString() == "2")
                         {
                             LabelClass.Visible = false;
                             LabelClassCaption.Visible = false;
@@ -89,7 +91,7 @@ namespace WebApplication8
 
 
                         }
-                        else
+                        if (reader["GroupID"].ToString() != "2" && reader["GroupID"].ToString() != "1")
                         {
 
                             LabelClass.Visible = false;

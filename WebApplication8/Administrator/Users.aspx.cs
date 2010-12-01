@@ -16,14 +16,15 @@ namespace WebApplication8.Administrator
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            btnEditRole.PostBackUrl = "~/Administrator/UsersRole.aspx?User="+GridViewUsers.SelectedRow.Cells[1].Text;
+            BtnProfile.PostBackUrl = "~/Administrator/UserProfile.aspx?User=" + GridViewUsers.SelectedRow.Cells[1].Text;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
             EditUsers eu = new EditUsers();
-            Button1.Text = eu.DeleteUser(GridView1.SelectedRow.Cells[2].Text);
-            GridView1.DataBind();
+            eu.DeleteUser(GridViewUsers.SelectedRow.Cells[2].Text);
+            GridViewUsers.DataBind();
 
             
             
@@ -32,6 +33,11 @@ namespace WebApplication8.Administrator
         protected void Button2_Click(object sender, EventArgs e)
         {
            
+        }
+
+        protected void Button2_Click1(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -9,6 +9,7 @@
 </asp:Content>
 <asp:Content ID="Content3" runat="server" 
     contentplaceholderid="ContentPlaceHolder2">
+    <div class = "title">
     <table id = "a1" style="width: 100%;">
         <tr>
             <td class="style1">
@@ -74,7 +75,7 @@
             <td class="style1">
                 <br />
                 <asp:Button ID="BtnAddNews" runat="server" onclick="BtnAddNews_Click" 
-                    Text="Добавить" ValidationGroup="1" />
+                    Text="Добавить" ValidationGroup="1" CssClass="nbutton" />
             </td>
             <td>
 
@@ -84,5 +85,6 @@
             </td>
         </tr>
     </table>
+    </div>
 </asp:Content>
 

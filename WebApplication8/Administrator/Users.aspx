@@ -12,26 +12,31 @@
 </asp:Content>
 <asp:Content ID="Content3" runat="server" 
     contentplaceholderid="ContentPlaceHolder2">
+    <div class = "title">
     <p class="style1">
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
-            SelectCommand="SELECT [UserName], [UserId] FROM [vw_aspnet_Users]">
+            
+            SelectCommand="SELECT vw_aspnet_Users.UserName, vw_aspnet_Users.UserId, aspnet_Membership.Email, aspnet_Membership.LastLoginDate, aspnet_Membership.CreateDate FROM vw_aspnet_Users INNER JOIN aspnet_Membership ON vw_aspnet_Users.UserId = aspnet_Membership.UserId">
         </asp:SqlDataSource>
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" 
+        <asp:GridView ID="GridViewUsers" runat="server" AllowPaging="True" 
             AutoGenerateColumns="False" DataSourceID="SqlDataSource1" 
             onselectedindexchanged="GridView1_SelectedIndexChanged" BackColor="White" 
             BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" 
-            PageSize="40" Width="100%">
+            PageSize="40" Width="100%" AllowSorting="True">
             <Columns>
-                <asp:CommandField ShowSelectButton="True" SelectText="Выбрать" >
-                <ItemStyle Width="10%" />
-                </asp:CommandField>
-                <asp:BoundField DataField="UserName" HeaderText="Имя пользователя" 
+                <asp:CommandField ShowSelectButton="True" />
+                <asp:BoundField DataField="UserName" HeaderText="Логин пользователя" 
                     SortExpression="UserName" >
-                <ItemStyle Width="90%" />
                 </asp:BoundField>
-                <asp:BoundField DataField="UserId" HeaderText="UserId" 
-                    SortExpression="UserId" Visible="False" />
+                <asp:BoundField DataField="UserId" HeaderText="Идентификатор" 
+                    SortExpression="UserId" >
+                </asp:BoundField>
+                <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                <asp:BoundField DataField="LastLoginDate" DataFormatString="{0:D}" 
+                    HeaderText="Дата последнего входа" SortExpression="LastLoginDate" />
+                <asp:BoundField DataField="CreateDate" DataFormatString="{0:D}" 
+                    HeaderText="Дата регистрации" SortExpression="CreateDate" />
             </Columns>
             <FooterStyle BackColor="White" ForeColor="#000066" />
             <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
@@ -43,9 +48,13 @@
             <SortedDescendingCellStyle BackColor="#CAC9C9" />
             <SortedDescendingHeaderStyle BackColor="#00547E" />
         </asp:GridView>
-        <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
-            Text="Удалить пользователя" />
-        <asp:Button ID="Button2" runat="server" Text="Изменить права пользователя" />
+        <asp:Button ID="BtnDeleteUser" runat="server" onclick="Button1_Click" 
+            Text="Удалить пользователя" CssClass="nbutton" />
+        <asp:Button ID="btnEditRole" runat="server" Text="Изменить права пользователя" 
+            onclick="Button2_Click1" CssClass="nbutton" />
+        <asp:Button ID="BtnProfile" runat="server" CssClass="nbutton" 
+            Text="Просмотр профиля пользователя" />
     </p>
+    </div>
     </asp:Content>
 
