@@ -3,21 +3,26 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-<table>
+<div class = "title">
+<table width="100%">
 <tr>
-<td>
+<td width="30%">
     <asp:ListBox ID="ListBox1" runat="server" AutoPostBack="True" 
         DataSourceID="SDSUser" DataTextField="UserName" DataValueField="UserName" 
-        Height="458px" Width="260px"></asp:ListBox>
+        Height="458px" Width="260px" 
+        onselectedindexchanged="ListBox1_SelectedIndexChanged"></asp:ListBox>
 </td>
 <td valign="top">
     <asp:GridView ID="GridView1" runat="server" AllowSorting="True" 
         AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" 
         BorderStyle="None" BorderWidth="1px" CellPadding="3" DataSourceID="SDSTray" 
-        Height="132px" Width="503px">
+        Height="132px" Width="100%" 
+        onselectedindexchanged="GridView1_SelectedIndexChanged">
         <Columns>
-            <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-            <asp:BoundField DataField="Cost" HeaderText="Cost" SortExpression="Cost" />
+            <asp:BoundField DataField="Name" HeaderText="Наименование товара" 
+                SortExpression="Name" />
+            <asp:BoundField DataField="Cost" HeaderText="Цена" SortExpression="Cost" 
+                DataFormatString="{0:c}" />
         </Columns>
         <FooterStyle BackColor="White" ForeColor="#000066" />
         <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
@@ -37,6 +42,10 @@
                 PropertyName="SelectedValue" />
         </SelectParameters>
     </asp:SqlDataSource>
+    <asp:Button ID="BtnProfile" runat="server" CssClass="nbutton" 
+        Text="Профиль пользователя" />
+    <asp:Button ID="Button1" runat="server" CssClass="nbutton" 
+        onclick="Button1_Click" Text="Доставлено" />
 </td>
 </tr>
 </table>
@@ -59,5 +68,5 @@
     </asp:SqlDataSource>
     <br />
     <br />
-&nbsp;
+</div>
 </asp:Content>

@@ -24,6 +24,12 @@ namespace WebApplication8.Trade
                 conn.Open();
                 context.Response.ContentType = "image/png";
                 context.Response.BinaryWrite((byte[])cmd.ExecuteScalar());
+
+                if (context.Items.Count == 0)
+                {
+                    context.Response.WriteFile("~/Image/no_cover.png");
+                
+                }
                 
             }
             catch (Exception)

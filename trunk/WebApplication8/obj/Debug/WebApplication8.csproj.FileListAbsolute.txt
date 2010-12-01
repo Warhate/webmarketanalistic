@@ -3,5 +3,3 @@ c:\users\warh\documents\visual studio 2010\Projects\WebApplication8\WebApplicati
 c:\users\warh\documents\visual studio 2010\Projects\WebApplication8\WebApplication8\bin\WebApplication8.pdb
 c:\users\warh\documents\visual studio 2010\Projects\WebApplication8\WebApplication8\obj\Debug\WebApplication8.dll
 c:\users\warh\documents\visual studio 2010\Projects\WebApplication8\WebApplication8\obj\Debug\WebApplication8.pdb
-C:\Users\Warh\Documents\Visual Studio 2010\Projects\WebApplication8\WebApplication8\obj\Debug\RdlCompile.cache
-C:\Users\Warh\Documents\Visual Studio 2010\Projects\WebApplication8\WebApplication8\obj\Debug\RdlCompile.compiled

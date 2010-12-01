@@ -3,6 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content3" runat="server" 
     contentplaceholderid="ContentPlaceHolder2">
+    <div class = "title">
     <asp:GridView ID="GridView1" runat="server" AllowPaging="True" 
         AllowSorting="True" AutoGenerateColumns="False" 
         DataSourceID="SqlDataSource1" 
@@ -13,7 +14,8 @@
             <asp:CommandField ShowSelectButton="True" ButtonType="Button" >
             <ItemStyle Width="10%" />
             </asp:CommandField>
-            <asp:BoundField DataField="date" HeaderText="Дата" SortExpression="date" >
+            <asp:BoundField DataField="date" HeaderText="Дата" SortExpression="date" 
+                DataFormatString="{0:D}" >
             <HeaderStyle Width="200px" />
             <ItemStyle BorderColor="#006699" BorderStyle="Solid" Width="20%" />
             </asp:BoundField>
@@ -43,5 +45,6 @@
     </asp:SqlDataSource>
     <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
         PostBackUrl="~/Administrator/NewsEdit.aspx" Text="Редактировать" />
+        </div>
 </asp:Content>
 
