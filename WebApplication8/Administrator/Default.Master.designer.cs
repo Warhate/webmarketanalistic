@@ -58,67 +58,49 @@ namespace WebApplication8.Administrator {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder3;
         
         /// <summary>
-        /// ImageButton1 элемент управления.
+        /// HLHome элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
+        protected global::System.Web.UI.WebControls.HyperLink HLHome;
         
         /// <summary>
-        /// ImageButton5 элемент управления.
+        /// HLMaket элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton5;
+        protected global::System.Web.UI.WebControls.HyperLink HLMaket;
         
         /// <summary>
-        /// ImageButton2 элемент управления.
+        /// HLBuy элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton2;
+        protected global::System.Web.UI.WebControls.HyperLink HLBuy;
         
         /// <summary>
-        /// ImageButton6 элемент управления.
+        /// HLOplata элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton6;
+        protected global::System.Web.UI.WebControls.HyperLink HLOplata;
         
         /// <summary>
-        /// ImageButton3 элемент управления.
+        /// HLContacts элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton3;
-        
-        /// <summary>
-        /// ImageButton7 элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton7;
-        
-        /// <summary>
-        /// HyperLink1 элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.HyperLink HLContacts;
         
         /// <summary>
         /// HyperLink2 элемент управления.

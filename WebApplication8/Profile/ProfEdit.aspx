@@ -11,6 +11,8 @@
         </td>
         <td>
             <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                ControlToValidate="txtFirstName" ErrorMessage="*"></asp:RequiredFieldValidator>
         </td>
     </tr>
         <tr>
@@ -19,6 +21,8 @@
         </td>
         <td>
             <asp:TextBox ID="txtMidleName" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                ControlToValidate="txtMidleName" ErrorMessage="*"></asp:RequiredFieldValidator>
         </td>
     </tr>
         <tr>
@@ -27,6 +31,8 @@
         </td>
         <td>
             <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
+                ControlToValidate="txtLastName" ErrorMessage="*"></asp:RequiredFieldValidator>
         </td>
     </tr>
         <tr>
@@ -34,6 +40,8 @@
             Возраст</td>
         <td>
             <asp:TextBox ID="txtAge" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
+                ControlToValidate="txtAge" ErrorMessage="*"></asp:RequiredFieldValidator>
         </td>
     </tr>
         <tr>
@@ -41,6 +49,8 @@
             Вид деятельности</td>
         <td>
             <asp:TextBox ID="txtPorofession" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
+                ControlToValidate="txtPorofession" ErrorMessage="*"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
@@ -74,6 +84,8 @@
         </td>
         <td>
             <asp:TextBox ID="TxtCountry" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" 
+                ControlToValidate="TxtCountry" ErrorMessage="*"></asp:RequiredFieldValidator>
         </td>
     </tr>
         <tr>
@@ -82,6 +94,8 @@
         </td>
         <td>
             <asp:TextBox ID="TxtCity" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" 
+                ControlToValidate="TxtCity" ErrorMessage="*"></asp:RequiredFieldValidator>
         </td>
     </tr>
         <tr>
@@ -90,6 +104,8 @@
         </td>
         <td>
             <asp:TextBox ID="TxtOblast" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" 
+                ControlToValidate="TxtCity" ErrorMessage="*"></asp:RequiredFieldValidator>
         </td>
     </tr>
         <tr>
@@ -98,6 +114,8 @@
             </td>
         <td>
             <asp:TextBox ID="TxtRAyon" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" 
+                ControlToValidate="TxtRAyon" ErrorMessage="*"></asp:RequiredFieldValidator>
         </td>
     </tr>
         <tr>
@@ -106,6 +124,8 @@
             </td>
         <td>
             <asp:TextBox ID="TxtStreet" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" 
+                ControlToValidate="TxtStreet" ErrorMessage="*"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
@@ -114,6 +134,8 @@
         </td>
         <td>
             <asp:TextBox ID="TxtDom" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" 
+                ControlToValidate="TxtDom" ErrorMessage="*"></asp:RequiredFieldValidator>
         </td>
     </tr>
         <tr>
@@ -122,6 +144,8 @@
         </td>
         <td>
             <asp:TextBox ID="TxtRoom" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" 
+                ControlToValidate="TxtRoom" ErrorMessage="*"></asp:RequiredFieldValidator>
         </td>
     </tr>
         <tr>
@@ -130,6 +154,8 @@
         </td>
         <td style="text-align: right">
             <asp:TextBox ID="TxtIndex" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" 
+                ControlToValidate="TxtIndex" ErrorMessage="*"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>

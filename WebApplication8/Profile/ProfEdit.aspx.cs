@@ -55,7 +55,7 @@ namespace WebApplication8
             WebProfile.Current.Street = TxtStreet.Text;
             WebProfile.Current.Save();
             ProfileEdit pe = new ProfileEdit();
-            pe.ProfileAdd();
+            Label1.Text =  pe.ProfileAdd();
         }
     }
 }

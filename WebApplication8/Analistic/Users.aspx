@@ -7,7 +7,7 @@
     <tr>
     <td>
     
-        <div id = "selectstat">
+        <div id = "selectstat" align="left">
     <asp:Label ID="Label1" runat="server" 
         Text="Выбор статистики, которую нужно показать"></asp:Label>
     <br />
@@ -112,7 +112,7 @@
             onclick="ButtonSex_Click" Text="Экспорт" />
         <br />
     <asp:Chart ID="ChartSex" runat="server" DataSourceID="SDSUsersSex" Height="202px" 
-            style="text-align: left" Width="394px" Palette="SeaGreen">
+            style="text-align: left" Width="394px" Palette="SemiTransparent">
         <Series>
             <asp:Series ChartType="Bar" Name="Series1" XValueMember="Sex" 
                 YValueMembers="Expr1">
@@ -120,6 +120,8 @@
         </Series>
         <ChartAreas>
             <asp:ChartArea Name="ChartArea1">
+                <Area3DStyle Enable3D="True" Inclination="20" IsClustered="True" 
+                    IsRightAngleAxes="False" LightStyle="Realistic" />
             </asp:ChartArea>
         </ChartAreas>
     </asp:Chart>

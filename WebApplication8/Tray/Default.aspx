@@ -19,7 +19,7 @@
                 <br />
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
                     DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#CCCCCC" 
-                    BorderStyle="None" BorderWidth="1px" CellPadding="3" Height="100px" 
+                    BorderStyle="None" BorderWidth="1px" CellPadding="3" 
                     Width="493px" AllowSorting="True" DataKeyNames="TrayID">
                     <Columns>
                         <asp:CommandField ShowSelectButton="True" />

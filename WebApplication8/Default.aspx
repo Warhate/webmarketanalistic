@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication8.WebForm2" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication8.WebForm2" UICulture = "auto" Culture = "uk-UA"  %>
 
 <%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>
 
@@ -10,6 +9,8 @@
         
         SelectCommand="SELECT newsbody, date, newsname FROM News ORDER BY date DESC">
     </asp:SqlDataSource>
+    <asp:Label ID="LabelNews" runat="server" Font-Bold="True" 
+    Font-Size="X-Large" Text="Новости"></asp:Label>
     <br />
     <asp:ListView ID="ListView1"  runat="server" DataSourceID="SqlDataSource1" 
         style="text-align: left" >
@@ -135,9 +136,5 @@
 
     </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID = "ContentPlaceHolder3" runat = "server">
-
-
-</asp:Content>
 <asp:Content ID="Content3" runat="server" contentplaceholderid="head">
     </asp:Content>

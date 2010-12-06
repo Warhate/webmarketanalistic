@@ -3,22 +3,23 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     
-    <div class = "item">
-    <table width="100%">
-    <tr>
-    <td>
-    <asp:Label ID="LabelName" runat="server" 
-        style="text-align: center; color: #33CC33; font-weight: 700; font-size: large; font-family: Aharoni;"></asp:Label><br />
-    <p style="text-align: left">
-    </td>
-    <td>
-        
+      <div class =  "title">
+           <table>
+           <tr>
+           <td>
+           <asp:Label ID="LabelName" runat="server" ></asp:Label>
+           </td>
+           <td>
+           </td>
+           </tr>
 
-
-
-
-
-        <asp:Label ID="LabelDiagCaption" runat="server" Font-Bold="True" 
+           <tr>
+           <td valign="top">
+   
+               <asp:Image ID="Image1" runat="server" />
+           </td>
+           <td valign="top">
+<asp:Label ID="LabelDiagCaption" runat="server" Font-Bold="True" 
             Text="Диагональ экрана:"></asp:Label>
 &nbsp;<asp:Label ID="LabelDiag" runat="server"></asp:Label>
         <br />
@@ -45,46 +46,36 @@
             Text="Функции памяти:"></asp:Label>
 &nbsp;<asp:Label ID="LabelMem" runat="server"></asp:Label>
         
-
-
-
-
-
-    </td>
-    </tr>
-
-        <tr valign="top">
-    <td>
-
-      <asp:Image
-        ID="Image1" runat="server" ImageUrl="~/Trade/Image.ashx" />
-
-    </td>
-    <td>
+               <br />
+               <br />
+        
         <asp:Label ID="LabelInfo" runat="server" style="font-size: medium; color: #000000"></asp:Label>
+           </td>
+           </tr>
 
-    </td>
-    </tr>
+           <tr>
+           <td>
 
-        <tr>
-    <td>
-        <asp:Label ID="LabelPrice" runat="server" style="font-weight: 500; color: #0033CC" Text = "Цена : {0:c}"></asp:Label>
-        <br />
-    </td>
-    <td>
-        <asp:Button ID="Button1" runat="server" CssClass="nbutton" 
+              <asp:Button ID="Button1" runat="server" CssClass="nbutton" 
             onclick="Button1_Click" Text="Купить" />
-    </td>
-    </tr>
+           </td>
+           <td>
 
-    </table>
-    
-      
-    </p>
-    <p style="text-align: left">
-    
-    </p>
-    </div>
+                  <asp:Label ID="LabelPrice" runat="server" 
+                      style="font-weight: 500; color: #0033CC" Text = "Цена : {0:c}"></asp:Label>
+           </td>
+           </tr>
+
+           </table>
+           
+            </div>
+
+
+
+
+
+
+
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
 </asp:Content>

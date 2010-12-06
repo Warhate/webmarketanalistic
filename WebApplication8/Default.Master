@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="WebApplication8.Default" %>
+﻿<%@ Master  Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="WebApplication8.Default"  %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -9,71 +9,71 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            font-size: small;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 <div id = "page">
     <form id="form1" runat="server">
     <div id = "header" >
+        <%--Start head --%>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
-           <div id= "psch">
-                   <asp:DropDownList ID="droplang" runat="server" meta:resourcekey="droplangResource1">
-            <asp:ListItem Value="ua-ua" meta:resourcekey="ListItemResource1">Українська</asp:ListItem>
-            <asp:ListItem Value="ru-ru" meta:resourcekey="ListItemResource2">Русский</asp:ListItem>
-        </asp:DropDownList>
-        <asp:Button ID="btnlang" runat="server" Text="Выбрать" 
-                   meta:resourcekey="btnlangResource1" />
-<br/>
-<br/>
-               
-        <asp:ImageButton ID="ImageButton1" runat="server" Height="24px" 
-            ImageUrl="~/Image/shopcart_128x128.png" PostBackUrl="~/Tray/Default.aspx" />
-        <asp:HyperLink ID="HLTray" runat="server" NavigateUrl="~/Tray/Default.aspx">Корзина</asp:HyperLink>
+           
+    
+            <br />
+            <asp:Label ID="HomePage" runat="server" Font-Bold="True" Font-Size="XX-Large" 
+                ForeColor="#4F504F" Text="Главная"></asp:Label>
 
-
-
-    </div>
+           
     
         </asp:ContentPlaceHolder>
         </div>
-        <div id = "lm">
-        <div id="mmn">
+    <%--Start head --%>
+       
+      
 
             <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
-            <div id = "title">
+                <%-- Початок вхід --%>
+             <div id = "lm">
                    <asp:LoginView ID="LoginView1" runat="server" 
                        onviewchanged="LoginView1_ViewChanged">
 
                        <AnonymousTemplate>
-                           <div id = "mn">
+
                                            <asp:LoginStatus ID="LoginStatus1" runat="server" 
                        style="text-align: left" LogoutPageUrl="~/Login.aspx" 
-                       meta:resourcekey="LoginStatus1Resource1" Width="16px" />
-                           <br />
+                       meta:resourcekey="LoginStatus1Resource1" Width="16px" 
+                                               LoginText="<%$ Resources:LocalizeText, Login %>" 
+                                               LogoutText="<%$ Resources:LocalizeText, Logout %>" />
 
-                               </div>
+
                        </AnonymousTemplate>
                        <LoggedInTemplate>
-                       <div id="mn">
 
-                               <asp:LoginName ID="LoginName1" runat="server" 
-                                   FormatString="Добро пожаловать, {0}." meta:resourcekey="LoginName1Resource1" />
                                <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutPageUrl="~/Login.aspx" 
-                                   meta:resourcekey="LoginStatus1Resource1" style="text-align: left" />
+                                   meta:resourcekey="LoginStatus1Resource1" style="text-align: left" 
+                                   LoginText="<%$ Resources:LocalizeText, Login %>" 
+                                   LogoutText="<%$ Resources:LocalizeText, Logout %>" Width="16px" />
 
-                           </div>
                        </LoggedInTemplate>
                        <RoleGroups>
                            <asp:RoleGroup Roles="Administrator">
                                <ContentTemplate>
-                                <div id="mn">
-                                   <asp:LoginName ID="LoginName1" runat="server" 
-                                       FormatString="Добро пожаловать, {0}." meta:resourcekey="LoginName1Resource1" />
-                                   <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutPageUrl="~/Login.aspx" 
-                                       meta:resourcekey="LoginStatus1Resource1" style="text-align: left" />
-                                   <br />
 
-                                       </div>
+                                   <asp:LoginName ID="LoginName1" runat="server" 
+                                       FormatString="<%$ Resources:LocalizeText, LoginName %>" 
+                                        meta:resourcekey="LoginName1Resource1" />
+                                   <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutPageUrl="~/Login.aspx" 
+                                       meta:resourcekey="LoginStatus1Resource1" style="text-align: left" 
+                                        LoginText="<%$ Resources:LocalizeText, Login %>" 
+                                        LogoutText="<%$ Resources:LocalizeText, Logout %>" />
+
                                </ContentTemplate>
                            </asp:RoleGroup>
                            <asp:RoleGroup Roles="Trader">
@@ -83,124 +83,140 @@
                            </asp:RoleGroup>
                            <asp:RoleGroup Roles="Analistic">
                                <ContentTemplate>
-                                <div id="mn">
-                                   <asp:LoginName ID="LoginName1" runat="server" 
-                                       FormatString="Добро пожаловать, {0}." meta:resourcekey="LoginName1Resource1" />
-                                   <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutPageUrl="~/Login.aspx" 
-                                       meta:resourcekey="LoginStatus1Resource1" style="text-align: left" />
-                                   <br />
-                                   &nbsp;
 
-                                       </div>
+                                   <asp:LoginName ID="LoginName1" runat="server" 
+                                       FormatString="<%$ Resources:LocalizeText, LoginName %>" 
+                                        meta:resourcekey="LoginName1Resource1" />
+                                   <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutPageUrl="~/Login.aspx" 
+                                       meta:resourcekey="LoginStatus1Resource1" style="text-align: left" 
+                                        LoginText="<%$ Resources:LocalizeText, Login %>" 
+                                        LogoutText="<%$ Resources:LocalizeText, Logout %>" />
+
                                </ContentTemplate>
                            </asp:RoleGroup>
                        </RoleGroups>
 
-                </asp:LoginView>
+                </asp:LoginView> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:ImageButton ID="ImageButton1" runat="server" Height="24px" 
+            ImageUrl="~/Image/shopcart_128x128.png" PostBackUrl="~/Tray/Default.aspx" />
+        <asp:HyperLink ID="HLTray" runat="server" NavigateUrl="~/Tray/Default.aspx" 
+                       Text="<%$ Resources:LocalizeText, HLTray %>"></asp:HyperLink>
+                <div id= "psch">
+                   <asp:DropDownList ID="droplang" runat="server" 
+                       meta:resourcekey="droplangResource1" 
+                       onselectedindexchanged="droplang_SelectedIndexChanged1">
+            <asp:ListItem Value="uk" meta:resourcekey="ListItemResource1">Украинский</asp:ListItem>
+            <asp:ListItem Value="ru" meta:resourcekey="ListItemResource2">Русский</asp:ListItem>
+                       <asp:ListItem Value="en">Английский</asp:ListItem>
+        </asp:DropDownList>
+        <asp:Button ID="btnlang" runat="server" Text="Выбрать" 
+                   meta:resourcekey="btnlangResource1" onclick="btnlang_Click" />               
+
+
+
+
+    </div>
+                   <%-- Кінець вхід --%>
+                  </div>
+                <%--Початок головного меню --%>
+                <div id = "mainmenu">
+                     <div id="menu">
+                   <asp:HyperLink ID="HLHome" runat="server" NavigateUrl="~/Default.aspx" 
+                       Text="<%$ Resources:LocalizeText, HLHome %>"></asp:HyperLink>
+
+                    <asp:HyperLink ID="HLMaket" runat="server" NavigateUrl="~/Market.aspx" 
+                                        Text="<%$ Resources:LocalizeText, HLMarket %>"></asp:HyperLink>
+
+
+                    <asp:HyperLink ID="HLBuy" runat="server" Text="<%$ Resources:LocalizeText, HLBuy %>" 
+                             NavigateUrl="~/Purshe.aspx"></asp:HyperLink>
+
+
+                <asp:HyperLink ID="HLOplata" runat="server" 
+                        Text="<%$ Resources:LocalizeText, HLOplata %>" NavigateUrl="~/Money.aspx"></asp:HyperLink>
+
+                <asp:HyperLink ID="HLContacts" runat="server" NavigateUrl="~/About.aspx" 
+                        Text="<%$ Resources:LocalizeText, HLContacts %>"></asp:HyperLink>
                 </div>
-                   <br />
-                   <br />
-                   <div id = "title">
-                    
-                        
+                </div>
+                <%--Кінець головного меню --%>                          <%-- Початок Персональне меню --%>
                    <asp:LoginView ID="LoginView2" runat="server" 
                        onviewchanged="LoginView1_ViewChanged">
                        
                        <AnonymousTemplate>
-                           <div id="mn">
-                           <asp:Label ID="Label3" runat="server" Text="Персональное меню"></asp:Label>
-                           <div id = "menu">
-                               <asp:HyperLink ID="HyperLink18" runat="server" Text = "Регистрация" NavigateUrl="~/Registration/Reg.aspx"></asp:HyperLink>
+
+                           <div id = "menuuser">
+                               <asp:HyperLink ID="HLReg" runat="server" Text = "Регистрация" 
+                                   NavigateUrl="~/Registration/Reg.aspx"></asp:HyperLink>
                                </div>
-                           </div>
+
                        </AnonymousTemplate>
                        <LoggedInTemplate>
-                           <div id="mn">
-                           <asp:Label ID="Label3" runat="server" Text="Персональное меню"></asp:Label>
-                           <div id = "menu">
-                               <asp:HyperLink ID="HyperLink17" runat="server" Text = "Личные данные" NavigateUrl="~/Profile/Profile.aspx"></asp:HyperLink>
+
+                           <div id = "menuuser">
+                               <asp:HyperLink ID="HLProfile" runat="server" Text = "Личные данные" 
+                                   NavigateUrl="~/Profile/Profile.aspx"></asp:HyperLink>
                                </div>
-                           </div>
+
                        </LoggedInTemplate>
                        <RoleGroups>
                            <asp:RoleGroup Roles="Administrator">
                                <ContentTemplate>
-                               <div id="mn">
-                               <asp:Label ID="Label3" runat="server" Text="Меню персонала"></asp:Label>
+
+                           
                                        
-                                                                  <div id = "menu">
-                               <asp:HyperLink ID="HyperLink16" runat="server" Text = "Личные данные" NavigateUrl="~/Profile/Profile.aspx"></asp:HyperLink>
-                               </div>
-                                       
-                                       <div id="menu">
-                                           <asp:HyperLink ID="HyperLink13" runat="server"  Text = "Управление" NavigateUrl="~/Administrator/Default.aspx"></asp:HyperLink>
-                                      </div><div id="menu">
-                                          <asp:HyperLink ID="HyperLink14" runat="server" Text = "Статистика" NavigateUrl="~/Analistic/Default.aspx"></asp:HyperLink>
-                                      </div><div id="menu">
-                                          <asp:HyperLink ID="HyperLink15" runat="server" Text = "Товары" NavigateUrl="~/Trade/Default.aspx"></asp:HyperLink>
+                                                                  <div id = "menuadm">
+                               <asp:HyperLink ID="HLProfile" runat="server" Text = "<%$ Resources:LocalizeText, Profile %>" 
+                                                                          NavigateUrl="~/Profile/Profile.aspx"></asp:HyperLink>
+
+                                           <asp:HyperLink ID="HLAdmin" runat="server"  
+                                               Text = "<%$ Resources:LocalizeText, Administrator %>" 
+                                               NavigateUrl="~/Administrator/Default.aspx"></asp:HyperLink>
+
+                                          <asp:HyperLink ID="HLStat" runat="server" 
+                                              Text = "<%$ Resources:LocalizeText, Statistic %>" 
+                                              NavigateUrl="~/Analistic/Default.aspx"></asp:HyperLink>
+
+                                          <asp:HyperLink ID="HLTrade" runat="server" 
+                                              Text = "<%$ Resources:LocalizeText, Trade %>" 
+                                              NavigateUrl="~/Trade/Default.aspx"></asp:HyperLink>
                                           </div>
-                                          </div>
+
                                </ContentTemplate>
                            </asp:RoleGroup>
                            <asp:RoleGroup Roles="Trader">
                                <ContentTemplate>
-                               <div id="mn">
-                                    <asp:Label ID="Label3" runat="server" Text="Меню персонала"></asp:Label>
-                                                               <div class = "menu">
-                               <asp:HyperLink ID="HyperLink10" runat="server" Text = "Личные данные" NavigateUrl="~/Profile/Profile.aspx"></asp:HyperLink>
-                               </div>
-                                    
-                                    <div id = "mnu">
-                                   <asp:HyperLink ID="HyperLink9" runat="server" Text = "Товары" NavigateUrl="~/Trade/Default.aspx"></asp:HyperLink>
-                                   </div>
+                                                               <div class = "menupersonal">
+                               <asp:HyperLink ID="HLProfile" runat="server" Text = "<%$ Resources:LocalizeText, Profile %>" 
+                                                                       NavigateUrl="~/Profile/Profile.aspx"></asp:HyperLink>
+
+                                   <asp:HyperLink ID="HLTrade" runat="server" 
+                                            Text = "<%$ Resources:LocalizeText, Trade %>" 
+                                            NavigateUrl="~/Trade/Default.aspx"></asp:HyperLink>
                                    </div>
                                </ContentTemplate>
                            </asp:RoleGroup>
-                           <asp:RoleGroup Roles="Analistic">
-                               <ContentTemplate>
-                               <div id="mn">
-                                                                         <asp:Label ID="Label3" runat="server" Text="Меню персонала"></asp:Label>
-                                                               <div id = "menu">
-                               <asp:HyperLink ID="HyperLink10" runat="server" Text = "Личные данные" NavigateUrl="~/Profile/Profile.aspx"></asp:HyperLink>
-                               </div>
-                                    
-                                    <div class = "mnu">
-                                   <asp:HyperLink ID="HyperLink9" runat="server" Text = "Статистика" NavigateUrl="~/Analistic/Default.aspx"></asp:HyperLink>
-                                   </div>
+                           <asp:RoleGroup Roles="Analistic"> 
+                           <ContentTemplate>                     
+                                                               <div id = "menupersonal">
+                               <asp:HyperLink ID="HLProfile" runat="server" Text = "<%$ Resources:LocalizeText, Profile %>" 
+                                                                       NavigateUrl="~/Profile/Profile.aspx"></asp:HyperLink>
+                                   <asp:HyperLink ID="HLStatistic" runat="server" 
+                                            Text = "<%$ Resources:LocalizeText, Statistic %>" 
+                                            NavigateUrl="~/Analistic/Default.aspx"></asp:HyperLink>
                                    </div>
                                </ContentTemplate>
                            </asp:RoleGroup>
                        </RoleGroups>
                        
                 </asp:LoginView>
-                </div>
+
+                  <%-- Кінець персональне меню --%>
 
 
-                 <div id="mn">
-                     <asp:Label ID="Label2" runat="server" Text="Главное меню" Font-Bold="True"></asp:Label>
-                     <br />
-          	<div id="menu">
-
-
-                   <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Главная </asp:HyperLink>
-                   </div>
-                             	<div id="menu">
-                   <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Market.aspx">Магазин</asp:HyperLink>
-                   </div>
-                             	<div id="menu">
-                <asp:HyperLink ID="HyperLink4" runat="server">Как купить</asp:HyperLink>
-                </div>
-                <div id="menu">
-                <asp:HyperLink ID="HyperLink5" runat="server">Как оплатить</asp:HyperLink>
-                </div>
-                <div id="menu">
-                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/About.aspx">Контакты</asp:HyperLink>
-                </div>
-
-                   </div>
     </asp:ContentPlaceHolder>
-    </div>
-    </div>
+    
+
 
     <div id="text">
      <div id="txt">
@@ -215,10 +231,13 @@
     <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
 
 
+        <p class="style1">
+            (с)Прокопенко Тарас</p>
+
+
     </asp:ContentPlaceHolder>
     </div>
     </form>
     </div>
-
 </body>
 </html>
