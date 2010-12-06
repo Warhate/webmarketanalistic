@@ -14,11 +14,31 @@
     <form id="form1" runat="server">
     <div id = "header">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        <div id = "psch">
-            <asp:Label ID="Label1" runat="server" 
-                
-                Text="Корзина"></asp:Label>
-        </div>
+
+                       <br />
+            <asp:Label ID="HomePage" runat="server" Font-Bold="True" Font-Size="XX-Large" 
+                ForeColor="#4F504F" Text="Корзина"></asp:Label>
+                 <%--Початок головного меню --%>
+                <div id = "mainmenu">
+                     <div id="menu">
+                   <asp:HyperLink ID="HLHome" runat="server" NavigateUrl="~/Default.aspx" 
+                       Text="<%$ Resources:LocalizeText, HLHome %>"></asp:HyperLink>
+
+                    <asp:HyperLink ID="HLMaket" runat="server" NavigateUrl="~/Market.aspx" 
+                                        Text="<%$ Resources:LocalizeText, HLMarket %>"></asp:HyperLink>
+
+
+                    <asp:HyperLink ID="HLBuy" runat="server" Text="<%$ Resources:LocalizeText, HLBuy %>"></asp:HyperLink>
+
+
+                <asp:HyperLink ID="HLOplata" runat="server" 
+                        Text="<%$ Resources:LocalizeText, HLOplata %>"></asp:HyperLink>
+
+                <asp:HyperLink ID="HLContacts" runat="server" NavigateUrl="~/About.aspx" 
+                        Text="<%$ Resources:LocalizeText, HLContacts %>"></asp:HyperLink>
+                </div>
+                </div>
+                <%--Кінець головного меню --%>
         </asp:ContentPlaceHolder>
         </div>
 

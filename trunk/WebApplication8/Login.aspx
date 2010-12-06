@@ -66,17 +66,5 @@
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
 </asp:Content>
-<asp:Content ID="Content5" runat="server" 
-    contentplaceholderid="ContentPlaceHolder1">
-           <div style="text-align: right">
-               <div  style="text-align: left" >
-               </div>
-               
-        <asp:DropDownList ID="droplang" runat="server">
-            <asp:ListItem Value="ua-ua">Українська</asp:ListItem>
-            <asp:ListItem Value="ru-ru">Русский</asp:ListItem>
-        </asp:DropDownList>
-        <asp:Button ID="btnlang" runat="server" Text="Выбрать" />
-    </div>
-        </asp:Content>
+
 

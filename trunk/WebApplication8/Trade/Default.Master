@@ -14,83 +14,54 @@
     <form id="form1" runat="server">
     <div id = "header">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        <div id= "psch">
+        
 
-                <asp:Label ID="Label1" runat="server" 
-                   
-                    Text="Панель товара"></asp:Label>
+                <br />
+            <asp:Label ID="Label1" runat="server"  
+                Text="Панель товара" Font-Size="XX-Large" Font-Bold="True" ForeColor="#4F504F"></asp:Label>
 
-            </div>
+
         </asp:ContentPlaceHolder>
     </div>
     </div>
 
-    <div id = "lm">
-<div id = "mmn">
-          <div id = "mn">
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
-                    
-       <table align="center" border="1px" cellpadding="50px" frame="box">
-       <tr>
-       <td align="center">
-           <asp:ImageButton ID="ImageButton1" runat="server" 
-               ImageUrl="~/Image/go-home.png" PostBackUrl="~/Default.aspx" Width="48px" />
-       </td>
-       <td align="center">
-           <asp:ImageButton ID="ImageButton5" runat="server" 
-               ImageUrl="~/Image/program-group.png" 
-               PostBackUrl="~/Trade/AddGroup.aspx" Width="48px" />
-       </td>
-              <td align="center">
-                  <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Image/box.png" 
-                      PostBackUrl="~/Trade/Default.aspx" Width="48px" />
-       </td>
-       <td align="center">
-           <asp:ImageButton ID="ImageButton6" runat="server" 
-               ImageUrl="~/Image/1289309280_1.png" PostBackUrl="~/Trade/AddProduct.aspx" 
-               Width="48px" />
-       </td>
-              <td align="center">
-                  &nbsp;</td>
-       <td align="center">
-           &nbsp;</td>
-              <td align="center">
-                  &nbsp;</td>
-       <td align="center">
-           &nbsp;</td>
-       </tr>
-              <tr>
-       <td align="center" width="100">
-           <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">На главную</asp:HyperLink>
-       </td>
-       <td align="center" width="100">
-           <asp:HyperLink ID="HyperLink2" runat="server" 
-               NavigateUrl="~/Trade/AddGroup.aspx">Категории товара и фирмы</asp:HyperLink>
-       </td>
 
-              <td align="center" width="100">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                    <%--Початок головного меню --%>
+                <div id = "mainmenu">
+                     <div id="menu">
+                   <asp:HyperLink ID="HLHome" runat="server" NavigateUrl="~/Default.aspx" 
+                       Text="<%$ Resources:LocalizeText, HLHome %>"></asp:HyperLink>
+
+                    <asp:HyperLink ID="HLMaket" runat="server" NavigateUrl="~/Market.aspx" 
+                                        Text="<%$ Resources:LocalizeText, HLMarket %>"></asp:HyperLink>
+
+
+                    <asp:HyperLink ID="HLBuy" runat="server" Text="<%$ Resources:LocalizeText, HLBuy %>"></asp:HyperLink>
+
+
+                <asp:HyperLink ID="HLOplata" runat="server" 
+                        Text="<%$ Resources:LocalizeText, HLOplata %>"></asp:HyperLink>
+
+                <asp:HyperLink ID="HLContacts" runat="server" NavigateUrl="~/About.aspx" 
+                        Text="<%$ Resources:LocalizeText, HLContacts %>"></asp:HyperLink>
+                </div>
+                </div>
+                <%--Кінець головного меню --%>
+                                <%--Start MenuStart --%>
+                                <div id = "menuuser">
+           <asp:HyperLink ID="HyperLink2" runat="server" 
+               NavigateUrl="~/Trade/AddGroup.aspx">Категории и фирмы</asp:HyperLink>
+     
                   <asp:HyperLink ID="HyperLink3" runat="server" 
                       NavigateUrl="~/Trade/Default.aspx">Список товара</asp:HyperLink>
-       </td>
-       <td align="center" width="100">
+      
            <asp:HyperLink ID="HyperLink4" runat="server" 
                NavigateUrl="~/Trade/AddProduct.aspx">Добавить товар</asp:HyperLink>
-       </td>
-              <td align="center" width="100">
-                  &nbsp;</td>
-       <td align="center" width="100">
-           &nbsp;</td>
-              <td align="center" width="100">
-                  &nbsp;</td>
-       <td align="center" width="100">
-           &nbsp;</td>
-       </tr>
-       </table>
-
+     </div>
+                       <%--Start MenuStart --%>
                 </asp:ContentPlaceHolder>
-                </div>
-                </div>
-                </div>
+
     
     <div id = "text">
     <div id = "txt">

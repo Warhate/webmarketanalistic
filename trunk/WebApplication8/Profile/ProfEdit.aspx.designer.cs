@@ -31,6 +31,15 @@ namespace WebApplication8 {
         protected global::System.Web.UI.WebControls.TextBox txtFirstName;
         
         /// <summary>
+        /// RequiredFieldValidator1 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
         /// LabelMiddleName элемент управления.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace WebApplication8 {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMidleName;
+        
+        /// <summary>
+        /// RequiredFieldValidator2 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
         /// LabelLastName элемент управления.
@@ -67,6 +85,15 @@ namespace WebApplication8 {
         protected global::System.Web.UI.WebControls.TextBox txtLastName;
         
         /// <summary>
+        /// RequiredFieldValidator3 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        
+        /// <summary>
         /// txtAge элемент управления.
         /// </summary>
         /// <remarks>
@@ -76,6 +103,15 @@ namespace WebApplication8 {
         protected global::System.Web.UI.WebControls.TextBox txtAge;
         
         /// <summary>
+        /// RequiredFieldValidator4 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+        
+        /// <summary>
         /// txtPorofession элемент управления.
         /// </summary>
         /// <remarks>
@@ -83,6 +119,15 @@ namespace WebApplication8 {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPorofession;
+        
+        /// <summary>
+        /// RequiredFieldValidator5 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
         
         /// <summary>
         /// DDListSex элемент управления.
@@ -121,6 +166,15 @@ namespace WebApplication8 {
         protected global::System.Web.UI.WebControls.TextBox TxtCountry;
         
         /// <summary>
+        /// RequiredFieldValidator6 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
+        
+        /// <summary>
         /// Label2 элемент управления.
         /// </summary>
         /// <remarks>
@@ -137,6 +191,15 @@ namespace WebApplication8 {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtCity;
+        
+        /// <summary>
+        /// RequiredFieldValidator7 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
         
         /// <summary>
         /// Label3 элемент управления.
@@ -157,6 +220,15 @@ namespace WebApplication8 {
         protected global::System.Web.UI.WebControls.TextBox TxtOblast;
         
         /// <summary>
+        /// RequiredFieldValidator8 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator8;
+        
+        /// <summary>
         /// Label4 элемент управления.
         /// </summary>
         /// <remarks>
@@ -173,6 +245,15 @@ namespace WebApplication8 {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtRAyon;
+        
+        /// <summary>
+        /// RequiredFieldValidator9 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator9;
         
         /// <summary>
         /// Label5 элемент управления.
@@ -193,6 +274,15 @@ namespace WebApplication8 {
         protected global::System.Web.UI.WebControls.TextBox TxtStreet;
         
         /// <summary>
+        /// RequiredFieldValidator10 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator10;
+        
+        /// <summary>
         /// Label6 элемент управления.
         /// </summary>
         /// <remarks>
@@ -209,6 +299,15 @@ namespace WebApplication8 {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtDom;
+        
+        /// <summary>
+        /// RequiredFieldValidator11 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator11;
         
         /// <summary>
         /// Label7 элемент управления.
@@ -229,6 +328,15 @@ namespace WebApplication8 {
         protected global::System.Web.UI.WebControls.TextBox TxtRoom;
         
         /// <summary>
+        /// RequiredFieldValidator12 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator12;
+        
+        /// <summary>
         /// Label8 элемент управления.
         /// </summary>
         /// <remarks>
@@ -245,6 +353,15 @@ namespace WebApplication8 {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtIndex;
+        
+        /// <summary>
+        /// RequiredFieldValidator13 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator13;
         
         /// <summary>
         /// ImageButton1 элемент управления.

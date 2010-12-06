@@ -103,15 +103,6 @@ namespace WebApplication8.Analistic {
         protected global::System.Web.UI.WebControls.Label LabelFirm;
         
         /// <summary>
-        /// LabelGroup элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelGroup;
-        
-        /// <summary>
         /// SqlDataSource5 элемент управления.
         /// </summary>
         /// <remarks>
@@ -130,24 +121,6 @@ namespace WebApplication8.Analistic {
         protected global::System.Web.UI.DataVisualization.Charting.Chart ChartFirm;
         
         /// <summary>
-        /// ChartGroup элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.DataVisualization.Charting.Chart ChartGroup;
-        
-        /// <summary>
-        /// SDSGroup элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SDSGroup;
-        
-        /// <summary>
         /// GridViewFirm элемент управления.
         /// </summary>
         /// <remarks>
@@ -164,6 +137,33 @@ namespace WebApplication8.Analistic {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonFirm;
+        
+        /// <summary>
+        /// SDSGroup элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SDSGroup;
+        
+        /// <summary>
+        /// LabelGroup элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelGroup;
+        
+        /// <summary>
+        /// ChartGroup элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.DataVisualization.Charting.Chart ChartGroup;
         
         /// <summary>
         /// GridViewGroup элемент управления.

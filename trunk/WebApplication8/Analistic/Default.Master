@@ -14,67 +14,44 @@
     <form id="form1" runat="server">
     <div id = "header" >
         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-            <div id= "psch">
-            <asp:Label ID="Label1" runat="server" 
-                Text="Панель статистики"></asp:Label>
-                </div>
+         <br />
+            <asp:Label ID="HomePage" runat="server" Font-Bold="True" Font-Size="XX-Large" 
+                ForeColor="#4F504F" Text="Статистика"></asp:Label>
+
         </asp:ContentPlaceHolder>
         </div>
-        <div id = "lm">
-<div id = "mmn">
-          <div id = "mn">
+ 
         <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
-        <table align="center" border="1px" cellpadding="50px" frame="box">
-       <tr>
-       <td align="center">
-           <asp:ImageButton ID="ImageButton1" runat="server" 
-               ImageUrl="~/Image/go-home.png" PostBackUrl="~/Default.aspx" Width="48px" />
-       </td>
-       <td align="center">
-           <asp:ImageButton ID="ImageButton5" runat="server" 
-               ImageUrl="~/Image/warehause.png" 
-               PostBackUrl="~/Analistic/Default.aspx" Width="48px" />
-       </td>
-              <td align="center">
-                  <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Image/people.png" 
-                      PostBackUrl="~/Analistic/Users.aspx" Width="48px" />
-       </td>
-       <td align="center">
-           &nbsp;</td>
-              <td align="center">
-                  &nbsp;</td>
-       <td align="center">
-           &nbsp;</td>
-              <td align="center">
-                  &nbsp;</td>
-       <td align="center">
-           &nbsp;</td>
-       </tr>
-              <tr>
-       <td align="center" width="100">
-           <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">На главную</asp:HyperLink>
-       </td>
-       <td align="center" width="100">
-           <asp:HyperLink ID="HyperLink2" runat="server" 
-               NavigateUrl="~/Analistic/Default.aspx">Статистика товара</asp:HyperLink>
-       </td>
+                    <%--Початок головного меню --%>
+                <div id = "mainmenu">
+                     <div id="menu">
+                   <asp:HyperLink ID="HLHome" runat="server" NavigateUrl="~/Default.aspx" 
+                       Text="<%$ Resources:LocalizeText, HLHome %>"></asp:HyperLink>
 
-              <td align="center" width="100">
+                    <asp:HyperLink ID="HLMaket" runat="server" NavigateUrl="~/Market.aspx" 
+                                        Text="<%$ Resources:LocalizeText, HLMarket %>"></asp:HyperLink>
+
+
+                    <asp:HyperLink ID="HLBuy" runat="server" Text="<%$ Resources:LocalizeText, HLBuy %>"></asp:HyperLink>
+
+
+                <asp:HyperLink ID="HLOplata" runat="server" 
+                        Text="<%$ Resources:LocalizeText, HLOplata %>"></asp:HyperLink>
+
+                <asp:HyperLink ID="HLContacts" runat="server" NavigateUrl="~/About.aspx" 
+                        Text="<%$ Resources:LocalizeText, HLContacts %>"></asp:HyperLink>
+                </div>
+                </div>
+                <%--Кінець головного меню --%>
+                <%-- Statistic menu--%>
+      <div id = "menuuser">
+           <asp:HyperLink ID="HyperLink2" runat="server" 
+               NavigateUrl="~/Analistic/Default.aspx">Товары</asp:HyperLink>
+     
                   <asp:HyperLink ID="HyperLink3" runat="server" 
-                      NavigateUrl="~/Analistic/Users.aspx">Статистика пользователей</asp:HyperLink>
-       </td>
-       <td align="center" width="100">
-           &nbsp;</td>
-              <td align="center" width="100">
-                  &nbsp;</td>
-       <td align="center" width="100">
-           &nbsp;</td>
-              <td align="center" width="100">
-                  &nbsp;</td>
-       <td align="center" width="100">
-           &nbsp;</td>
-       </tr>
-       </table>
+                      NavigateUrl="~/Analistic/Users.aspx">Пользователи</asp:HyperLink>
+   </div>
+   <%-- Statistic menu--%>
         </asp:ContentPlaceHolder>
                 </div>
            </div>

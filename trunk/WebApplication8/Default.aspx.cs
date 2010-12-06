@@ -4,10 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Threading;
+using System.Globalization;
 
 namespace WebApplication8
 {
-    public partial class WebForm2 : System.Web.UI.Page
+    public partial class WebForm2 :MarketPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,5 +23,9 @@ namespace WebApplication8
             String s=WebProfile.Properties.ToString();
             return s;
         }
+
+
+
+        
     }
 }

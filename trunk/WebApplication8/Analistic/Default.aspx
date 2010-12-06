@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<table align="center">
+    <table align="center">
 <tr>
 <td>
 <div id = "selectstat">
@@ -78,10 +78,7 @@
         Font-Size="Large"></asp:Label>
     </td>
     <td style="text-align: center">
-        <asp:Label ID="LabelGroup" runat="server" Text="Статистика по группам товара" 
-            style="font-weight: 700; color: #0066FF" Font-Bold="True" 
-            Font-Size="Large"></asp:Label>
-    </td>
+        &nbsp;</td>
     </tr>
     <tr>
     <td>
@@ -99,31 +96,13 @@
             </Series>
             <ChartAreas>
                 <asp:ChartArea Name="ChartArea1">
+                    <Area3DStyle Enable3D="True" Inclination="40" IsClustered="True" 
+                        IsRightAngleAxes="False" LightStyle="Realistic" />
                 </asp:ChartArea>
             </ChartAreas>
         </asp:Chart>
     </td>
-    <td>
-        <asp:Chart ID="ChartGroup" runat="server" Height="271px" Width="347px" 
-            DataSourceID="SDSGroup" BackColor="Transparent">
-            <Series>
-                <asp:Series Name="Series1" ChartType="Doughnut" XValueMember="Name" 
-                    YValueMembers="Expr1">
-                </asp:Series>
-            </Series>
-            <ChartAreas>
-                <asp:ChartArea Name="ChartArea1">
-                </asp:ChartArea>
-            </ChartAreas>
-        </asp:Chart>
-        <asp:SqlDataSource ID="SDSGroup" runat="server" 
-            ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
-            SelectCommand="SELECT GroupT.Name, COUNT(Product.ProductID) AS Expr1 FROM GroupT INNER JOIN Product ON GroupT.GroupID = Product.GroupID GROUP BY GroupT.Name">
-        </asp:SqlDataSource>
-    </td>
-    </tr>
-    <tr>
-    <td>
+    <td valign="top">
         <asp:GridView ID="GridViewFirm" runat="server" AllowSorting="True" 
             AutoGenerateColumns="False" DataSourceID="SqlDataSource5" 
             BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" 
@@ -147,8 +126,36 @@
         <asp:Button ID="ButtonFirm" runat="server" CssClass="nbutton" 
             onclick="Button2_Click1" Text="Экспорт" />
         <br />
+        <br />
+        <br />
+        <asp:SqlDataSource ID="SDSGroup" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
+            SelectCommand="SELECT GroupT.Name, COUNT(Product.ProductID) AS Expr1 FROM GroupT INNER JOIN Product ON GroupT.GroupID = Product.GroupID GROUP BY GroupT.Name">
+        </asp:SqlDataSource>
     </td>
-        <td>
+    </tr>
+    <tr>
+    <td>
+        <asp:Label ID="LabelGroup" runat="server" Text="Статистика по группам товара" 
+            style="font-weight: 700; color: #0066FF" Font-Bold="True" 
+            Font-Size="Large"></asp:Label>
+        <br />
+        <asp:Chart ID="ChartGroup" runat="server" Height="271px" Width="347px" 
+            DataSourceID="SDSGroup" BackColor="Transparent">
+            <Series>
+                <asp:Series Name="Series1" ChartType="Doughnut" XValueMember="Name" 
+                    YValueMembers="Expr1">
+                </asp:Series>
+            </Series>
+            <ChartAreas>
+                <asp:ChartArea Name="ChartArea1">
+                    <Area3DStyle Enable3D="True" Inclination="40" IsClustered="True" />
+                </asp:ChartArea>
+            </ChartAreas>
+        </asp:Chart>
+    </td>
+        <td valign="top">
+            <br />
             <asp:GridView ID="GridViewGroup" runat="server" AllowSorting="True" 
                 AutoGenerateColumns="False" DataSourceID="SDSGroup" BorderColor="#999999" 
                 BorderStyle="Solid" BackColor="#CCCCCC" BorderWidth="3px" CellPadding="4" 
