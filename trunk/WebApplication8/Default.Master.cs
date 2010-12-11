@@ -38,7 +38,7 @@ namespace WebApplication8
 
         protected void btnlang_Click(object sender, EventArgs e)
         {
-            Response.Redirect(Request.Path);
+            Session["Lang"] = "ru";
 
         }
 

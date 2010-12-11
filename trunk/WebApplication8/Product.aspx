@@ -55,11 +55,14 @@
 
            <tr>
            <td>
+           <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Image/buy.png" 
+                   ToolTip="Купить" />
 
-              <asp:Button ID="Button1" runat="server" CssClass="nbutton" 
-            onclick="Button1_Click" Text="Купить" />
            </td>
            <td>
+
+                  <asp:Image ID="Image2" runat="server" ImageAlign="Middle" 
+                      ImageUrl="~/Image/1291667688_cost.png" Width="24px" />
 
                   <asp:Label ID="LabelPrice" runat="server" 
                       style="font-weight: 500; color: #0033CC" Text = "Цена : {0:c}"></asp:Label>

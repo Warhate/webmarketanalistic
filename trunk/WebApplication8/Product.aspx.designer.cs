@@ -22,15 +22,6 @@ namespace WebApplication8 {
         protected global::System.Web.UI.WebControls.Label LabelName;
         
         /// <summary>
-        /// Image2 элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image2;
-        
-        /// <summary>
         /// Image1 элемент управления.
         /// </summary>
         /// <remarks>
@@ -175,13 +166,22 @@ namespace WebApplication8 {
         protected global::System.Web.UI.WebControls.Label LabelInfo;
         
         /// <summary>
-        /// Button1 элемент управления.
+        /// ImageButton2 элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.ImageButton ImageButton2;
+        
+        /// <summary>
+        /// Image2 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image2;
         
         /// <summary>
         /// LabelPrice элемент управления.

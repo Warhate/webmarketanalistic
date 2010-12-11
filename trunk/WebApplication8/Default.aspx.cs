@@ -24,6 +24,17 @@ namespace WebApplication8
             return s;
         }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
+            InitializeCulture();
+        }
+
+        protected override void InitializeCulture()
+        {
+            
+            base.InitializeCulture();
+        }
 
 
         

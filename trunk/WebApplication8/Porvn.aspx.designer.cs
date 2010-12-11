@@ -10,16 +10,7 @@
 namespace WebApplication8 {
     
     
-    public partial class WebForm5 {
-        
-        /// <summary>
-        /// Image2 элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image2;
+    public partial class WebForm12 {
         
         /// <summary>
         /// Label1 элемент управления.
@@ -31,13 +22,13 @@ namespace WebApplication8 {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// RadioButtonList1 элемент управления.
+        /// DDListFirm элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
+        protected global::System.Web.UI.WebControls.DropDownList DDListFirm;
         
         /// <summary>
         /// SDSFirm элемент управления.
@@ -49,30 +40,66 @@ namespace WebApplication8 {
         protected global::System.Web.UI.WebControls.SqlDataSource SDSFirm;
         
         /// <summary>
-        /// SDSGroup элемент управления.
+        /// Label2 элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SDSGroup;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// ListView1 элемент управления.
+        /// DDListProduct элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView ListView1;
+        protected global::System.Web.UI.WebControls.DropDownList DDListProduct;
         
         /// <summary>
-        /// SqlDataSource1 элемент управления.
+        /// SDSProduct элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.SqlDataSource SDSProduct;
+        
+        /// <summary>
+        /// DetailsView2 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView DetailsView2;
+        
+        /// <summary>
+        /// SDSProductF элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SDSProductF;
+        
+        /// <summary>
+        /// DetailsView1 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView DetailsView1;
+        
+        /// <summary>
+        /// SDSProductS элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SDSProductS;
     }
 }

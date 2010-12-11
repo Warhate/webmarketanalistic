@@ -32,6 +32,31 @@
         
         <br />
 
+        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SDS" 
+            DataTextField="Name" DataValueField="FirmID">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="SDS" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
+            SelectCommand="SELECT [FirmID], [Name] FROM [Firm] WHERE ([GroupID] = @GroupID)">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="DropDownList2" Name="GroupID" 
+                    PropertyName="SelectedValue" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SDSEquals" 
+            DataTextField="Name" DataValueField="ProductID">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="SDSEquals" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
+            SelectCommand="SELECT [Name], [ProductID] FROM [Product] WHERE (([GroupID] = @GroupID) AND ([FirmID] = @FirmID))">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="DropDownList1" Name="GroupID" 
+                    PropertyName="SelectedValue" Type="Int32" />
+                <asp:ControlParameter ControlID="DropDownList2" Name="FirmID" 
+                    PropertyName="SelectedValue" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+
     </div>
     <asp:SqlDataSource ID="SDSGroup" runat="server" 
         ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
