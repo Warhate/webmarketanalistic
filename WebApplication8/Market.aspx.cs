@@ -17,6 +17,12 @@ namespace WebApplication8
             }
             }
 
+        public String GetURL(String PID, String GID)
+        {
+            return String.Format("~/Porvn.aspx?PID={0}&GID={1}", PID, GID);
+        }
+
+
         public void SetParam(SqlDataSource SDS, String paramName, params Object[] paramValues)
         {
             string[] paramNames = new string[paramValues.Length];

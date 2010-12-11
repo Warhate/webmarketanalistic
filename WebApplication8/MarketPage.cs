@@ -12,19 +12,22 @@ namespace WebApplication8
 {
     public class MarketPage:Page
     {
+
         protected override void InitializeCulture()
         {
-            String s = Request["droplang"];
-            if (s != null)
-            {
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo(s);
-            }
+
+            if (Session["Culture"].ToString() == null)
             {
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
+
             }
+            else
+            {
+
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(Session["Lang"].ToString());
+            }
+           
         }
-
-
 
     }
 }

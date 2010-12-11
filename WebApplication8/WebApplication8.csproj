@@ -76,7 +76,11 @@
     <Content Include="Image\1289309280_1.png" />
     <Content Include="Image\1289313975_Emulation.png" />
     <Content Include="Image\1289469968_label_blue_buy.png" />
+    <Content Include="Image\1291663380_home.png" />
+    <Content Include="Image\1291667400_clendarorange-24.png" />
+    <Content Include="Image\1291667688_cost.png" />
     <Content Include="Image\50288370_41728658_39503510_gallery_2_176_7280.gif" />
+    <Content Include="Image\bginput.png" />
     <Content Include="Image\buttonadm.png" />
     <Content Include="Image\buttonpersonal.png" />
     <Content Include="Image\buttonuser.png" />
@@ -142,11 +146,11 @@
     <Content Include="Purshe.aspx" />
     <Content Include="WebForm10.aspx" />
     <Content Include="Money.aspx" />
+    <Content Include="Porvn.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -244,18 +248,18 @@
     <Compile Include="Analistic\Users.aspx.designer.cs">
       <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_GlobalResources\LocalizeText.ru.designer.cs">
+    <Compile Include="App_GlobalResources\__LocalizeText.ru.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LocalizeText.ru.resx</DependentUpon>
+      <DependentUpon>__LocalizeText.ru.resx</DependentUpon>
     </Compile>
     <Compile Include="App_GlobalResources\LocalizeText.uk.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LocalizeText.uk.resx</DependentUpon>
     </Compile>
-    <Compile Include="App_GlobalResources\LocalizeText.en.designer.cs">
-      <DependentUpon>LocalizeText.en.resx</DependentUpon>
+    <Compile Include="App_GlobalResources\__LocalizeText.en.designer.cs">
+      <DependentUpon>__LocalizeText.en.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -434,6 +438,13 @@
     <Compile Include="Money.aspx.designer.cs">
       <DependentUpon>Money.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Porvn.aspx.cs">
+      <DependentUpon>Porvn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Porvn.aspx.designer.cs">
+      <DependentUpon>Porvn.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebProfile.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -477,9 +488,9 @@
     <Content Include="Image.ashx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_GlobalResources\LocalizeText.ru.resx">
+    <Content Include="App_GlobalResources\__LocalizeText.ru.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>LocalizeText.ru.designer.cs</LastGenOutput>
+      <LastGenOutput>__LocalizeText.ru.designer.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -489,9 +500,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_GlobalResources\LocalizeText.en.resx">
+    <Content Include="App_GlobalResources\__LocalizeText.en.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>LocalizeText.en.designer.cs</LastGenOutput>
+      <LastGenOutput>__LocalizeText.en.designer.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

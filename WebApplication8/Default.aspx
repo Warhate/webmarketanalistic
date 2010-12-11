@@ -4,13 +4,18 @@
 
 
 <asp:Content ID = "Content1" ContentPlaceHolderID = "ContentPlaceHolder2" runat = "server">
-    &nbsp;<asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+    &nbsp;<asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
+        Text="Button" />
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
         
         SelectCommand="SELECT newsbody, date, newsname FROM News ORDER BY date DESC">
     </asp:SqlDataSource>
+    <asp:Image ID="Image2" runat="server" ImageUrl="~/Image/newsfire_48x48.png" 
+        Width="24px" />
     <asp:Label ID="LabelNews" runat="server" Font-Bold="True" 
     Font-Size="X-Large" Text="Новости"></asp:Label>
+    &nbsp;&nbsp;
     <br />
     <asp:ListView ID="ListView1"  runat="server" DataSourceID="SqlDataSource1" 
         style="text-align: left" >
@@ -27,7 +32,8 @@
                 <br />
                 <br />
                 <i>
-                <asp:Label ID="Label1" runat="server" Text="Дата публикации"></asp:Label>
+
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Image/1291667400_clendarorange-24.png" />
                 <asp:Label ID="dateLabel" runat="server" Text='<%# Eval("date", "{0:D}") %>'></asp:Label>
                 </i>
                 <br />
@@ -86,7 +92,7 @@
                 <br />
                 <br />
                 <i>
-                <asp:Label ID="Label1" runat="server" Text="Дата публикации"></asp:Label>
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Image/1291667400_clendarorange-24.png" />
                 <asp:Label ID="dateLabel" runat="server" Text='<%# Eval("date", "{0:D}") %>'></asp:Label>
                 </i>
                 <br />

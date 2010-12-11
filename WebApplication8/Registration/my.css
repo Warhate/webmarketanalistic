@@ -1,10 +1,11 @@
 ﻿Input
 {
-	background-color:Green;
-	color:White;
-		border-style:solid;
-		border-width:2px;
-		border-color:Green;
+	background:url("/image/bginput.png") repeat-x;
+	border-style:solid;
+	border-width:1px;
+	border-color:#c2c2c2;
+	color:Black;
+
 
 	}
 
@@ -14,17 +15,14 @@ select
 	border-width:2px;
 	border-color:#3b8ac2;
 */
-	background-color:Green;
-	color:White;
-		border-style:solid;
-		border-width:2px;
-		border-color:Green;
+
+background:url("/image/bginput.png") repeat-x;
+
 }
 
 .nbutton
 {
-	Color:White;
-	background-color:Green;
+
 	
 	
 	
@@ -82,22 +80,19 @@ a:hover {
 
 .title 
 {
+	border: 1px dotted #48b479;
 	text-align:justify;
 	text-indent: 3px;
 	
-	font: 17px Georgia, "Times New Roman", Times, serif;
-	border-left: #48b479 dotted 1px;
-	border-right: #48b479 dotted 1px;
-	border-top: #48b479 dotted 1px;
-	border-bottom: #48b479 dotted 1px;
 	margin-top: 9px;
 	margin-bottom: 9px;
 	color: Black;
 	background:url("/image/bgtext.png") repeat;
 	padding:15px;
-
-	
-	
+	font-style: normal;
+	font-variant: normal;
+	line-height: normal;
+	font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .title a
@@ -122,7 +117,7 @@ a:hover {
 	margin-bottom: 9px;
 	color: Black;
 	background-color:Fuchsia;
-	background: transparent url('ul.png') no-repeat  left center;
+	background: transparent url('/image/fon1.gif') no-repeat  left center;
 }
 
 
@@ -503,11 +498,15 @@ float:left;
 	background: url("kvb.png");
 	width: 679px;
 	height: 20px;
-	font: .8em bold;
-	color: rgb(255,255,204);
+	color: rgb(51, 51, 51);
 	margin-left: 20px;
 	Float: left;
 	text-align: left;
+	font-style: normal;
+	font-variant: normal;
+	font-size: .8em;
+	line-height: normal;
+	font-family: bold;
 }
 #lang {
 	display: block;
@@ -524,6 +523,7 @@ float:left;
 	margin-left: 20px;
 	margin-right: 20px;
 }
+/*
 #psch  Input
 {
 	background-color:Green;
@@ -536,20 +536,21 @@ float:left;
 
 #psch  select
 {
-/*		border-style:solid;
+	border-style:solid;
 	border-width:2px;
 	border-color:#3b8ac2;
-*/
+
 	background-color:Green;
 	color:White;
 		border-style:solid;
 		border-width:2px;
 		border-color:Green;
 }
-
+*/
 
 p {
 	font-size: 1.8em;
+	color: #000000;
 }
 #adm {
 	display: block;
@@ -597,4 +598,16 @@ button
 	background-color:Blue;
 	
 }
+
+#selectstat {
+	margin-left: 2px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	outline-style:solid;
+	outline-color:#3b8ac2;
+	outline-width:3px;
+	float:left;
+}
+
 

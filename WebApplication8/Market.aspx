@@ -5,7 +5,13 @@
     <br />
     <div class = "title">
 
-        <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="Группы товара"></asp:Label>
+        <asp:Image ID="Image2" runat="server" ImageUrl="~/Image/box.png" 
+            Width="24px" ImageAlign="Middle" />
+
+        <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="Группы товара" 
+            Font-Size="Large"></asp:Label>
+        &nbsp;
+        <br />
         <hr />
         <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True" 
             DataSourceID="SDSGroup" DataTextField="Name" DataValueField="GroupID" 
@@ -19,7 +25,7 @@
         <hr />
 
 
-        <hr />
+        <hr size="1" />
         <asp:SqlDataSource ID="SDSFirm" runat="server" 
             ConnectionString="<%$ ConnectionStrings:webmarkkkConnectionString %>" 
             SelectCommand="SELECT [FirmID], [Name] FROM [Firm] WHERE ([GroupID] IN (@GroupID))">
@@ -28,7 +34,7 @@
                     PropertyName="SelectedValue" Type="Int32" />
             </SelectParameters>
         </asp:SqlDataSource>
-        
+
         <br />
 
     </div>
@@ -44,12 +50,19 @@
            <table>
            <tr>
            <td>
+           
            <asp:Label ID="FirmNameLabel" runat="server" Text='<%# Eval("FirmName") %>' />&nbsp; - &nbsp;
            <asp:HyperLink ID="HyperLink1" runat="server" 
                     NavigateUrl='<%# Eval("ProductID", "~/Product.aspx?ID={0}") %>'  
                     Text='<%# Eval("Name") %>'></asp:HyperLink>
            </td>
            <td>
+
+               <asp:Button ID="Button1" runat="server" Text="Сравнить" PostBackUrl='<%# 
+               
+               GetURL(Eval("ProductID").ToString(),Eval("GroupID").ToString())
+               
+               %>' />
            </td>
            </tr>
 
@@ -152,6 +165,11 @@
                     Text='<%# Eval("Name") %>'></asp:HyperLink>
            </td>
            <td>
+             <asp:Button ID="Button1" runat="server" Text="Сравнить" PostBackUrl='<%# 
+               
+               GetURL(Eval("ProductID").ToString(),Eval("GroupID").ToString())
+               
+               %>' />
            </td>
            </tr>
 
@@ -237,7 +255,7 @@
         
         
         
-        SelectCommand="SELECT Product.ProductID, Product.Name, Product.Image, Product.Cost, Firm.Name AS FirmName, Product.Info FROM Product INNER JOIN Firm ON Product.FirmID = Firm.FirmID WHERE (Product.GroupID = @GroupID)">
+        SelectCommand="SELECT Product.ProductID, Product.Name, Product.Image,Product.GroupID, Product.Cost, Firm.Name AS FirmName, Product.Info FROM Product INNER JOIN Firm ON Product.FirmID = Firm.FirmID WHERE (Product.GroupID = @GroupID)">
         <SelectParameters>
             <asp:ControlParameter ControlID="RadioButtonList1" Name="GroupID" 
                 PropertyName="SelectedValue" Type="Int32" />

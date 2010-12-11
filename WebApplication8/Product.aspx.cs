@@ -121,7 +121,7 @@ namespace WebApplication8
 
 
                         Image1.ImageUrl = "~/Image.ashx?ID="+ID;
-                        Button1.PostBackUrl = "~/Tray/Default.aspx?ID="+ID;
+                       ImageButton2.PostBackUrl = "~/Tray/Default.aspx?ID="+ID;
                     }
                     catch (SqlException ex)
                     {
